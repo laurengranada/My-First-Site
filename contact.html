@@ -1,0 +1,84 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lauren Granada - Portfolio</title>
+  <!-- bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- my css -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto:700" rel="stylesheet">
+
+</head>
+<body>
+  <div class="navbar-top">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-center">
+            <li><a href="index.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.php">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+
+
+  <div class="name">
+    <h1>Contact Me</h1>
+    <h4>Let's stay in touch</h4>
+  </div>
+
+  <div class="About">
+
+  <?php
+     
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+       $from = 'From: laurengranada.com'; 
+        $to = 'laurengranada@utexas.edu'; 
+        $subject = 'New message from laurengranada.com';
+      
+      $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+      
+    ?>
+      <div class="input-group">
+        <?php
+        
+        if ($_POST['submit']) {
+            if ($name != '' && $email != '') {       
+                    if (mail ($to, $subject, $body, $from)) { 
+                  echo '<p>Your message has been sent!</p>';
+              } else { 
+                  echo '<p>Something went wrong, go back and try again!</p>'; 
+          }
+            } else {
+                echo '<p>You need to fill in all required fields!!</p>';
+            }
+        }
+        ?>
+        <form method="post" action="contact.php">
+          <input type="text" class="form-control" name="name" placeholder="Name" aria-describedby="basic-addon1">
+          <input type="email" class="form-control" name="email" placeholder="Email" aria-describedby="basic-addon1">
+          <textarea type="text" class="form-control texthere" name="message" placeholder="Message" rows="7" aria-describedby="basic-addon1"></textarea>
+          <button type="submit" id="submit" name="submit" class="btn btn-primary" value="submit">Submit</button>
+        </form>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://www.linkedin.com/in/lauren-granada-b78934b7/"><img class="icon" width="60px" src="images/linkedin.png">
+    <a href="https://github.com/laurengranada"><img class="icon"  width="60px" src="images/github.png">
+    <a href="https://www.youtube.com/user/thesunsethaven"><img class="icon" width="60px" src="images/youtube.png">
+  </footer>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- my js -->
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body{
+	background-image: url("../pix/2wood.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+}
+
+ul{
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	background-color:black;
+	font-family: geneva;
+	letter-spacing: 2px;
+	font-size: 10px;
+	text-align:center;
+}
+
+li{
+	display:inline-block;
+	
+	
+
+
+	
+}
+
+li a{
+	padding: 12px 16px;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+	display: block;
+}
+
+li a:hover{
+	background-color:#C40003;
+}
+
+
+h1{
+	color: white;
+	text-align: center;
+	text-transform: none;
+	font-variant: small-caps;
+	text-shadow: 5px 5px 10px black;
+	font-family: palatino;
+	font-size: 80px;
+	padding-top: 92px;
+	padding-right: 120px;
+	padding-left: 120px;
+	padding-bottom: 20px;
+	padding-bottom: 20px;	
+	
+}
+
+.me{
+	text-align: center;
+	color: black;
+	font-family: Century Schoolbook, Georgia, Times, serif;
+	text-transform: none;
+	font-weight: bold;
+	font-size: 24px;
+	letter-spacing: -2px;
+	margin-top: 0px;
+}
+
+.picture{
+	border-radius: 52px;
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-left: 5px;
+	margin-bottom: 11px;
+}
+
+.info{
+	text-align: left;
+	color: black;
+	font-family: georgia, serif;
+	text-transform: none;
+	letter-spacing: 0px;
+	font-weight: none;
+	font-size: 13px;
+	text-shadow: none;
+	margin-left: 13em;
+	margin-top: -149px;
+	margin-right: 0px;
+}
+
+.note{
+	background-image: url("../pix/paper.jpg");
+	background-repeat: none;
+	background-position: center;
+	background-size: cover;
+	padding-top: 11px;
+	padding-right: 80px;
+	padding-left: 80px;
+	padding-bottom: 59px;
+	box-shadow: 5px 5px 20px black;
+	margin-left: 63px;
+	margin-right: 63px;
+	margin-bottom: 63px;
+}
+
+footer{
+	 color: white;
+	 text-align:center;
+	 text-shadow: 5px 5px 10px black;
+}

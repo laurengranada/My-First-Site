@@ -1,0 +1,117 @@
+body{
+	background-image: url("../pix/2wood.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+}
+
+ul{
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	background-color:black;
+	font-family: geneva;
+	letter-spacing: 2px;
+	font-size: 10px;
+	text-align:center;
+}
+
+li{
+	display:inline-block;
+}
+
+li a{
+	padding: 12px 16px;
+	text-decoration: none;
+	color:white;
+	text-align: center;
+	display: block;
+}
+
+li a:hover{
+	background-color:#C40003;
+}
+
+
+
+h1{
+	color: white;
+	text-align: center;
+	text-transform: none;
+	font-variant: small-caps;
+	text-shadow: 5px 5px 10px black;
+	font-family: palatino;
+	font-size: 50px;
+	padding-top: 99px;
+	padding-right: 69px;
+	padding-left: 69px;
+	padding-bottom: 69px;
+}
+
+section{
+	background-image: url(../pix/paper.jpg);
+	background-size: cover;
+	box-shadow: 5px 5px 20px black;
+	padding-top: 29px;
+	padding-right: 37px;
+	padding-left: 37px;
+	padding-bottom: 37px;
+	margin-bottom: 67px;
+	margin-left: 230px;
+	margin-right: 230px;
+	margin-top: 12px;
+}
+
+
+label{
+	display:block;	
+	margin-top:15px;
+	color: black;
+	font-family: Century Schoolbook, Georgia, Times, serif;	
+	letter-spacing: -1px;
+	font-weight: bold; 
+	font-size: 17px;
+}
+
+form{
+	margin:0 auto;
+	size: 400px 500px;
+	
+}
+
+input, textarea{
+	height:20px;
+	width: 400px;
+	border: 1px solid black;
+	padding: 1px;
+	color:black;
+	font-family: georgia, serif;
+	font-size: 13px;
+}
+
+textarea{
+	height: 180px;	
+}
+
+input:focus, textarea:focus{
+	border: 1px solid blue;	
+}
+
+#submit{
+	margin-top: 14px;
+	width: 129px;
+	font-family: georgia, serif;
+}
+
+#submit:hover{
+	opacity: .6;	
+}
+
+footer{
+	 color: white;
+	 text-align:center;
+	 text-shadow: 5px 5px 10px black;
+}
