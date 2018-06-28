@@ -20,12 +20,7 @@ ul{
 }
 
 li{
-	display:inline-block;
-	
-	
-
-
-	
+	display:inline-block;	
 }
 
 li a{
@@ -39,8 +34,6 @@ li a{
 li a:hover{
 	background-color:#C40003;
 }
-
-
 h1{
 	color: white;
 	text-align: center;

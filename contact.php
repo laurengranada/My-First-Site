@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
- <link rel="stylesheet" href="css/contact.css"/>
+ <link rel="stylesheet" href="css/film.css"/>
 <link rel="stylesheet" href="css/responsive.css"/>
  </head>
 <body>
@@ -19,9 +19,10 @@
 
   <div class="name">
     <h1>Contact Me</h1>
+    <h4>Let's stay in touch</h4>
   </div>
-  
-<section>
+
+  <div class="About">
 
   <?php
      
@@ -56,7 +57,7 @@
           <button type="submit" id="submit" name="submit" class="btn btn-primary" value="submit">Submit</button>
         </form>
     </div>
-</section>
+  </div>
 
 <footer> 
 <p>Design by Lauren Granada 2016</p>
