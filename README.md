@@ -4,7 +4,7 @@ This was the first site I created completely from scratch (before I ever knew th
 
 I decided to move all my files here to host them on heroku for display, as I'm still very proud of what I accomplished in this project!
 
-![alt text](https://github.com/laurengranada/week-3-game/blob/gh-pages/read-images/index.png)
+![alt text](https://github.com/laurengranada/My-First-Site/blob/master/read-images/index.png)
 
 ### Languages/Technologies Used:
 - HTML
