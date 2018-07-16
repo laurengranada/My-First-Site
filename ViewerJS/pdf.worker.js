@@ -14594,7 +14594,7 @@ var serifFonts = {
   'Seagull': true, 'Sistina': true, 'Souvenir': true,
   'STIX': true, 'Stone Informal': true, 'Stone Serif': true,
   'Sylfaen': true, 'Times': true, 'Trajan': true,
-  'TrinitÃ©': true, 'Trump Mediaeval': true, 'Utopia': true,
+  'Trinité': true, 'Trump Mediaeval': true, 'Utopia': true,
   'Vale Type': true, 'Bitstream Vera': true, 'Vera Serif': true,
   'Versailles': true, 'Wanted': true, 'Weiss': true,
   'Wide Latin': true, 'Windsor': true, 'XITS': true
@@ -18728,7 +18728,7 @@ var Font = (function FontClosure() {
         return new ToUnicodeMap(toUnicode);
       }
       // If the font is a composite font that uses one of the predefined CMaps
-      // listed in Table 118 (except Identityâ€“H and Identityâ€“V) or whose
+      // listed in Table 118 (except Identity–H and Identity–V) or whose
       // descendant CIDFont uses the Adobe-GB1, Adobe-CNS1, Adobe-Japan1, or
       // Adobe-Korea1 character collection:
       if (properties.composite && (
@@ -18741,15 +18741,15 @@ var Font = (function FontClosure() {
               properties.cidSystemInfo.ordering === 'Korea1')))) {
         // Then:
         // a) Map the character code to a character identifier (CID) according
-        // to the fontâ€™s CMap.
+        // to the font’s CMap.
         // b) Obtain the registry and ordering of the character collection used
-        // by the fontâ€™s CMap (for example, Adobe and Japan1) from its
+        // by the font’s CMap (for example, Adobe and Japan1) from its
         // CIDSystemInfo dictionary.
         var registry = properties.cidSystemInfo.registry;
         var ordering = properties.cidSystemInfo.ordering;
         // c) Construct a second CMap name by concatenating the registry and
-        // ordering obtained in step (b) in the format registryâ€“orderingâ€“UCS2
-        // (for example, Adobeâ€“Japan1â€“UCS2).
+        // ordering obtained in step (b) in the format registry–ordering–UCS2
+        // (for example, Adobe–Japan1–UCS2).
         var ucs2CMapName = new Name(registry + '-' + ordering + '-UCS2');
         // d) Obtain the CMap with the name constructed in step (c) (available
         // from the ASN Web site; see the Bibliography).
@@ -28189,4 +28189,11165 @@ var Metrics = {
     'space': 278,
     'exclam': 278,
     'quotedbl': 355,
-    'numbersign':
+    'numbersign': 556,
+    'dollar': 556,
+    'percent': 889,
+    'ampersand': 667,
+    'quoteright': 222,
+    'parenleft': 333,
+    'parenright': 333,
+    'asterisk': 389,
+    'plus': 584,
+    'comma': 278,
+    'hyphen': 333,
+    'period': 278,
+    'slash': 278,
+    'zero': 556,
+    'one': 556,
+    'two': 556,
+    'three': 556,
+    'four': 556,
+    'five': 556,
+    'six': 556,
+    'seven': 556,
+    'eight': 556,
+    'nine': 556,
+    'colon': 278,
+    'semicolon': 278,
+    'less': 584,
+    'equal': 584,
+    'greater': 584,
+    'question': 556,
+    'at': 1015,
+    'A': 667,
+    'B': 667,
+    'C': 722,
+    'D': 722,
+    'E': 667,
+    'F': 611,
+    'G': 778,
+    'H': 722,
+    'I': 278,
+    'J': 500,
+    'K': 667,
+    'L': 556,
+    'M': 833,
+    'N': 722,
+    'O': 778,
+    'P': 667,
+    'Q': 778,
+    'R': 722,
+    'S': 667,
+    'T': 611,
+    'U': 722,
+    'V': 667,
+    'W': 944,
+    'X': 667,
+    'Y': 667,
+    'Z': 611,
+    'bracketleft': 278,
+    'backslash': 278,
+    'bracketright': 278,
+    'asciicircum': 469,
+    'underscore': 556,
+    'quoteleft': 222,
+    'a': 556,
+    'b': 556,
+    'c': 500,
+    'd': 556,
+    'e': 556,
+    'f': 278,
+    'g': 556,
+    'h': 556,
+    'i': 222,
+    'j': 222,
+    'k': 500,
+    'l': 222,
+    'm': 833,
+    'n': 556,
+    'o': 556,
+    'p': 556,
+    'q': 556,
+    'r': 333,
+    's': 500,
+    't': 278,
+    'u': 556,
+    'v': 500,
+    'w': 722,
+    'x': 500,
+    'y': 500,
+    'z': 500,
+    'braceleft': 334,
+    'bar': 260,
+    'braceright': 334,
+    'asciitilde': 584,
+    'exclamdown': 333,
+    'cent': 556,
+    'sterling': 556,
+    'fraction': 167,
+    'yen': 556,
+    'florin': 556,
+    'section': 556,
+    'currency': 556,
+    'quotesingle': 191,
+    'quotedblleft': 333,
+    'guillemotleft': 556,
+    'guilsinglleft': 333,
+    'guilsinglright': 333,
+    'fi': 500,
+    'fl': 500,
+    'endash': 556,
+    'dagger': 556,
+    'daggerdbl': 556,
+    'periodcentered': 278,
+    'paragraph': 537,
+    'bullet': 350,
+    'quotesinglbase': 222,
+    'quotedblbase': 333,
+    'quotedblright': 333,
+    'guillemotright': 556,
+    'ellipsis': 1000,
+    'perthousand': 1000,
+    'questiondown': 611,
+    'grave': 333,
+    'acute': 333,
+    'circumflex': 333,
+    'tilde': 333,
+    'macron': 333,
+    'breve': 333,
+    'dotaccent': 333,
+    'dieresis': 333,
+    'ring': 333,
+    'cedilla': 333,
+    'hungarumlaut': 333,
+    'ogonek': 333,
+    'caron': 333,
+    'emdash': 1000,
+    'AE': 1000,
+    'ordfeminine': 370,
+    'Lslash': 556,
+    'Oslash': 778,
+    'OE': 1000,
+    'ordmasculine': 365,
+    'ae': 889,
+    'dotlessi': 278,
+    'lslash': 222,
+    'oslash': 611,
+    'oe': 944,
+    'germandbls': 611,
+    'Idieresis': 278,
+    'eacute': 556,
+    'abreve': 556,
+    'uhungarumlaut': 556,
+    'ecaron': 556,
+    'Ydieresis': 667,
+    'divide': 584,
+    'Yacute': 667,
+    'Acircumflex': 667,
+    'aacute': 556,
+    'Ucircumflex': 722,
+    'yacute': 500,
+    'scommaaccent': 500,
+    'ecircumflex': 556,
+    'Uring': 722,
+    'Udieresis': 722,
+    'aogonek': 556,
+    'Uacute': 722,
+    'uogonek': 556,
+    'Edieresis': 667,
+    'Dcroat': 722,
+    'commaaccent': 250,
+    'copyright': 737,
+    'Emacron': 667,
+    'ccaron': 500,
+    'aring': 556,
+    'Ncommaaccent': 722,
+    'lacute': 222,
+    'agrave': 556,
+    'Tcommaaccent': 611,
+    'Cacute': 722,
+    'atilde': 556,
+    'Edotaccent': 667,
+    'scaron': 500,
+    'scedilla': 500,
+    'iacute': 278,
+    'lozenge': 471,
+    'Rcaron': 722,
+    'Gcommaaccent': 778,
+    'ucircumflex': 556,
+    'acircumflex': 556,
+    'Amacron': 667,
+    'rcaron': 333,
+    'ccedilla': 500,
+    'Zdotaccent': 611,
+    'Thorn': 667,
+    'Omacron': 778,
+    'Racute': 722,
+    'Sacute': 667,
+    'dcaron': 643,
+    'Umacron': 722,
+    'uring': 556,
+    'threesuperior': 333,
+    'Ograve': 778,
+    'Agrave': 667,
+    'Abreve': 667,
+    'multiply': 584,
+    'uacute': 556,
+    'Tcaron': 611,
+    'partialdiff': 476,
+    'ydieresis': 500,
+    'Nacute': 722,
+    'icircumflex': 278,
+    'Ecircumflex': 667,
+    'adieresis': 556,
+    'edieresis': 556,
+    'cacute': 500,
+    'nacute': 556,
+    'umacron': 556,
+    'Ncaron': 722,
+    'Iacute': 278,
+    'plusminus': 584,
+    'brokenbar': 260,
+    'registered': 737,
+    'Gbreve': 778,
+    'Idotaccent': 278,
+    'summation': 600,
+    'Egrave': 667,
+    'racute': 333,
+    'omacron': 556,
+    'Zacute': 611,
+    'Zcaron': 611,
+    'greaterequal': 549,
+    'Eth': 722,
+    'Ccedilla': 722,
+    'lcommaaccent': 222,
+    'tcaron': 317,
+    'eogonek': 556,
+    'Uogonek': 722,
+    'Aacute': 667,
+    'Adieresis': 667,
+    'egrave': 556,
+    'zacute': 500,
+    'iogonek': 222,
+    'Oacute': 778,
+    'oacute': 556,
+    'amacron': 556,
+    'sacute': 500,
+    'idieresis': 278,
+    'Ocircumflex': 778,
+    'Ugrave': 722,
+    'Delta': 612,
+    'thorn': 556,
+    'twosuperior': 333,
+    'Odieresis': 778,
+    'mu': 556,
+    'igrave': 278,
+    'ohungarumlaut': 556,
+    'Eogonek': 667,
+    'dcroat': 556,
+    'threequarters': 834,
+    'Scedilla': 667,
+    'lcaron': 299,
+    'Kcommaaccent': 667,
+    'Lacute': 556,
+    'trademark': 1000,
+    'edotaccent': 556,
+    'Igrave': 278,
+    'Imacron': 278,
+    'Lcaron': 556,
+    'onehalf': 834,
+    'lessequal': 549,
+    'ocircumflex': 556,
+    'ntilde': 556,
+    'Uhungarumlaut': 722,
+    'Eacute': 667,
+    'emacron': 556,
+    'gbreve': 556,
+    'onequarter': 834,
+    'Scaron': 667,
+    'Scommaaccent': 667,
+    'Ohungarumlaut': 778,
+    'degree': 400,
+    'ograve': 556,
+    'Ccaron': 722,
+    'ugrave': 556,
+    'radical': 453,
+    'Dcaron': 722,
+    'rcommaaccent': 333,
+    'Ntilde': 722,
+    'otilde': 556,
+    'Rcommaaccent': 722,
+    'Lcommaaccent': 556,
+    'Atilde': 667,
+    'Aogonek': 667,
+    'Aring': 667,
+    'Otilde': 778,
+    'zdotaccent': 500,
+    'Ecaron': 667,
+    'Iogonek': 278,
+    'kcommaaccent': 500,
+    'minus': 584,
+    'Icircumflex': 278,
+    'ncaron': 556,
+    'tcommaaccent': 278,
+    'logicalnot': 584,
+    'odieresis': 556,
+    'udieresis': 556,
+    'notequal': 549,
+    'gcommaaccent': 556,
+    'eth': 556,
+    'zcaron': 500,
+    'ncommaaccent': 556,
+    'onesuperior': 333,
+    'imacron': 278,
+    'Euro': 556
+  },
+  'Symbol': {
+    'space': 250,
+    'exclam': 333,
+    'universal': 713,
+    'numbersign': 500,
+    'existential': 549,
+    'percent': 833,
+    'ampersand': 778,
+    'suchthat': 439,
+    'parenleft': 333,
+    'parenright': 333,
+    'asteriskmath': 500,
+    'plus': 549,
+    'comma': 250,
+    'minus': 549,
+    'period': 250,
+    'slash': 278,
+    'zero': 500,
+    'one': 500,
+    'two': 500,
+    'three': 500,
+    'four': 500,
+    'five': 500,
+    'six': 500,
+    'seven': 500,
+    'eight': 500,
+    'nine': 500,
+    'colon': 278,
+    'semicolon': 278,
+    'less': 549,
+    'equal': 549,
+    'greater': 549,
+    'question': 444,
+    'congruent': 549,
+    'Alpha': 722,
+    'Beta': 667,
+    'Chi': 722,
+    'Delta': 612,
+    'Epsilon': 611,
+    'Phi': 763,
+    'Gamma': 603,
+    'Eta': 722,
+    'Iota': 333,
+    'theta1': 631,
+    'Kappa': 722,
+    'Lambda': 686,
+    'Mu': 889,
+    'Nu': 722,
+    'Omicron': 722,
+    'Pi': 768,
+    'Theta': 741,
+    'Rho': 556,
+    'Sigma': 592,
+    'Tau': 611,
+    'Upsilon': 690,
+    'sigma1': 439,
+    'Omega': 768,
+    'Xi': 645,
+    'Psi': 795,
+    'Zeta': 611,
+    'bracketleft': 333,
+    'therefore': 863,
+    'bracketright': 333,
+    'perpendicular': 658,
+    'underscore': 500,
+    'radicalex': 500,
+    'alpha': 631,
+    'beta': 549,
+    'chi': 549,
+    'delta': 494,
+    'epsilon': 439,
+    'phi': 521,
+    'gamma': 411,
+    'eta': 603,
+    'iota': 329,
+    'phi1': 603,
+    'kappa': 549,
+    'lambda': 549,
+    'mu': 576,
+    'nu': 521,
+    'omicron': 549,
+    'pi': 549,
+    'theta': 521,
+    'rho': 549,
+    'sigma': 603,
+    'tau': 439,
+    'upsilon': 576,
+    'omega1': 713,
+    'omega': 686,
+    'xi': 493,
+    'psi': 686,
+    'zeta': 494,
+    'braceleft': 480,
+    'bar': 200,
+    'braceright': 480,
+    'similar': 549,
+    'Euro': 750,
+    'Upsilon1': 620,
+    'minute': 247,
+    'lessequal': 549,
+    'fraction': 167,
+    'infinity': 713,
+    'florin': 500,
+    'club': 753,
+    'diamond': 753,
+    'heart': 753,
+    'spade': 753,
+    'arrowboth': 1042,
+    'arrowleft': 987,
+    'arrowup': 603,
+    'arrowright': 987,
+    'arrowdown': 603,
+    'degree': 400,
+    'plusminus': 549,
+    'second': 411,
+    'greaterequal': 549,
+    'multiply': 549,
+    'proportional': 713,
+    'partialdiff': 494,
+    'bullet': 460,
+    'divide': 549,
+    'notequal': 549,
+    'equivalence': 549,
+    'approxequal': 549,
+    'ellipsis': 1000,
+    'arrowvertex': 603,
+    'arrowhorizex': 1000,
+    'carriagereturn': 658,
+    'aleph': 823,
+    'Ifraktur': 686,
+    'Rfraktur': 795,
+    'weierstrass': 987,
+    'circlemultiply': 768,
+    'circleplus': 768,
+    'emptyset': 823,
+    'intersection': 768,
+    'union': 768,
+    'propersuperset': 713,
+    'reflexsuperset': 713,
+    'notsubset': 713,
+    'propersubset': 713,
+    'reflexsubset': 713,
+    'element': 713,
+    'notelement': 713,
+    'angle': 768,
+    'gradient': 713,
+    'registerserif': 790,
+    'copyrightserif': 790,
+    'trademarkserif': 890,
+    'product': 823,
+    'radical': 549,
+    'dotmath': 250,
+    'logicalnot': 713,
+    'logicaland': 603,
+    'logicalor': 603,
+    'arrowdblboth': 1042,
+    'arrowdblleft': 987,
+    'arrowdblup': 603,
+    'arrowdblright': 987,
+    'arrowdbldown': 603,
+    'lozenge': 494,
+    'angleleft': 329,
+    'registersans': 790,
+    'copyrightsans': 790,
+    'trademarksans': 786,
+    'summation': 713,
+    'parenlefttp': 384,
+    'parenleftex': 384,
+    'parenleftbt': 384,
+    'bracketlefttp': 384,
+    'bracketleftex': 384,
+    'bracketleftbt': 384,
+    'bracelefttp': 494,
+    'braceleftmid': 494,
+    'braceleftbt': 494,
+    'braceex': 494,
+    'angleright': 329,
+    'integral': 274,
+    'integraltp': 686,
+    'integralex': 686,
+    'integralbt': 686,
+    'parenrighttp': 384,
+    'parenrightex': 384,
+    'parenrightbt': 384,
+    'bracketrighttp': 384,
+    'bracketrightex': 384,
+    'bracketrightbt': 384,
+    'bracerighttp': 494,
+    'bracerightmid': 494,
+    'bracerightbt': 494,
+    'apple': 790
+  },
+  'Times-Roman': {
+    'space': 250,
+    'exclam': 333,
+    'quotedbl': 408,
+    'numbersign': 500,
+    'dollar': 500,
+    'percent': 833,
+    'ampersand': 778,
+    'quoteright': 333,
+    'parenleft': 333,
+    'parenright': 333,
+    'asterisk': 500,
+    'plus': 564,
+    'comma': 250,
+    'hyphen': 333,
+    'period': 250,
+    'slash': 278,
+    'zero': 500,
+    'one': 500,
+    'two': 500,
+    'three': 500,
+    'four': 500,
+    'five': 500,
+    'six': 500,
+    'seven': 500,
+    'eight': 500,
+    'nine': 500,
+    'colon': 278,
+    'semicolon': 278,
+    'less': 564,
+    'equal': 564,
+    'greater': 564,
+    'question': 444,
+    'at': 921,
+    'A': 722,
+    'B': 667,
+    'C': 667,
+    'D': 722,
+    'E': 611,
+    'F': 556,
+    'G': 722,
+    'H': 722,
+    'I': 333,
+    'J': 389,
+    'K': 722,
+    'L': 611,
+    'M': 889,
+    'N': 722,
+    'O': 722,
+    'P': 556,
+    'Q': 722,
+    'R': 667,
+    'S': 556,
+    'T': 611,
+    'U': 722,
+    'V': 722,
+    'W': 944,
+    'X': 722,
+    'Y': 722,
+    'Z': 611,
+    'bracketleft': 333,
+    'backslash': 278,
+    'bracketright': 333,
+    'asciicircum': 469,
+    'underscore': 500,
+    'quoteleft': 333,
+    'a': 444,
+    'b': 500,
+    'c': 444,
+    'd': 500,
+    'e': 444,
+    'f': 333,
+    'g': 500,
+    'h': 500,
+    'i': 278,
+    'j': 278,
+    'k': 500,
+    'l': 278,
+    'm': 778,
+    'n': 500,
+    'o': 500,
+    'p': 500,
+    'q': 500,
+    'r': 333,
+    's': 389,
+    't': 278,
+    'u': 500,
+    'v': 500,
+    'w': 722,
+    'x': 500,
+    'y': 500,
+    'z': 444,
+    'braceleft': 480,
+    'bar': 200,
+    'braceright': 480,
+    'asciitilde': 541,
+    'exclamdown': 333,
+    'cent': 500,
+    'sterling': 500,
+    'fraction': 167,
+    'yen': 500,
+    'florin': 500,
+    'section': 500,
+    'currency': 500,
+    'quotesingle': 180,
+    'quotedblleft': 444,
+    'guillemotleft': 500,
+    'guilsinglleft': 333,
+    'guilsinglright': 333,
+    'fi': 556,
+    'fl': 556,
+    'endash': 500,
+    'dagger': 500,
+    'daggerdbl': 500,
+    'periodcentered': 250,
+    'paragraph': 453,
+    'bullet': 350,
+    'quotesinglbase': 333,
+    'quotedblbase': 444,
+    'quotedblright': 444,
+    'guillemotright': 500,
+    'ellipsis': 1000,
+    'perthousand': 1000,
+    'questiondown': 444,
+    'grave': 333,
+    'acute': 333,
+    'circumflex': 333,
+    'tilde': 333,
+    'macron': 333,
+    'breve': 333,
+    'dotaccent': 333,
+    'dieresis': 333,
+    'ring': 333,
+    'cedilla': 333,
+    'hungarumlaut': 333,
+    'ogonek': 333,
+    'caron': 333,
+    'emdash': 1000,
+    'AE': 889,
+    'ordfeminine': 276,
+    'Lslash': 611,
+    'Oslash': 722,
+    'OE': 889,
+    'ordmasculine': 310,
+    'ae': 667,
+    'dotlessi': 278,
+    'lslash': 278,
+    'oslash': 500,
+    'oe': 722,
+    'germandbls': 500,
+    'Idieresis': 333,
+    'eacute': 444,
+    'abreve': 444,
+    'uhungarumlaut': 500,
+    'ecaron': 444,
+    'Ydieresis': 722,
+    'divide': 564,
+    'Yacute': 722,
+    'Acircumflex': 722,
+    'aacute': 444,
+    'Ucircumflex': 722,
+    'yacute': 500,
+    'scommaaccent': 389,
+    'ecircumflex': 444,
+    'Uring': 722,
+    'Udieresis': 722,
+    'aogonek': 444,
+    'Uacute': 722,
+    'uogonek': 500,
+    'Edieresis': 611,
+    'Dcroat': 722,
+    'commaaccent': 250,
+    'copyright': 760,
+    'Emacron': 611,
+    'ccaron': 444,
+    'aring': 444,
+    'Ncommaaccent': 722,
+    'lacute': 278,
+    'agrave': 444,
+    'Tcommaaccent': 611,
+    'Cacute': 667,
+    'atilde': 444,
+    'Edotaccent': 611,
+    'scaron': 389,
+    'scedilla': 389,
+    'iacute': 278,
+    'lozenge': 471,
+    'Rcaron': 667,
+    'Gcommaaccent': 722,
+    'ucircumflex': 500,
+    'acircumflex': 444,
+    'Amacron': 722,
+    'rcaron': 333,
+    'ccedilla': 444,
+    'Zdotaccent': 611,
+    'Thorn': 556,
+    'Omacron': 722,
+    'Racute': 667,
+    'Sacute': 556,
+    'dcaron': 588,
+    'Umacron': 722,
+    'uring': 500,
+    'threesuperior': 300,
+    'Ograve': 722,
+    'Agrave': 722,
+    'Abreve': 722,
+    'multiply': 564,
+    'uacute': 500,
+    'Tcaron': 611,
+    'partialdiff': 476,
+    'ydieresis': 500,
+    'Nacute': 722,
+    'icircumflex': 278,
+    'Ecircumflex': 611,
+    'adieresis': 444,
+    'edieresis': 444,
+    'cacute': 444,
+    'nacute': 500,
+    'umacron': 500,
+    'Ncaron': 722,
+    'Iacute': 333,
+    'plusminus': 564,
+    'brokenbar': 200,
+    'registered': 760,
+    'Gbreve': 722,
+    'Idotaccent': 333,
+    'summation': 600,
+    'Egrave': 611,
+    'racute': 333,
+    'omacron': 500,
+    'Zacute': 611,
+    'Zcaron': 611,
+    'greaterequal': 549,
+    'Eth': 722,
+    'Ccedilla': 667,
+    'lcommaaccent': 278,
+    'tcaron': 326,
+    'eogonek': 444,
+    'Uogonek': 722,
+    'Aacute': 722,
+    'Adieresis': 722,
+    'egrave': 444,
+    'zacute': 444,
+    'iogonek': 278,
+    'Oacute': 722,
+    'oacute': 500,
+    'amacron': 444,
+    'sacute': 389,
+    'idieresis': 278,
+    'Ocircumflex': 722,
+    'Ugrave': 722,
+    'Delta': 612,
+    'thorn': 500,
+    'twosuperior': 300,
+    'Odieresis': 722,
+    'mu': 500,
+    'igrave': 278,
+    'ohungarumlaut': 500,
+    'Eogonek': 611,
+    'dcroat': 500,
+    'threequarters': 750,
+    'Scedilla': 556,
+    'lcaron': 344,
+    'Kcommaaccent': 722,
+    'Lacute': 611,
+    'trademark': 980,
+    'edotaccent': 444,
+    'Igrave': 333,
+    'Imacron': 333,
+    'Lcaron': 611,
+    'onehalf': 750,
+    'lessequal': 549,
+    'ocircumflex': 500,
+    'ntilde': 500,
+    'Uhungarumlaut': 722,
+    'Eacute': 611,
+    'emacron': 444,
+    'gbreve': 500,
+    'onequarter': 750,
+    'Scaron': 556,
+    'Scommaaccent': 556,
+    'Ohungarumlaut': 722,
+    'degree': 400,
+    'ograve': 500,
+    'Ccaron': 667,
+    'ugrave': 500,
+    'radical': 453,
+    'Dcaron': 722,
+    'rcommaaccent': 333,
+    'Ntilde': 722,
+    'otilde': 500,
+    'Rcommaaccent': 667,
+    'Lcommaaccent': 611,
+    'Atilde': 722,
+    'Aogonek': 722,
+    'Aring': 722,
+    'Otilde': 722,
+    'zdotaccent': 444,
+    'Ecaron': 611,
+    'Iogonek': 333,
+    'kcommaaccent': 500,
+    'minus': 564,
+    'Icircumflex': 333,
+    'ncaron': 500,
+    'tcommaaccent': 278,
+    'logicalnot': 564,
+    'odieresis': 500,
+    'udieresis': 500,
+    'notequal': 549,
+    'gcommaaccent': 500,
+    'eth': 500,
+    'zcaron': 444,
+    'ncommaaccent': 500,
+    'onesuperior': 300,
+    'imacron': 278,
+    'Euro': 500
+  },
+  'Times-Bold': {
+    'space': 250,
+    'exclam': 333,
+    'quotedbl': 555,
+    'numbersign': 500,
+    'dollar': 500,
+    'percent': 1000,
+    'ampersand': 833,
+    'quoteright': 333,
+    'parenleft': 333,
+    'parenright': 333,
+    'asterisk': 500,
+    'plus': 570,
+    'comma': 250,
+    'hyphen': 333,
+    'period': 250,
+    'slash': 278,
+    'zero': 500,
+    'one': 500,
+    'two': 500,
+    'three': 500,
+    'four': 500,
+    'five': 500,
+    'six': 500,
+    'seven': 500,
+    'eight': 500,
+    'nine': 500,
+    'colon': 333,
+    'semicolon': 333,
+    'less': 570,
+    'equal': 570,
+    'greater': 570,
+    'question': 500,
+    'at': 930,
+    'A': 722,
+    'B': 667,
+    'C': 722,
+    'D': 722,
+    'E': 667,
+    'F': 611,
+    'G': 778,
+    'H': 778,
+    'I': 389,
+    'J': 500,
+    'K': 778,
+    'L': 667,
+    'M': 944,
+    'N': 722,
+    'O': 778,
+    'P': 611,
+    'Q': 778,
+    'R': 722,
+    'S': 556,
+    'T': 667,
+    'U': 722,
+    'V': 722,
+    'W': 1000,
+    'X': 722,
+    'Y': 722,
+    'Z': 667,
+    'bracketleft': 333,
+    'backslash': 278,
+    'bracketright': 333,
+    'asciicircum': 581,
+    'underscore': 500,
+    'quoteleft': 333,
+    'a': 500,
+    'b': 556,
+    'c': 444,
+    'd': 556,
+    'e': 444,
+    'f': 333,
+    'g': 500,
+    'h': 556,
+    'i': 278,
+    'j': 333,
+    'k': 556,
+    'l': 278,
+    'm': 833,
+    'n': 556,
+    'o': 500,
+    'p': 556,
+    'q': 556,
+    'r': 444,
+    's': 389,
+    't': 333,
+    'u': 556,
+    'v': 500,
+    'w': 722,
+    'x': 500,
+    'y': 500,
+    'z': 444,
+    'braceleft': 394,
+    'bar': 220,
+    'braceright': 394,
+    'asciitilde': 520,
+    'exclamdown': 333,
+    'cent': 500,
+    'sterling': 500,
+    'fraction': 167,
+    'yen': 500,
+    'florin': 500,
+    'section': 500,
+    'currency': 500,
+    'quotesingle': 278,
+    'quotedblleft': 500,
+    'guillemotleft': 500,
+    'guilsinglleft': 333,
+    'guilsinglright': 333,
+    'fi': 556,
+    'fl': 556,
+    'endash': 500,
+    'dagger': 500,
+    'daggerdbl': 500,
+    'periodcentered': 250,
+    'paragraph': 540,
+    'bullet': 350,
+    'quotesinglbase': 333,
+    'quotedblbase': 500,
+    'quotedblright': 500,
+    'guillemotright': 500,
+    'ellipsis': 1000,
+    'perthousand': 1000,
+    'questiondown': 500,
+    'grave': 333,
+    'acute': 333,
+    'circumflex': 333,
+    'tilde': 333,
+    'macron': 333,
+    'breve': 333,
+    'dotaccent': 333,
+    'dieresis': 333,
+    'ring': 333,
+    'cedilla': 333,
+    'hungarumlaut': 333,
+    'ogonek': 333,
+    'caron': 333,
+    'emdash': 1000,
+    'AE': 1000,
+    'ordfeminine': 300,
+    'Lslash': 667,
+    'Oslash': 778,
+    'OE': 1000,
+    'ordmasculine': 330,
+    'ae': 722,
+    'dotlessi': 278,
+    'lslash': 278,
+    'oslash': 500,
+    'oe': 722,
+    'germandbls': 556,
+    'Idieresis': 389,
+    'eacute': 444,
+    'abreve': 500,
+    'uhungarumlaut': 556,
+    'ecaron': 444,
+    'Ydieresis': 722,
+    'divide': 570,
+    'Yacute': 722,
+    'Acircumflex': 722,
+    'aacute': 500,
+    'Ucircumflex': 722,
+    'yacute': 500,
+    'scommaaccent': 389,
+    'ecircumflex': 444,
+    'Uring': 722,
+    'Udieresis': 722,
+    'aogonek': 500,
+    'Uacute': 722,
+    'uogonek': 556,
+    'Edieresis': 667,
+    'Dcroat': 722,
+    'commaaccent': 250,
+    'copyright': 747,
+    'Emacron': 667,
+    'ccaron': 444,
+    'aring': 500,
+    'Ncommaaccent': 722,
+    'lacute': 278,
+    'agrave': 500,
+    'Tcommaaccent': 667,
+    'Cacute': 722,
+    'atilde': 500,
+    'Edotaccent': 667,
+    'scaron': 389,
+    'scedilla': 389,
+    'iacute': 278,
+    'lozenge': 494,
+    'Rcaron': 722,
+    'Gcommaaccent': 778,
+    'ucircumflex': 556,
+    'acircumflex': 500,
+    'Amacron': 722,
+    'rcaron': 444,
+    'ccedilla': 444,
+    'Zdotaccent': 667,
+    'Thorn': 611,
+    'Omacron': 778,
+    'Racute': 722,
+    'Sacute': 556,
+    'dcaron': 672,
+    'Umacron': 722,
+    'uring': 556,
+    'threesuperior': 300,
+    'Ograve': 778,
+    'Agrave': 722,
+    'Abreve': 722,
+    'multiply': 570,
+    'uacute': 556,
+    'Tcaron': 667,
+    'partialdiff': 494,
+    'ydieresis': 500,
+    'Nacute': 722,
+    'icircumflex': 278,
+    'Ecircumflex': 667,
+    'adieresis': 500,
+    'edieresis': 444,
+    'cacute': 444,
+    'nacute': 556,
+    'umacron': 556,
+    'Ncaron': 722,
+    'Iacute': 389,
+    'plusminus': 570,
+    'brokenbar': 220,
+    'registered': 747,
+    'Gbreve': 778,
+    'Idotaccent': 389,
+    'summation': 600,
+    'Egrave': 667,
+    'racute': 444,
+    'omacron': 500,
+    'Zacute': 667,
+    'Zcaron': 667,
+    'greaterequal': 549,
+    'Eth': 722,
+    'Ccedilla': 722,
+    'lcommaaccent': 278,
+    'tcaron': 416,
+    'eogonek': 444,
+    'Uogonek': 722,
+    'Aacute': 722,
+    'Adieresis': 722,
+    'egrave': 444,
+    'zacute': 444,
+    'iogonek': 278,
+    'Oacute': 778,
+    'oacute': 500,
+    'amacron': 500,
+    'sacute': 389,
+    'idieresis': 278,
+    'Ocircumflex': 778,
+    'Ugrave': 722,
+    'Delta': 612,
+    'thorn': 556,
+    'twosuperior': 300,
+    'Odieresis': 778,
+    'mu': 556,
+    'igrave': 278,
+    'ohungarumlaut': 500,
+    'Eogonek': 667,
+    'dcroat': 556,
+    'threequarters': 750,
+    'Scedilla': 556,
+    'lcaron': 394,
+    'Kcommaaccent': 778,
+    'Lacute': 667,
+    'trademark': 1000,
+    'edotaccent': 444,
+    'Igrave': 389,
+    'Imacron': 389,
+    'Lcaron': 667,
+    'onehalf': 750,
+    'lessequal': 549,
+    'ocircumflex': 500,
+    'ntilde': 556,
+    'Uhungarumlaut': 722,
+    'Eacute': 667,
+    'emacron': 444,
+    'gbreve': 500,
+    'onequarter': 750,
+    'Scaron': 556,
+    'Scommaaccent': 556,
+    'Ohungarumlaut': 778,
+    'degree': 400,
+    'ograve': 500,
+    'Ccaron': 722,
+    'ugrave': 556,
+    'radical': 549,
+    'Dcaron': 722,
+    'rcommaaccent': 444,
+    'Ntilde': 722,
+    'otilde': 500,
+    'Rcommaaccent': 722,
+    'Lcommaaccent': 667,
+    'Atilde': 722,
+    'Aogonek': 722,
+    'Aring': 722,
+    'Otilde': 778,
+    'zdotaccent': 444,
+    'Ecaron': 667,
+    'Iogonek': 389,
+    'kcommaaccent': 556,
+    'minus': 570,
+    'Icircumflex': 389,
+    'ncaron': 556,
+    'tcommaaccent': 333,
+    'logicalnot': 570,
+    'odieresis': 500,
+    'udieresis': 556,
+    'notequal': 549,
+    'gcommaaccent': 500,
+    'eth': 500,
+    'zcaron': 444,
+    'ncommaaccent': 556,
+    'onesuperior': 300,
+    'imacron': 278,
+    'Euro': 500
+  },
+  'Times-BoldItalic': {
+    'space': 250,
+    'exclam': 389,
+    'quotedbl': 555,
+    'numbersign': 500,
+    'dollar': 500,
+    'percent': 833,
+    'ampersand': 778,
+    'quoteright': 333,
+    'parenleft': 333,
+    'parenright': 333,
+    'asterisk': 500,
+    'plus': 570,
+    'comma': 250,
+    'hyphen': 333,
+    'period': 250,
+    'slash': 278,
+    'zero': 500,
+    'one': 500,
+    'two': 500,
+    'three': 500,
+    'four': 500,
+    'five': 500,
+    'six': 500,
+    'seven': 500,
+    'eight': 500,
+    'nine': 500,
+    'colon': 333,
+    'semicolon': 333,
+    'less': 570,
+    'equal': 570,
+    'greater': 570,
+    'question': 500,
+    'at': 832,
+    'A': 667,
+    'B': 667,
+    'C': 667,
+    'D': 722,
+    'E': 667,
+    'F': 667,
+    'G': 722,
+    'H': 778,
+    'I': 389,
+    'J': 500,
+    'K': 667,
+    'L': 611,
+    'M': 889,
+    'N': 722,
+    'O': 722,
+    'P': 611,
+    'Q': 722,
+    'R': 667,
+    'S': 556,
+    'T': 611,
+    'U': 722,
+    'V': 667,
+    'W': 889,
+    'X': 667,
+    'Y': 611,
+    'Z': 611,
+    'bracketleft': 333,
+    'backslash': 278,
+    'bracketright': 333,
+    'asciicircum': 570,
+    'underscore': 500,
+    'quoteleft': 333,
+    'a': 500,
+    'b': 500,
+    'c': 444,
+    'd': 500,
+    'e': 444,
+    'f': 333,
+    'g': 500,
+    'h': 556,
+    'i': 278,
+    'j': 278,
+    'k': 500,
+    'l': 278,
+    'm': 778,
+    'n': 556,
+    'o': 500,
+    'p': 500,
+    'q': 500,
+    'r': 389,
+    's': 389,
+    't': 278,
+    'u': 556,
+    'v': 444,
+    'w': 667,
+    'x': 500,
+    'y': 444,
+    'z': 389,
+    'braceleft': 348,
+    'bar': 220,
+    'braceright': 348,
+    'asciitilde': 570,
+    'exclamdown': 389,
+    'cent': 500,
+    'sterling': 500,
+    'fraction': 167,
+    'yen': 500,
+    'florin': 500,
+    'section': 500,
+    'currency': 500,
+    'quotesingle': 278,
+    'quotedblleft': 500,
+    'guillemotleft': 500,
+    'guilsinglleft': 333,
+    'guilsinglright': 333,
+    'fi': 556,
+    'fl': 556,
+    'endash': 500,
+    'dagger': 500,
+    'daggerdbl': 500,
+    'periodcentered': 250,
+    'paragraph': 500,
+    'bullet': 350,
+    'quotesinglbase': 333,
+    'quotedblbase': 500,
+    'quotedblright': 500,
+    'guillemotright': 500,
+    'ellipsis': 1000,
+    'perthousand': 1000,
+    'questiondown': 500,
+    'grave': 333,
+    'acute': 333,
+    'circumflex': 333,
+    'tilde': 333,
+    'macron': 333,
+    'breve': 333,
+    'dotaccent': 333,
+    'dieresis': 333,
+    'ring': 333,
+    'cedilla': 333,
+    'hungarumlaut': 333,
+    'ogonek': 333,
+    'caron': 333,
+    'emdash': 1000,
+    'AE': 944,
+    'ordfeminine': 266,
+    'Lslash': 611,
+    'Oslash': 722,
+    'OE': 944,
+    'ordmasculine': 300,
+    'ae': 722,
+    'dotlessi': 278,
+    'lslash': 278,
+    'oslash': 500,
+    'oe': 722,
+    'germandbls': 500,
+    'Idieresis': 389,
+    'eacute': 444,
+    'abreve': 500,
+    'uhungarumlaut': 556,
+    'ecaron': 444,
+    'Ydieresis': 611,
+    'divide': 570,
+    'Yacute': 611,
+    'Acircumflex': 667,
+    'aacute': 500,
+    'Ucircumflex': 722,
+    'yacute': 444,
+    'scommaaccent': 389,
+    'ecircumflex': 444,
+    'Uring': 722,
+    'Udieresis': 722,
+    'aogonek': 500,
+    'Uacute': 722,
+    'uogonek': 556,
+    'Edieresis': 667,
+    'Dcroat': 722,
+    'commaaccent': 250,
+    'copyright': 747,
+    'Emacron': 667,
+    'ccaron': 444,
+    'aring': 500,
+    'Ncommaaccent': 722,
+    'lacute': 278,
+    'agrave': 500,
+    'Tcommaaccent': 611,
+    'Cacute': 667,
+    'atilde': 500,
+    'Edotaccent': 667,
+    'scaron': 389,
+    'scedilla': 389,
+    'iacute': 278,
+    'lozenge': 494,
+    'Rcaron': 667,
+    'Gcommaaccent': 722,
+    'ucircumflex': 556,
+    'acircumflex': 500,
+    'Amacron': 667,
+    'rcaron': 389,
+    'ccedilla': 444,
+    'Zdotaccent': 611,
+    'Thorn': 611,
+    'Omacron': 722,
+    'Racute': 667,
+    'Sacute': 556,
+    'dcaron': 608,
+    'Umacron': 722,
+    'uring': 556,
+    'threesuperior': 300,
+    'Ograve': 722,
+    'Agrave': 667,
+    'Abreve': 667,
+    'multiply': 570,
+    'uacute': 556,
+    'Tcaron': 611,
+    'partialdiff': 494,
+    'ydieresis': 444,
+    'Nacute': 722,
+    'icircumflex': 278,
+    'Ecircumflex': 667,
+    'adieresis': 500,
+    'edieresis': 444,
+    'cacute': 444,
+    'nacute': 556,
+    'umacron': 556,
+    'Ncaron': 722,
+    'Iacute': 389,
+    'plusminus': 570,
+    'brokenbar': 220,
+    'registered': 747,
+    'Gbreve': 722,
+    'Idotaccent': 389,
+    'summation': 600,
+    'Egrave': 667,
+    'racute': 389,
+    'omacron': 500,
+    'Zacute': 611,
+    'Zcaron': 611,
+    'greaterequal': 549,
+    'Eth': 722,
+    'Ccedilla': 667,
+    'lcommaaccent': 278,
+    'tcaron': 366,
+    'eogonek': 444,
+    'Uogonek': 722,
+    'Aacute': 667,
+    'Adieresis': 667,
+    'egrave': 444,
+    'zacute': 389,
+    'iogonek': 278,
+    'Oacute': 722,
+    'oacute': 500,
+    'amacron': 500,
+    'sacute': 389,
+    'idieresis': 278,
+    'Ocircumflex': 722,
+    'Ugrave': 722,
+    'Delta': 612,
+    'thorn': 500,
+    'twosuperior': 300,
+    'Odieresis': 722,
+    'mu': 576,
+    'igrave': 278,
+    'ohungarumlaut': 500,
+    'Eogonek': 667,
+    'dcroat': 500,
+    'threequarters': 750,
+    'Scedilla': 556,
+    'lcaron': 382,
+    'Kcommaaccent': 667,
+    'Lacute': 611,
+    'trademark': 1000,
+    'edotaccent': 444,
+    'Igrave': 389,
+    'Imacron': 389,
+    'Lcaron': 611,
+    'onehalf': 750,
+    'lessequal': 549,
+    'ocircumflex': 500,
+    'ntilde': 556,
+    'Uhungarumlaut': 722,
+    'Eacute': 667,
+    'emacron': 444,
+    'gbreve': 500,
+    'onequarter': 750,
+    'Scaron': 556,
+    'Scommaaccent': 556,
+    'Ohungarumlaut': 722,
+    'degree': 400,
+    'ograve': 500,
+    'Ccaron': 667,
+    'ugrave': 556,
+    'radical': 549,
+    'Dcaron': 722,
+    'rcommaaccent': 389,
+    'Ntilde': 722,
+    'otilde': 500,
+    'Rcommaaccent': 667,
+    'Lcommaaccent': 611,
+    'Atilde': 667,
+    'Aogonek': 667,
+    'Aring': 667,
+    'Otilde': 722,
+    'zdotaccent': 389,
+    'Ecaron': 667,
+    'Iogonek': 389,
+    'kcommaaccent': 500,
+    'minus': 606,
+    'Icircumflex': 389,
+    'ncaron': 556,
+    'tcommaaccent': 278,
+    'logicalnot': 606,
+    'odieresis': 500,
+    'udieresis': 556,
+    'notequal': 549,
+    'gcommaaccent': 500,
+    'eth': 500,
+    'zcaron': 389,
+    'ncommaaccent': 556,
+    'onesuperior': 300,
+    'imacron': 278,
+    'Euro': 500
+  },
+  'Times-Italic': {
+    'space': 250,
+    'exclam': 333,
+    'quotedbl': 420,
+    'numbersign': 500,
+    'dollar': 500,
+    'percent': 833,
+    'ampersand': 778,
+    'quoteright': 333,
+    'parenleft': 333,
+    'parenright': 333,
+    'asterisk': 500,
+    'plus': 675,
+    'comma': 250,
+    'hyphen': 333,
+    'period': 250,
+    'slash': 278,
+    'zero': 500,
+    'one': 500,
+    'two': 500,
+    'three': 500,
+    'four': 500,
+    'five': 500,
+    'six': 500,
+    'seven': 500,
+    'eight': 500,
+    'nine': 500,
+    'colon': 333,
+    'semicolon': 333,
+    'less': 675,
+    'equal': 675,
+    'greater': 675,
+    'question': 500,
+    'at': 920,
+    'A': 611,
+    'B': 611,
+    'C': 667,
+    'D': 722,
+    'E': 611,
+    'F': 611,
+    'G': 722,
+    'H': 722,
+    'I': 333,
+    'J': 444,
+    'K': 667,
+    'L': 556,
+    'M': 833,
+    'N': 667,
+    'O': 722,
+    'P': 611,
+    'Q': 722,
+    'R': 611,
+    'S': 500,
+    'T': 556,
+    'U': 722,
+    'V': 611,
+    'W': 833,
+    'X': 611,
+    'Y': 556,
+    'Z': 556,
+    'bracketleft': 389,
+    'backslash': 278,
+    'bracketright': 389,
+    'asciicircum': 422,
+    'underscore': 500,
+    'quoteleft': 333,
+    'a': 500,
+    'b': 500,
+    'c': 444,
+    'd': 500,
+    'e': 444,
+    'f': 278,
+    'g': 500,
+    'h': 500,
+    'i': 278,
+    'j': 278,
+    'k': 444,
+    'l': 278,
+    'm': 722,
+    'n': 500,
+    'o': 500,
+    'p': 500,
+    'q': 500,
+    'r': 389,
+    's': 389,
+    't': 278,
+    'u': 500,
+    'v': 444,
+    'w': 667,
+    'x': 444,
+    'y': 444,
+    'z': 389,
+    'braceleft': 400,
+    'bar': 275,
+    'braceright': 400,
+    'asciitilde': 541,
+    'exclamdown': 389,
+    'cent': 500,
+    'sterling': 500,
+    'fraction': 167,
+    'yen': 500,
+    'florin': 500,
+    'section': 500,
+    'currency': 500,
+    'quotesingle': 214,
+    'quotedblleft': 556,
+    'guillemotleft': 500,
+    'guilsinglleft': 333,
+    'guilsinglright': 333,
+    'fi': 500,
+    'fl': 500,
+    'endash': 500,
+    'dagger': 500,
+    'daggerdbl': 500,
+    'periodcentered': 250,
+    'paragraph': 523,
+    'bullet': 350,
+    'quotesinglbase': 333,
+    'quotedblbase': 556,
+    'quotedblright': 556,
+    'guillemotright': 500,
+    'ellipsis': 889,
+    'perthousand': 1000,
+    'questiondown': 500,
+    'grave': 333,
+    'acute': 333,
+    'circumflex': 333,
+    'tilde': 333,
+    'macron': 333,
+    'breve': 333,
+    'dotaccent': 333,
+    'dieresis': 333,
+    'ring': 333,
+    'cedilla': 333,
+    'hungarumlaut': 333,
+    'ogonek': 333,
+    'caron': 333,
+    'emdash': 889,
+    'AE': 889,
+    'ordfeminine': 276,
+    'Lslash': 556,
+    'Oslash': 722,
+    'OE': 944,
+    'ordmasculine': 310,
+    'ae': 667,
+    'dotlessi': 278,
+    'lslash': 278,
+    'oslash': 500,
+    'oe': 667,
+    'germandbls': 500,
+    'Idieresis': 333,
+    'eacute': 444,
+    'abreve': 500,
+    'uhungarumlaut': 500,
+    'ecaron': 444,
+    'Ydieresis': 556,
+    'divide': 675,
+    'Yacute': 556,
+    'Acircumflex': 611,
+    'aacute': 500,
+    'Ucircumflex': 722,
+    'yacute': 444,
+    'scommaaccent': 389,
+    'ecircumflex': 444,
+    'Uring': 722,
+    'Udieresis': 722,
+    'aogonek': 500,
+    'Uacute': 722,
+    'uogonek': 500,
+    'Edieresis': 611,
+    'Dcroat': 722,
+    'commaaccent': 250,
+    'copyright': 760,
+    'Emacron': 611,
+    'ccaron': 444,
+    'aring': 500,
+    'Ncommaaccent': 667,
+    'lacute': 278,
+    'agrave': 500,
+    'Tcommaaccent': 556,
+    'Cacute': 667,
+    'atilde': 500,
+    'Edotaccent': 611,
+    'scaron': 389,
+    'scedilla': 389,
+    'iacute': 278,
+    'lozenge': 471,
+    'Rcaron': 611,
+    'Gcommaaccent': 722,
+    'ucircumflex': 500,
+    'acircumflex': 500,
+    'Amacron': 611,
+    'rcaron': 389,
+    'ccedilla': 444,
+    'Zdotaccent': 556,
+    'Thorn': 611,
+    'Omacron': 722,
+    'Racute': 611,
+    'Sacute': 500,
+    'dcaron': 544,
+    'Umacron': 722,
+    'uring': 500,
+    'threesuperior': 300,
+    'Ograve': 722,
+    'Agrave': 611,
+    'Abreve': 611,
+    'multiply': 675,
+    'uacute': 500,
+    'Tcaron': 556,
+    'partialdiff': 476,
+    'ydieresis': 444,
+    'Nacute': 667,
+    'icircumflex': 278,
+    'Ecircumflex': 611,
+    'adieresis': 500,
+    'edieresis': 444,
+    'cacute': 444,
+    'nacute': 500,
+    'umacron': 500,
+    'Ncaron': 667,
+    'Iacute': 333,
+    'plusminus': 675,
+    'brokenbar': 275,
+    'registered': 760,
+    'Gbreve': 722,
+    'Idotaccent': 333,
+    'summation': 600,
+    'Egrave': 611,
+    'racute': 389,
+    'omacron': 500,
+    'Zacute': 556,
+    'Zcaron': 556,
+    'greaterequal': 549,
+    'Eth': 722,
+    'Ccedilla': 667,
+    'lcommaaccent': 278,
+    'tcaron': 300,
+    'eogonek': 444,
+    'Uogonek': 722,
+    'Aacute': 611,
+    'Adieresis': 611,
+    'egrave': 444,
+    'zacute': 389,
+    'iogonek': 278,
+    'Oacute': 722,
+    'oacute': 500,
+    'amacron': 500,
+    'sacute': 389,
+    'idieresis': 278,
+    'Ocircumflex': 722,
+    'Ugrave': 722,
+    'Delta': 612,
+    'thorn': 500,
+    'twosuperior': 300,
+    'Odieresis': 722,
+    'mu': 500,
+    'igrave': 278,
+    'ohungarumlaut': 500,
+    'Eogonek': 611,
+    'dcroat': 500,
+    'threequarters': 750,
+    'Scedilla': 500,
+    'lcaron': 300,
+    'Kcommaaccent': 667,
+    'Lacute': 556,
+    'trademark': 980,
+    'edotaccent': 444,
+    'Igrave': 333,
+    'Imacron': 333,
+    'Lcaron': 611,
+    'onehalf': 750,
+    'lessequal': 549,
+    'ocircumflex': 500,
+    'ntilde': 500,
+    'Uhungarumlaut': 722,
+    'Eacute': 611,
+    'emacron': 444,
+    'gbreve': 500,
+    'onequarter': 750,
+    'Scaron': 500,
+    'Scommaaccent': 500,
+    'Ohungarumlaut': 722,
+    'degree': 400,
+    'ograve': 500,
+    'Ccaron': 667,
+    'ugrave': 500,
+    'radical': 453,
+    'Dcaron': 722,
+    'rcommaaccent': 389,
+    'Ntilde': 667,
+    'otilde': 500,
+    'Rcommaaccent': 611,
+    'Lcommaaccent': 556,
+    'Atilde': 611,
+    'Aogonek': 611,
+    'Aring': 611,
+    'Otilde': 722,
+    'zdotaccent': 389,
+    'Ecaron': 611,
+    'Iogonek': 333,
+    'kcommaaccent': 444,
+    'minus': 675,
+    'Icircumflex': 333,
+    'ncaron': 500,
+    'tcommaaccent': 278,
+    'logicalnot': 675,
+    'odieresis': 500,
+    'udieresis': 500,
+    'notequal': 549,
+    'gcommaaccent': 500,
+    'eth': 500,
+    'zcaron': 389,
+    'ncommaaccent': 500,
+    'onesuperior': 300,
+    'imacron': 278,
+    'Euro': 500
+  },
+  'ZapfDingbats': {
+    'space': 278,
+    'a1': 974,
+    'a2': 961,
+    'a202': 974,
+    'a3': 980,
+    'a4': 719,
+    'a5': 789,
+    'a119': 790,
+    'a118': 791,
+    'a117': 690,
+    'a11': 960,
+    'a12': 939,
+    'a13': 549,
+    'a14': 855,
+    'a15': 911,
+    'a16': 933,
+    'a105': 911,
+    'a17': 945,
+    'a18': 974,
+    'a19': 755,
+    'a20': 846,
+    'a21': 762,
+    'a22': 761,
+    'a23': 571,
+    'a24': 677,
+    'a25': 763,
+    'a26': 760,
+    'a27': 759,
+    'a28': 754,
+    'a6': 494,
+    'a7': 552,
+    'a8': 537,
+    'a9': 577,
+    'a10': 692,
+    'a29': 786,
+    'a30': 788,
+    'a31': 788,
+    'a32': 790,
+    'a33': 793,
+    'a34': 794,
+    'a35': 816,
+    'a36': 823,
+    'a37': 789,
+    'a38': 841,
+    'a39': 823,
+    'a40': 833,
+    'a41': 816,
+    'a42': 831,
+    'a43': 923,
+    'a44': 744,
+    'a45': 723,
+    'a46': 749,
+    'a47': 790,
+    'a48': 792,
+    'a49': 695,
+    'a50': 776,
+    'a51': 768,
+    'a52': 792,
+    'a53': 759,
+    'a54': 707,
+    'a55': 708,
+    'a56': 682,
+    'a57': 701,
+    'a58': 826,
+    'a59': 815,
+    'a60': 789,
+    'a61': 789,
+    'a62': 707,
+    'a63': 687,
+    'a64': 696,
+    'a65': 689,
+    'a66': 786,
+    'a67': 787,
+    'a68': 713,
+    'a69': 791,
+    'a70': 785,
+    'a71': 791,
+    'a72': 873,
+    'a73': 761,
+    'a74': 762,
+    'a203': 762,
+    'a75': 759,
+    'a204': 759,
+    'a76': 892,
+    'a77': 892,
+    'a78': 788,
+    'a79': 784,
+    'a81': 438,
+    'a82': 138,
+    'a83': 277,
+    'a84': 415,
+    'a97': 392,
+    'a98': 392,
+    'a99': 668,
+    'a100': 668,
+    'a89': 390,
+    'a90': 390,
+    'a93': 317,
+    'a94': 317,
+    'a91': 276,
+    'a92': 276,
+    'a205': 509,
+    'a85': 509,
+    'a206': 410,
+    'a86': 410,
+    'a87': 234,
+    'a88': 234,
+    'a95': 334,
+    'a96': 334,
+    'a101': 732,
+    'a102': 544,
+    'a103': 544,
+    'a104': 910,
+    'a106': 667,
+    'a107': 760,
+    'a108': 760,
+    'a112': 776,
+    'a111': 595,
+    'a110': 694,
+    'a109': 626,
+    'a120': 788,
+    'a121': 788,
+    'a122': 788,
+    'a123': 788,
+    'a124': 788,
+    'a125': 788,
+    'a126': 788,
+    'a127': 788,
+    'a128': 788,
+    'a129': 788,
+    'a130': 788,
+    'a131': 788,
+    'a132': 788,
+    'a133': 788,
+    'a134': 788,
+    'a135': 788,
+    'a136': 788,
+    'a137': 788,
+    'a138': 788,
+    'a139': 788,
+    'a140': 788,
+    'a141': 788,
+    'a142': 788,
+    'a143': 788,
+    'a144': 788,
+    'a145': 788,
+    'a146': 788,
+    'a147': 788,
+    'a148': 788,
+    'a149': 788,
+    'a150': 788,
+    'a151': 788,
+    'a152': 788,
+    'a153': 788,
+    'a154': 788,
+    'a155': 788,
+    'a156': 788,
+    'a157': 788,
+    'a158': 788,
+    'a159': 788,
+    'a160': 894,
+    'a161': 838,
+    'a163': 1016,
+    'a164': 458,
+    'a196': 748,
+    'a165': 924,
+    'a192': 748,
+    'a166': 918,
+    'a167': 927,
+    'a168': 928,
+    'a169': 928,
+    'a170': 834,
+    'a171': 873,
+    'a172': 828,
+    'a173': 924,
+    'a162': 924,
+    'a174': 917,
+    'a175': 930,
+    'a176': 931,
+    'a177': 463,
+    'a178': 883,
+    'a179': 836,
+    'a193': 836,
+    'a180': 867,
+    'a199': 867,
+    'a181': 696,
+    'a200': 696,
+    'a182': 874,
+    'a201': 874,
+    'a183': 760,
+    'a184': 946,
+    'a197': 771,
+    'a185': 865,
+    'a194': 771,
+    'a198': 888,
+    'a186': 967,
+    'a195': 888,
+    'a187': 831,
+    'a188': 873,
+    'a189': 927,
+    'a190': 970,
+    'a191': 918
+  }
+};
+
+
+var EOF = {};
+
+function isEOF(v) {
+  return (v === EOF);
+}
+
+var MAX_LENGTH_TO_CACHE = 1000;
+
+var Parser = (function ParserClosure() {
+  function Parser(lexer, allowStreams, xref) {
+    this.lexer = lexer;
+    this.allowStreams = allowStreams;
+    this.xref = xref;
+    this.imageCache = {};
+    this.refill();
+  }
+
+  Parser.prototype = {
+    refill: function Parser_refill() {
+      this.buf1 = this.lexer.getObj();
+      this.buf2 = this.lexer.getObj();
+    },
+    shift: function Parser_shift() {
+      if (isCmd(this.buf2, 'ID')) {
+        this.buf1 = this.buf2;
+        this.buf2 = null;
+      } else {
+        this.buf1 = this.buf2;
+        this.buf2 = this.lexer.getObj();
+      }
+    },
+    getObj: function Parser_getObj(cipherTransform) {
+      var buf1 = this.buf1;
+      this.shift();
+
+      if (buf1 instanceof Cmd) {
+        switch (buf1.cmd) {
+          case 'BI': // inline image
+            return this.makeInlineImage(cipherTransform);
+          case '[': // array
+            var array = [];
+            while (!isCmd(this.buf1, ']') && !isEOF(this.buf1)) {
+              array.push(this.getObj(cipherTransform));
+            }
+            if (isEOF(this.buf1)) {
+              error('End of file inside array');
+            }
+            this.shift();
+            return array;
+          case '<<': // dictionary or stream
+            var dict = new Dict(this.xref);
+            while (!isCmd(this.buf1, '>>') && !isEOF(this.buf1)) {
+              if (!isName(this.buf1)) {
+                info('Malformed dictionary: key must be a name object');
+                this.shift();
+                continue;
+              }
+
+              var key = this.buf1.name;
+              this.shift();
+              if (isEOF(this.buf1)) {
+                break;
+              }
+              dict.set(key, this.getObj(cipherTransform));
+            }
+            if (isEOF(this.buf1)) {
+              error('End of file inside dictionary');
+            }
+
+            // Stream objects are not allowed inside content streams or
+            // object streams.
+            if (isCmd(this.buf2, 'stream')) {
+              return (this.allowStreams ?
+                      this.makeStream(dict, cipherTransform) : dict);
+            }
+            this.shift();
+            return dict;
+          default: // simple object
+            return buf1;
+        }
+      }
+
+      if (isInt(buf1)) { // indirect reference or integer
+        var num = buf1;
+        if (isInt(this.buf1) && isCmd(this.buf2, 'R')) {
+          var ref = new Ref(num, this.buf1);
+          this.shift();
+          this.shift();
+          return ref;
+        }
+        return num;
+      }
+
+      if (isString(buf1)) { // string
+        var str = buf1;
+        if (cipherTransform) {
+          str = cipherTransform.decryptString(str);
+        }
+        return str;
+      }
+
+      // simple object
+      return buf1;
+    },
+    /**
+     * Find the end of the stream by searching for the /EI\s/.
+     * @returns {number} The inline stream length.
+     */
+    findDefaultInlineStreamEnd:
+        function Parser_findDefaultInlineStreamEnd(stream) {
+      var E = 0x45, I = 0x49, SPACE = 0x20, LF = 0xA, CR = 0xD;
+      var startPos = stream.pos, state = 0, ch, i, n, followingBytes;
+      while ((ch = stream.getByte()) !== -1) {
+        if (state === 0) {
+          state = (ch === E) ? 1 : 0;
+        } else if (state === 1) {
+          state = (ch === I) ? 2 : 0;
+        } else {
+          assert(state === 2);
+          if (ch === SPACE || ch === LF || ch === CR) {
+            // Let's check the next five bytes are ASCII... just be sure.
+            n = 5;
+            followingBytes = stream.peekBytes(n);
+            for (i = 0; i < n; i++) {
+              ch = followingBytes[i];
+              if (ch !== LF && ch !== CR && (ch < SPACE || ch > 0x7F)) {
+                // Not a LF, CR, SPACE or any visible ASCII character, i.e.
+                // it's binary stuff. Resetting the state.
+                state = 0;
+                break;
+              }
+            }
+            if (state === 2) {
+              break;  // Finished!
+            }
+          } else {
+            state = 0;
+          }
+        }
+      }
+      return ((stream.pos - 4) - startPos);
+    },
+    /**
+     * Find the EOI (end-of-image) marker 0xFFD9 of the stream.
+     * @returns {number} The inline stream length.
+     */
+    findDCTDecodeInlineStreamEnd:
+        function Parser_findDCTDecodeInlineStreamEnd(stream) {
+      var startPos = stream.pos, foundEOI = false, b, markerLength, length;
+      while ((b = stream.getByte()) !== -1) {
+        if (b !== 0xFF) { // Not a valid marker.
+          continue;
+        }
+        switch (stream.getByte()) {
+          case 0x00: // Byte stuffing.
+            // 0xFF00 appears to be a very common byte sequence in JPEG images.
+            break;
+
+          case 0xFF: // Fill byte.
+            // Avoid skipping a valid marker, resetting the stream position.
+            stream.skip(-1);
+            break;
+
+          case 0xD9: // EOI
+            foundEOI = true;
+            break;
+
+          case 0xC0: // SOF0
+          case 0xC1: // SOF1
+          case 0xC2: // SOF2
+          case 0xC3: // SOF3
+
+          case 0xC5: // SOF5
+          case 0xC6: // SOF6
+          case 0xC7: // SOF7
+
+          case 0xC9: // SOF9
+          case 0xCA: // SOF10
+          case 0xCB: // SOF11
+
+          case 0xCD: // SOF13
+          case 0xCE: // SOF14
+          case 0xCF: // SOF15
+
+          case 0xC4: // DHT
+          case 0xCC: // DAC
+
+          case 0xDA: // SOS
+          case 0xDB: // DQT
+          case 0xDC: // DNL
+          case 0xDD: // DRI
+          case 0xDE: // DHP
+          case 0xDF: // EXP
+
+          case 0xE0: // APP0
+          case 0xE1: // APP1
+          case 0xE2: // APP2
+          case 0xE3: // APP3
+          case 0xE4: // APP4
+          case 0xE5: // APP5
+          case 0xE6: // APP6
+          case 0xE7: // APP7
+          case 0xE8: // APP8
+          case 0xE9: // APP9
+          case 0xEA: // APP10
+          case 0xEB: // APP11
+          case 0xEC: // APP12
+          case 0xED: // APP13
+          case 0xEE: // APP14
+          case 0xEF: // APP15
+
+          case 0xFE: // COM
+            // The marker should be followed by the length of the segment.
+            markerLength = stream.getUint16();
+            if (markerLength > 2) {
+              // |markerLength| contains the byte length of the marker segment,
+              // including its own length (2 bytes) and excluding the marker.
+              stream.skip(markerLength - 2); // Jump to the next marker.
+            } else {
+              // The marker length is invalid, resetting the stream position.
+              stream.skip(-2);
+            }
+            break;
+        }
+        if (foundEOI) {
+          break;
+        }
+      }
+      length = stream.pos - startPos;
+      if (b === -1) {
+        warn('Inline DCTDecode image stream: ' +
+             'EOI marker not found, searching for /EI/ instead.');
+        stream.skip(-length); // Reset the stream position.
+        return this.findDefaultInlineStreamEnd(stream);
+      }
+      this.inlineStreamSkipEI(stream);
+      return length;
+    },
+    /**
+     * Find the EOD (end-of-data) marker '~>' (i.e. TILDE + GT) of the stream.
+     * @returns {number} The inline stream length.
+     */
+    findASCII85DecodeInlineStreamEnd:
+        function Parser_findASCII85DecodeInlineStreamEnd(stream) {
+      var TILDE = 0x7E, GT = 0x3E;
+      var startPos = stream.pos, ch, length;
+      while ((ch = stream.getByte()) !== -1) {
+        if (ch === TILDE && stream.peekByte() === GT) {
+          stream.skip();
+          break;
+        }
+      }
+      length = stream.pos - startPos;
+      if (ch === -1) {
+        warn('Inline ASCII85Decode image stream: ' +
+             'EOD marker not found, searching for /EI/ instead.');
+        stream.skip(-length); // Reset the stream position.
+        return this.findDefaultInlineStreamEnd(stream);
+      }
+      this.inlineStreamSkipEI(stream);
+      return length;
+    },
+    /**
+     * Find the EOD (end-of-data) marker '>' (i.e. GT) of the stream.
+     * @returns {number} The inline stream length.
+     */
+    findASCIIHexDecodeInlineStreamEnd:
+        function Parser_findASCIIHexDecodeInlineStreamEnd(stream) {
+      var GT = 0x3E;
+      var startPos = stream.pos, ch, length;
+      while ((ch = stream.getByte()) !== -1) {
+        if (ch === GT) {
+          break;
+        }
+      }
+      length = stream.pos - startPos;
+      if (ch === -1) {
+        warn('Inline ASCIIHexDecode image stream: ' +
+             'EOD marker not found, searching for /EI/ instead.');
+        stream.skip(-length); // Reset the stream position.
+        return this.findDefaultInlineStreamEnd(stream);
+      }
+      this.inlineStreamSkipEI(stream);
+      return length;
+    },
+    /**
+     * Skip over the /EI/ for streams where we search for an EOD marker.
+     */
+    inlineStreamSkipEI: function Parser_inlineStreamSkipEI(stream) {
+      var E = 0x45, I = 0x49;
+      var state = 0, ch;
+      while ((ch = stream.getByte()) !== -1) {
+        if (state === 0) {
+          state = (ch === E) ? 1 : 0;
+        } else if (state === 1) {
+          state = (ch === I) ? 2 : 0;
+        } else if (state === 2) {
+          break;
+        }
+      }
+    },
+    makeInlineImage: function Parser_makeInlineImage(cipherTransform) {
+      var lexer = this.lexer;
+      var stream = lexer.stream;
+
+      // Parse dictionary.
+      var dict = new Dict(null);
+      while (!isCmd(this.buf1, 'ID') && !isEOF(this.buf1)) {
+        if (!isName(this.buf1)) {
+          error('Dictionary key must be a name object');
+        }
+        var key = this.buf1.name;
+        this.shift();
+        if (isEOF(this.buf1)) {
+          break;
+        }
+        dict.set(key, this.getObj(cipherTransform));
+      }
+
+      // Extract the name of the first (i.e. the current) image filter.
+      var filter = this.fetchIfRef(dict.get('Filter', 'F')), filterName;
+      if (isName(filter)) {
+        filterName = filter.name;
+      } else if (isArray(filter) && isName(filter[0])) {
+        filterName = filter[0].name;
+      }
+
+      // Parse image stream.
+      var startPos = stream.pos, length, i, ii;
+      if (filterName === 'DCTDecode' || filterName === 'DCT') {
+        length = this.findDCTDecodeInlineStreamEnd(stream);
+      } else if (filterName === 'ASCII85Decide' || filterName === 'A85') {
+        length = this.findASCII85DecodeInlineStreamEnd(stream);
+      } else if (filterName === 'ASCIIHexDecode' || filterName === 'AHx') {
+        length = this.findASCIIHexDecodeInlineStreamEnd(stream);
+      } else {
+        length = this.findDefaultInlineStreamEnd(stream);
+      }
+      var imageStream = stream.makeSubStream(startPos, length, dict);
+
+      // Cache all images below the MAX_LENGTH_TO_CACHE threshold by their
+      // adler32 checksum.
+      var adler32;
+      if (length < MAX_LENGTH_TO_CACHE) {
+        var imageBytes = imageStream.getBytes();
+        imageStream.reset();
+
+        var a = 1;
+        var b = 0;
+        for (i = 0, ii = imageBytes.length; i < ii; ++i) {
+          // No modulo required in the loop if imageBytes.length < 5552.
+          a += imageBytes[i] & 0xff;
+          b += a;
+        }
+        adler32 = ((b % 65521) << 16) | (a % 65521);
+
+        if (this.imageCache.adler32 === adler32) {
+          this.buf2 = Cmd.get('EI');
+          this.shift();
+
+          this.imageCache[adler32].reset();
+          return this.imageCache[adler32];
+        }
+      }
+
+      if (cipherTransform) {
+        imageStream = cipherTransform.createStream(imageStream, length);
+      }
+
+      imageStream = this.filter(imageStream, dict, length);
+      imageStream.dict = dict;
+      if (adler32 !== undefined) {
+        imageStream.cacheKey = 'inline_' + length + '_' + adler32;
+        this.imageCache[adler32] = imageStream;
+      }
+
+      this.buf2 = Cmd.get('EI');
+      this.shift();
+
+      return imageStream;
+    },
+    fetchIfRef: function Parser_fetchIfRef(obj) {
+      // not relying on the xref.fetchIfRef -- xref might not be set
+      return (isRef(obj) ? this.xref.fetch(obj) : obj);
+    },
+    makeStream: function Parser_makeStream(dict, cipherTransform) {
+      var lexer = this.lexer;
+      var stream = lexer.stream;
+
+      // get stream start position
+      lexer.skipToNextLine();
+      var pos = stream.pos - 1;
+
+      // get length
+      var length = this.fetchIfRef(dict.get('Length'));
+      if (!isInt(length)) {
+        info('Bad ' + length + ' attribute in stream');
+        length = 0;
+      }
+
+      // skip over the stream data
+      stream.pos = pos + length;
+      lexer.nextChar();
+
+      this.shift(); // '>>'
+      this.shift(); // 'stream'
+      if (!isCmd(this.buf1, 'endstream')) {
+        // bad stream length, scanning for endstream
+        stream.pos = pos;
+        var SCAN_BLOCK_SIZE = 2048;
+        var ENDSTREAM_SIGNATURE_LENGTH = 9;
+        var ENDSTREAM_SIGNATURE = [0x65, 0x6E, 0x64, 0x73, 0x74, 0x72, 0x65,
+                                   0x61, 0x6D];
+        var skipped = 0, found = false, i, j;
+        while (stream.pos < stream.end) {
+          var scanBytes = stream.peekBytes(SCAN_BLOCK_SIZE);
+          var scanLength = scanBytes.length - ENDSTREAM_SIGNATURE_LENGTH;
+          if (scanLength <= 0) {
+            break;
+          }
+          found = false;
+          for (i = 0, j = 0; i < scanLength; i++) {
+            var b = scanBytes[i];
+            if (b !== ENDSTREAM_SIGNATURE[j]) {
+              i -= j;
+              j = 0;
+            } else {
+              j++;
+              if (j >= ENDSTREAM_SIGNATURE_LENGTH) {
+                i++;
+                found = true;
+                break;
+              }
+            }
+          }
+          if (found) {
+            skipped += i - ENDSTREAM_SIGNATURE_LENGTH;
+            stream.pos += i - ENDSTREAM_SIGNATURE_LENGTH;
+            break;
+          }
+          skipped += scanLength;
+          stream.pos += scanLength;
+        }
+        if (!found) {
+          error('Missing endstream');
+        }
+        length = skipped;
+
+        lexer.nextChar();
+        this.shift();
+        this.shift();
+      }
+      this.shift(); // 'endstream'
+
+      stream = stream.makeSubStream(pos, length, dict);
+      if (cipherTransform) {
+        stream = cipherTransform.createStream(stream, length);
+      }
+      stream = this.filter(stream, dict, length);
+      stream.dict = dict;
+      return stream;
+    },
+    filter: function Parser_filter(stream, dict, length) {
+      var filter = this.fetchIfRef(dict.get('Filter', 'F'));
+      var params = this.fetchIfRef(dict.get('DecodeParms', 'DP'));
+      if (isName(filter)) {
+        return this.makeFilter(stream, filter.name, length, params);
+      }
+
+      var maybeLength = length;
+      if (isArray(filter)) {
+        var filterArray = filter;
+        var paramsArray = params;
+        for (var i = 0, ii = filterArray.length; i < ii; ++i) {
+          filter = filterArray[i];
+          if (!isName(filter)) {
+            error('Bad filter name: ' + filter);
+          }
+
+          params = null;
+          if (isArray(paramsArray) && (i in paramsArray)) {
+            params = paramsArray[i];
+          }
+          stream = this.makeFilter(stream, filter.name, maybeLength, params);
+          // after the first stream the length variable is invalid
+          maybeLength = null;
+        }
+      }
+      return stream;
+    },
+    makeFilter: function Parser_makeFilter(stream, name, maybeLength, params) {
+      if (stream.dict.get('Length') === 0) {
+        return new NullStream(stream);
+      }
+      try {
+        if (params) {
+          params = this.fetchIfRef(params);
+        }
+        var xrefStreamStats = this.xref.stats.streamTypes;
+        if (name === 'FlateDecode' || name === 'Fl') {
+          xrefStreamStats[StreamType.FLATE] = true;
+          if (params) {
+            return new PredictorStream(new FlateStream(stream, maybeLength),
+                                       maybeLength, params);
+          }
+          return new FlateStream(stream, maybeLength);
+        }
+        if (name === 'LZWDecode' || name === 'LZW') {
+          xrefStreamStats[StreamType.LZW] = true;
+          var earlyChange = 1;
+          if (params) {
+            if (params.has('EarlyChange')) {
+              earlyChange = params.get('EarlyChange');
+            }
+            return new PredictorStream(
+              new LZWStream(stream, maybeLength, earlyChange),
+              maybeLength, params);
+          }
+          return new LZWStream(stream, maybeLength, earlyChange);
+        }
+        if (name === 'DCTDecode' || name === 'DCT') {
+          xrefStreamStats[StreamType.DCT] = true;
+          return new JpegStream(stream, maybeLength, stream.dict, this.xref);
+        }
+        if (name === 'JPXDecode' || name === 'JPX') {
+          xrefStreamStats[StreamType.JPX] = true;
+          return new JpxStream(stream, maybeLength, stream.dict);
+        }
+        if (name === 'ASCII85Decode' || name === 'A85') {
+          xrefStreamStats[StreamType.A85] = true;
+          return new Ascii85Stream(stream, maybeLength);
+        }
+        if (name === 'ASCIIHexDecode' || name === 'AHx') {
+          xrefStreamStats[StreamType.AHX] = true;
+          return new AsciiHexStream(stream, maybeLength);
+        }
+        if (name === 'CCITTFaxDecode' || name === 'CCF') {
+          xrefStreamStats[StreamType.CCF] = true;
+          return new CCITTFaxStream(stream, maybeLength, params);
+        }
+        if (name === 'RunLengthDecode' || name === 'RL') {
+          xrefStreamStats[StreamType.RL] = true;
+          return new RunLengthStream(stream, maybeLength);
+        }
+        if (name === 'JBIG2Decode') {
+          xrefStreamStats[StreamType.JBIG] = true;
+          return new Jbig2Stream(stream, maybeLength, stream.dict);
+        }
+        warn('filter "' + name + '" not supported yet');
+        return stream;
+      } catch (ex) {
+        if (ex instanceof MissingDataException) {
+          throw ex;
+        }
+        warn('Invalid stream: \"' + ex + '\"');
+        return new NullStream(stream);
+      }
+    }
+  };
+
+  return Parser;
+})();
+
+var Lexer = (function LexerClosure() {
+  function Lexer(stream, knownCommands) {
+    this.stream = stream;
+    this.nextChar();
+
+    // While lexing, we build up many strings one char at a time. Using += for
+    // this can result in lots of garbage strings. It's better to build an
+    // array of single-char strings and then join() them together at the end.
+    // And reusing a single array (i.e. |this.strBuf|) over and over for this
+    // purpose uses less memory than using a new array for each string.
+    this.strBuf = [];
+
+    // The PDFs might have "glued" commands with other commands, operands or
+    // literals, e.g. "q1". The knownCommands is a dictionary of the valid
+    // commands and their prefixes. The prefixes are built the following way:
+    // if there a command that is a prefix of the other valid command or
+    // literal (e.g. 'f' and 'false') the following prefixes must be included,
+    // 'fa', 'fal', 'fals'. The prefixes are not needed, if the command has no
+    // other commands or literals as a prefix. The knowCommands is optional.
+    this.knownCommands = knownCommands;
+  }
+
+  Lexer.isSpace = function Lexer_isSpace(ch) {
+    // Space is one of the following characters: SPACE, TAB, CR or LF.
+    return (ch === 0x20 || ch === 0x09 || ch === 0x0D || ch === 0x0A);
+  };
+
+  // A '1' in this array means the character is white space. A '1' or
+  // '2' means the character ends a name or command.
+  var specialChars = [
+    1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, // 0x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 1x
+    1, 0, 0, 0, 0, 2, 0, 0, 2, 2, 0, 0, 0, 0, 0, 2, // 2x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, // 3x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 4x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, // 5x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 6x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 2, 0, 0, // 7x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 8x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 9x
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // ax
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // bx
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // cx
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // dx
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // ex
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0  // fx
+  ];
+
+  function toHexDigit(ch) {
+    if (ch >= 0x30 && ch <= 0x39) { // '0'-'9'
+      return ch & 0x0F;
+    }
+    if ((ch >= 0x41 && ch <= 0x46) || (ch >= 0x61 && ch <= 0x66)) {
+      // 'A'-'F', 'a'-'f'
+      return (ch & 0x0F) + 9;
+    }
+    return -1;
+  }
+
+  Lexer.prototype = {
+    nextChar: function Lexer_nextChar() {
+      return (this.currentChar = this.stream.getByte());
+    },
+    peekChar: function Lexer_peekChar() {
+      return this.stream.peekByte();
+    },
+    getNumber: function Lexer_getNumber() {
+      var ch = this.currentChar;
+      var eNotation = false;
+      var divideBy = 0; // different from 0 if it's a floating point value
+      var sign = 1;
+
+      if (ch === 0x2D) { // '-'
+        sign = -1;
+        ch = this.nextChar();
+      } else if (ch === 0x2B) { // '+'
+        ch = this.nextChar();
+      }
+      if (ch === 0x2E) { // '.'
+        divideBy = 10;
+        ch = this.nextChar();
+      }
+      if (ch < 0x30 || ch > 0x39) { // '0' - '9'
+        error('Invalid number: ' + String.fromCharCode(ch));
+        return 0;
+      }
+
+      var baseValue = ch - 0x30; // '0'
+      var powerValue = 0;
+      var powerValueSign = 1;
+
+      while ((ch = this.nextChar()) >= 0) {
+        if (0x30 <= ch && ch <= 0x39) { // '0' - '9'
+          var currentDigit = ch - 0x30; // '0'
+          if (eNotation) { // We are after an 'e' or 'E'
+            powerValue = powerValue * 10 + currentDigit;
+          } else {
+            if (divideBy !== 0) { // We are after a point
+              divideBy *= 10;
+            }
+            baseValue = baseValue * 10 + currentDigit;
+          }
+        } else if (ch === 0x2E) { // '.'
+          if (divideBy === 0) {
+            divideBy = 1;
+          } else {
+            // A number can have only one '.'
+            break;
+          }
+        } else if (ch === 0x2D) { // '-'
+          // ignore minus signs in the middle of numbers to match
+          // Adobe's behavior
+          warn('Badly formated number');
+        } else if (ch === 0x45 || ch === 0x65) { // 'E', 'e'
+          // 'E' can be either a scientific notation or the beginning of a new
+          // operator
+          ch = this.peekChar();
+          if (ch === 0x2B || ch === 0x2D) { // '+', '-'
+            powerValueSign = (ch === 0x2D) ? -1 : 1;
+            this.nextChar(); // Consume the sign character
+          } else if (ch < 0x30 || ch > 0x39) { // '0' - '9'
+            // The 'E' must be the beginning of a new operator
+            break;
+          }
+          eNotation = true;
+        } else {
+          // the last character doesn't belong to us
+          break;
+        }
+      }
+
+      if (divideBy !== 0) {
+        baseValue /= divideBy;
+      }
+      if (eNotation) {
+        baseValue *= Math.pow(10, powerValueSign * powerValue);
+      }
+      return sign * baseValue;
+    },
+    getString: function Lexer_getString() {
+      var numParen = 1;
+      var done = false;
+      var strBuf = this.strBuf;
+      strBuf.length = 0;
+
+      var ch = this.nextChar();
+      while (true) {
+        var charBuffered = false;
+        switch (ch | 0) {
+          case -1:
+            warn('Unterminated string');
+            done = true;
+            break;
+          case 0x28: // '('
+            ++numParen;
+            strBuf.push('(');
+            break;
+          case 0x29: // ')'
+            if (--numParen === 0) {
+              this.nextChar(); // consume strings ')'
+              done = true;
+            } else {
+              strBuf.push(')');
+            }
+            break;
+          case 0x5C: // '\\'
+            ch = this.nextChar();
+            switch (ch) {
+              case -1:
+                warn('Unterminated string');
+                done = true;
+                break;
+              case 0x6E: // 'n'
+                strBuf.push('\n');
+                break;
+              case 0x72: // 'r'
+                strBuf.push('\r');
+                break;
+              case 0x74: // 't'
+                strBuf.push('\t');
+                break;
+              case 0x62: // 'b'
+                strBuf.push('\b');
+                break;
+              case 0x66: // 'f'
+                strBuf.push('\f');
+                break;
+              case 0x5C: // '\'
+              case 0x28: // '('
+              case 0x29: // ')'
+                strBuf.push(String.fromCharCode(ch));
+                break;
+              case 0x30: case 0x31: case 0x32: case 0x33: // '0'-'3'
+              case 0x34: case 0x35: case 0x36: case 0x37: // '4'-'7'
+                var x = ch & 0x0F;
+                ch = this.nextChar();
+                charBuffered = true;
+                if (ch >= 0x30 && ch <= 0x37) { // '0'-'7'
+                  x = (x << 3) + (ch & 0x0F);
+                  ch = this.nextChar();
+                  if (ch >= 0x30 && ch <= 0x37) {  // '0'-'7'
+                    charBuffered = false;
+                    x = (x << 3) + (ch & 0x0F);
+                  }
+                }
+                strBuf.push(String.fromCharCode(x));
+                break;
+              case 0x0D: // CR
+                if (this.peekChar() === 0x0A) { // LF
+                  this.nextChar();
+                }
+                break;
+              case 0x0A: // LF
+                break;
+              default:
+                strBuf.push(String.fromCharCode(ch));
+                break;
+            }
+            break;
+          default:
+            strBuf.push(String.fromCharCode(ch));
+            break;
+        }
+        if (done) {
+          break;
+        }
+        if (!charBuffered) {
+          ch = this.nextChar();
+        }
+      }
+      return strBuf.join('');
+    },
+    getName: function Lexer_getName() {
+      var ch;
+      var strBuf = this.strBuf;
+      strBuf.length = 0;
+      while ((ch = this.nextChar()) >= 0 && !specialChars[ch]) {
+        if (ch === 0x23) { // '#'
+          ch = this.nextChar();
+          var x = toHexDigit(ch);
+          if (x !== -1) {
+            var x2 = toHexDigit(this.nextChar());
+            if (x2 === -1) {
+              error('Illegal digit in hex char in name: ' + x2);
+            }
+            strBuf.push(String.fromCharCode((x << 4) | x2));
+          } else {
+            strBuf.push('#', String.fromCharCode(ch));
+          }
+        } else {
+          strBuf.push(String.fromCharCode(ch));
+        }
+      }
+      if (strBuf.length > 128) {
+        error('Warning: name token is longer than allowed by the spec: ' +
+              strBuf.length);
+      }
+      return Name.get(strBuf.join(''));
+    },
+    getHexString: function Lexer_getHexString() {
+      var strBuf = this.strBuf;
+      strBuf.length = 0;
+      var ch = this.currentChar;
+      var isFirstHex = true;
+      var firstDigit;
+      var secondDigit;
+      while (true) {
+        if (ch < 0) {
+          warn('Unterminated hex string');
+          break;
+        } else if (ch === 0x3E) { // '>'
+          this.nextChar();
+          break;
+        } else if (specialChars[ch] === 1) {
+          ch = this.nextChar();
+          continue;
+        } else {
+          if (isFirstHex) {
+            firstDigit = toHexDigit(ch);
+            if (firstDigit === -1) {
+              warn('Ignoring invalid character "' + ch + '" in hex string');
+              ch = this.nextChar();
+              continue;
+            }
+          } else {
+            secondDigit = toHexDigit(ch);
+            if (secondDigit === -1) {
+              warn('Ignoring invalid character "' + ch + '" in hex string');
+              ch = this.nextChar();
+              continue;
+            }
+            strBuf.push(String.fromCharCode((firstDigit << 4) | secondDigit));
+          }
+          isFirstHex = !isFirstHex;
+          ch = this.nextChar();
+        }
+      }
+      return strBuf.join('');
+    },
+    getObj: function Lexer_getObj() {
+      // skip whitespace and comments
+      var comment = false;
+      var ch = this.currentChar;
+      while (true) {
+        if (ch < 0) {
+          return EOF;
+        }
+        if (comment) {
+          if (ch === 0x0A || ch === 0x0D) { // LF, CR
+            comment = false;
+          }
+        } else if (ch === 0x25) { // '%'
+          comment = true;
+        } else if (specialChars[ch] !== 1) {
+          break;
+        }
+        ch = this.nextChar();
+      }
+
+      // start reading token
+      switch (ch | 0) {
+        case 0x30: case 0x31: case 0x32: case 0x33: case 0x34: // '0'-'4'
+        case 0x35: case 0x36: case 0x37: case 0x38: case 0x39: // '5'-'9'
+        case 0x2B: case 0x2D: case 0x2E: // '+', '-', '.'
+          return this.getNumber();
+        case 0x28: // '('
+          return this.getString();
+        case 0x2F: // '/'
+          return this.getName();
+        // array punctuation
+        case 0x5B: // '['
+          this.nextChar();
+          return Cmd.get('[');
+        case 0x5D: // ']'
+          this.nextChar();
+          return Cmd.get(']');
+        // hex string or dict punctuation
+        case 0x3C: // '<'
+          ch = this.nextChar();
+          if (ch === 0x3C) {
+            // dict punctuation
+            this.nextChar();
+            return Cmd.get('<<');
+          }
+          return this.getHexString();
+        // dict punctuation
+        case 0x3E: // '>'
+          ch = this.nextChar();
+          if (ch === 0x3E) {
+            this.nextChar();
+            return Cmd.get('>>');
+          }
+          return Cmd.get('>');
+        case 0x7B: // '{'
+          this.nextChar();
+          return Cmd.get('{');
+        case 0x7D: // '}'
+          this.nextChar();
+          return Cmd.get('}');
+        case 0x29: // ')'
+          error('Illegal character: ' + ch);
+          break;
+      }
+
+      // command
+      var str = String.fromCharCode(ch);
+      var knownCommands = this.knownCommands;
+      var knownCommandFound = knownCommands && knownCommands[str] !== undefined;
+      while ((ch = this.nextChar()) >= 0 && !specialChars[ch]) {
+        // stop if known command is found and next character does not make
+        // the str a command
+        var possibleCommand = str + String.fromCharCode(ch);
+        if (knownCommandFound && knownCommands[possibleCommand] === undefined) {
+          break;
+        }
+        if (str.length === 128) {
+          error('Command token too long: ' + str.length);
+        }
+        str = possibleCommand;
+        knownCommandFound = knownCommands && knownCommands[str] !== undefined;
+      }
+      if (str === 'true') {
+        return true;
+      }
+      if (str === 'false') {
+        return false;
+      }
+      if (str === 'null') {
+        return null;
+      }
+      return Cmd.get(str);
+    },
+    skipToNextLine: function Lexer_skipToNextLine() {
+      var ch = this.currentChar;
+      while (ch >= 0) {
+        if (ch === 0x0D) { // CR
+          ch = this.nextChar();
+          if (ch === 0x0A) { // LF
+            this.nextChar();
+          }
+          break;
+        } else if (ch === 0x0A) { // LF
+          this.nextChar();
+          break;
+        }
+        ch = this.nextChar();
+      }
+    }
+  };
+
+  return Lexer;
+})();
+
+var Linearization = {
+  create: function LinearizationCreate(stream) {
+    function getInt(name, allowZeroValue) {
+      var obj = linDict.get(name);
+      if (isInt(obj) && (allowZeroValue ? obj >= 0 : obj > 0)) {
+        return obj;
+      }
+      throw new Error('The "' + name + '" parameter in the linearization ' +
+                      'dictionary is invalid.');
+    }
+    function getHints() {
+      var hints = linDict.get('H'), hintsLength, item;
+      if (isArray(hints) &&
+          ((hintsLength = hints.length) === 2 || hintsLength === 4)) {
+        for (var index = 0; index < hintsLength; index++) {
+          if (!(isInt(item = hints[index]) && item > 0)) {
+            throw new Error('Hint (' + index +
+                            ') in the linearization dictionary is invalid.');
+          }
+        }
+        return hints;
+      }
+      throw new Error('Hint array in the linearization dictionary is invalid.');
+    }
+    var parser = new Parser(new Lexer(stream), false, null);
+    var obj1 = parser.getObj();
+    var obj2 = parser.getObj();
+    var obj3 = parser.getObj();
+    var linDict = parser.getObj();
+    var obj, length;
+    if (!(isInt(obj1) && isInt(obj2) && isCmd(obj3, 'obj') && isDict(linDict) &&
+          isNum(obj = linDict.get('Linearized')) && obj > 0)) {
+      return null; // No valid linearization dictionary found.
+    } else if ((length = getInt('L')) !== stream.length) {
+      throw new Error('The "L" parameter in the linearization dictionary ' +
+                      'does not equal the stream length.');
+    }
+    return {
+      length: length,
+      hints: getHints(),
+      objectNumberFirst: getInt('O'),
+      endFirst: getInt('E'),
+      numPages: getInt('N'),
+      mainXRefEntriesOffset: getInt('T'),
+      pageFirst: (linDict.has('P') ? getInt('P', true) : 0)
+    };
+  }
+};
+
+
+var PostScriptParser = (function PostScriptParserClosure() {
+  function PostScriptParser(lexer) {
+    this.lexer = lexer;
+    this.operators = [];
+    this.token = null;
+    this.prev = null;
+  }
+  PostScriptParser.prototype = {
+    nextToken: function PostScriptParser_nextToken() {
+      this.prev = this.token;
+      this.token = this.lexer.getToken();
+    },
+    accept: function PostScriptParser_accept(type) {
+      if (this.token.type === type) {
+        this.nextToken();
+        return true;
+      }
+      return false;
+    },
+    expect: function PostScriptParser_expect(type) {
+      if (this.accept(type)) {
+        return true;
+      }
+      error('Unexpected symbol: found ' + this.token.type + ' expected ' +
+        type + '.');
+    },
+    parse: function PostScriptParser_parse() {
+      this.nextToken();
+      this.expect(PostScriptTokenTypes.LBRACE);
+      this.parseBlock();
+      this.expect(PostScriptTokenTypes.RBRACE);
+      return this.operators;
+    },
+    parseBlock: function PostScriptParser_parseBlock() {
+      while (true) {
+        if (this.accept(PostScriptTokenTypes.NUMBER)) {
+          this.operators.push(this.prev.value);
+        } else if (this.accept(PostScriptTokenTypes.OPERATOR)) {
+          this.operators.push(this.prev.value);
+        } else if (this.accept(PostScriptTokenTypes.LBRACE)) {
+          this.parseCondition();
+        } else {
+          return;
+        }
+      }
+    },
+    parseCondition: function PostScriptParser_parseCondition() {
+      // Add two place holders that will be updated later
+      var conditionLocation = this.operators.length;
+      this.operators.push(null, null);
+
+      this.parseBlock();
+      this.expect(PostScriptTokenTypes.RBRACE);
+      if (this.accept(PostScriptTokenTypes.IF)) {
+        // The true block is right after the 'if' so it just falls through on
+        // true else it jumps and skips the true block.
+        this.operators[conditionLocation] = this.operators.length;
+        this.operators[conditionLocation + 1] = 'jz';
+      } else if (this.accept(PostScriptTokenTypes.LBRACE)) {
+        var jumpLocation = this.operators.length;
+        this.operators.push(null, null);
+        var endOfTrue = this.operators.length;
+        this.parseBlock();
+        this.expect(PostScriptTokenTypes.RBRACE);
+        this.expect(PostScriptTokenTypes.IFELSE);
+        // The jump is added at the end of the true block to skip the false
+        // block.
+        this.operators[jumpLocation] = this.operators.length;
+        this.operators[jumpLocation + 1] = 'j';
+
+        this.operators[conditionLocation] = endOfTrue;
+        this.operators[conditionLocation + 1] = 'jz';
+      } else {
+        error('PS Function: error parsing conditional.');
+      }
+    }
+  };
+  return PostScriptParser;
+})();
+
+var PostScriptTokenTypes = {
+  LBRACE: 0,
+  RBRACE: 1,
+  NUMBER: 2,
+  OPERATOR: 3,
+  IF: 4,
+  IFELSE: 5
+};
+
+var PostScriptToken = (function PostScriptTokenClosure() {
+  function PostScriptToken(type, value) {
+    this.type = type;
+    this.value = value;
+  }
+
+  var opCache = {};
+
+  PostScriptToken.getOperator = function PostScriptToken_getOperator(op) {
+    var opValue = opCache[op];
+    if (opValue) {
+      return opValue;
+    }
+    return opCache[op] = new PostScriptToken(PostScriptTokenTypes.OPERATOR, op);
+  };
+
+  PostScriptToken.LBRACE = new PostScriptToken(PostScriptTokenTypes.LBRACE,
+    '{');
+  PostScriptToken.RBRACE = new PostScriptToken(PostScriptTokenTypes.RBRACE,
+    '}');
+  PostScriptToken.IF = new PostScriptToken(PostScriptTokenTypes.IF, 'IF');
+  PostScriptToken.IFELSE = new PostScriptToken(PostScriptTokenTypes.IFELSE,
+    'IFELSE');
+  return PostScriptToken;
+})();
+
+var PostScriptLexer = (function PostScriptLexerClosure() {
+  function PostScriptLexer(stream) {
+    this.stream = stream;
+    this.nextChar();
+
+    this.strBuf = [];
+  }
+  PostScriptLexer.prototype = {
+    nextChar: function PostScriptLexer_nextChar() {
+      return (this.currentChar = this.stream.getByte());
+    },
+    getToken: function PostScriptLexer_getToken() {
+      var comment = false;
+      var ch = this.currentChar;
+
+      // skip comments
+      while (true) {
+        if (ch < 0) {
+          return EOF;
+        }
+
+        if (comment) {
+          if (ch === 0x0A || ch === 0x0D) {
+            comment = false;
+          }
+        } else if (ch === 0x25) { // '%'
+          comment = true;
+        } else if (!Lexer.isSpace(ch)) {
+          break;
+        }
+        ch = this.nextChar();
+      }
+      switch (ch | 0) {
+        case 0x30: case 0x31: case 0x32: case 0x33: case 0x34: // '0'-'4'
+        case 0x35: case 0x36: case 0x37: case 0x38: case 0x39: // '5'-'9'
+        case 0x2B: case 0x2D: case 0x2E: // '+', '-', '.'
+          return new PostScriptToken(PostScriptTokenTypes.NUMBER,
+                                     this.getNumber());
+        case 0x7B: // '{'
+          this.nextChar();
+          return PostScriptToken.LBRACE;
+        case 0x7D: // '}'
+          this.nextChar();
+          return PostScriptToken.RBRACE;
+      }
+      // operator
+      var strBuf = this.strBuf;
+      strBuf.length = 0;
+      strBuf[0] = String.fromCharCode(ch);
+
+      while ((ch = this.nextChar()) >= 0 && // and 'A'-'Z', 'a'-'z'
+             ((ch >= 0x41 && ch <= 0x5A) || (ch >= 0x61 && ch <= 0x7A))) {
+        strBuf.push(String.fromCharCode(ch));
+      }
+      var str = strBuf.join('');
+      switch (str.toLowerCase()) {
+        case 'if':
+          return PostScriptToken.IF;
+        case 'ifelse':
+          return PostScriptToken.IFELSE;
+        default:
+          return PostScriptToken.getOperator(str);
+      }
+    },
+    getNumber: function PostScriptLexer_getNumber() {
+      var ch = this.currentChar;
+      var strBuf = this.strBuf;
+      strBuf.length = 0;
+      strBuf[0] = String.fromCharCode(ch);
+
+      while ((ch = this.nextChar()) >= 0) {
+        if ((ch >= 0x30 && ch <= 0x39) || // '0'-'9'
+            ch === 0x2D || ch === 0x2E) { // '-', '.'
+          strBuf.push(String.fromCharCode(ch));
+        } else {
+          break;
+        }
+      }
+      var value = parseFloat(strBuf.join(''));
+      if (isNaN(value)) {
+        error('Invalid floating point number: ' + value);
+      }
+      return value;
+    }
+  };
+  return PostScriptLexer;
+})();
+
+
+var Stream = (function StreamClosure() {
+  function Stream(arrayBuffer, start, length, dict) {
+    this.bytes = (arrayBuffer instanceof Uint8Array ?
+                  arrayBuffer : new Uint8Array(arrayBuffer));
+    this.start = start || 0;
+    this.pos = this.start;
+    this.end = (start + length) || this.bytes.length;
+    this.dict = dict;
+  }
+
+  // required methods for a stream. if a particular stream does not
+  // implement these, an error should be thrown
+  Stream.prototype = {
+    get length() {
+      return this.end - this.start;
+    },
+    get isEmpty() {
+      return this.length === 0;
+    },
+    getByte: function Stream_getByte() {
+      if (this.pos >= this.end) {
+        return -1;
+      }
+      return this.bytes[this.pos++];
+    },
+    getUint16: function Stream_getUint16() {
+      var b0 = this.getByte();
+      var b1 = this.getByte();
+      if (b0 === -1 || b1 === -1) {
+        return -1;
+      }
+      return (b0 << 8) + b1;
+    },
+    getInt32: function Stream_getInt32() {
+      var b0 = this.getByte();
+      var b1 = this.getByte();
+      var b2 = this.getByte();
+      var b3 = this.getByte();
+      return (b0 << 24) + (b1 << 16) + (b2 << 8) + b3;
+    },
+    // returns subarray of original buffer
+    // should only be read
+    getBytes: function Stream_getBytes(length) {
+      var bytes = this.bytes;
+      var pos = this.pos;
+      var strEnd = this.end;
+
+      if (!length) {
+        return bytes.subarray(pos, strEnd);
+      }
+      var end = pos + length;
+      if (end > strEnd) {
+        end = strEnd;
+      }
+      this.pos = end;
+      return bytes.subarray(pos, end);
+    },
+    peekByte: function Stream_peekByte() {
+      var peekedByte = this.getByte();
+      this.pos--;
+      return peekedByte;
+    },
+    peekBytes: function Stream_peekBytes(length) {
+      var bytes = this.getBytes(length);
+      this.pos -= bytes.length;
+      return bytes;
+    },
+    skip: function Stream_skip(n) {
+      if (!n) {
+        n = 1;
+      }
+      this.pos += n;
+    },
+    reset: function Stream_reset() {
+      this.pos = this.start;
+    },
+    moveStart: function Stream_moveStart() {
+      this.start = this.pos;
+    },
+    makeSubStream: function Stream_makeSubStream(start, length, dict) {
+      return new Stream(this.bytes.buffer, start, length, dict);
+    },
+    isStream: true
+  };
+
+  return Stream;
+})();
+
+var StringStream = (function StringStreamClosure() {
+  function StringStream(str) {
+    var length = str.length;
+    var bytes = new Uint8Array(length);
+    for (var n = 0; n < length; ++n) {
+      bytes[n] = str.charCodeAt(n);
+    }
+    Stream.call(this, bytes);
+  }
+
+  StringStream.prototype = Stream.prototype;
+
+  return StringStream;
+})();
+
+// super class for the decoding streams
+var DecodeStream = (function DecodeStreamClosure() {
+  // Lots of DecodeStreams are created whose buffers are never used.  For these
+  // we share a single empty buffer. This is (a) space-efficient and (b) avoids
+  // having special cases that would be required if we used |null| for an empty
+  // buffer.
+  var emptyBuffer = new Uint8Array(0);
+
+  function DecodeStream(maybeMinBufferLength) {
+    this.pos = 0;
+    this.bufferLength = 0;
+    this.eof = false;
+    this.buffer = emptyBuffer;
+    this.minBufferLength = 512;
+    if (maybeMinBufferLength) {
+      // Compute the first power of two that is as big as maybeMinBufferLength.
+      while (this.minBufferLength < maybeMinBufferLength) {
+        this.minBufferLength *= 2;
+      }
+    }
+  }
+
+  DecodeStream.prototype = {
+    get isEmpty() {
+      while (!this.eof && this.bufferLength === 0) {
+        this.readBlock();
+      }
+      return this.bufferLength === 0;
+    },
+    ensureBuffer: function DecodeStream_ensureBuffer(requested) {
+      var buffer = this.buffer;
+      if (requested <= buffer.byteLength) {
+        return buffer;
+      }
+      var size = this.minBufferLength;
+      while (size < requested) {
+        size *= 2;
+      }
+      var buffer2 = new Uint8Array(size);
+      buffer2.set(buffer);
+      return (this.buffer = buffer2);
+    },
+    getByte: function DecodeStream_getByte() {
+      var pos = this.pos;
+      while (this.bufferLength <= pos) {
+        if (this.eof) {
+          return -1;
+        }
+        this.readBlock();
+      }
+      return this.buffer[this.pos++];
+    },
+    getUint16: function DecodeStream_getUint16() {
+      var b0 = this.getByte();
+      var b1 = this.getByte();
+      if (b0 === -1 || b1 === -1) {
+        return -1;
+      }
+      return (b0 << 8) + b1;
+    },
+    getInt32: function DecodeStream_getInt32() {
+      var b0 = this.getByte();
+      var b1 = this.getByte();
+      var b2 = this.getByte();
+      var b3 = this.getByte();
+      return (b0 << 24) + (b1 << 16) + (b2 << 8) + b3;
+    },
+    getBytes: function DecodeStream_getBytes(length) {
+      var end, pos = this.pos;
+
+      if (length) {
+        this.ensureBuffer(pos + length);
+        end = pos + length;
+
+        while (!this.eof && this.bufferLength < end) {
+          this.readBlock();
+        }
+        var bufEnd = this.bufferLength;
+        if (end > bufEnd) {
+          end = bufEnd;
+        }
+      } else {
+        while (!this.eof) {
+          this.readBlock();
+        }
+        end = this.bufferLength;
+      }
+
+      this.pos = end;
+      return this.buffer.subarray(pos, end);
+    },
+    peekByte: function DecodeStream_peekByte() {
+      var peekedByte = this.getByte();
+      this.pos--;
+      return peekedByte;
+    },
+    peekBytes: function DecodeStream_peekBytes(length) {
+      var bytes = this.getBytes(length);
+      this.pos -= bytes.length;
+      return bytes;
+    },
+    makeSubStream: function DecodeStream_makeSubStream(start, length, dict) {
+      var end = start + length;
+      while (this.bufferLength <= end && !this.eof) {
+        this.readBlock();
+      }
+      return new Stream(this.buffer, start, length, dict);
+    },
+    skip: function DecodeStream_skip(n) {
+      if (!n) {
+        n = 1;
+      }
+      this.pos += n;
+    },
+    reset: function DecodeStream_reset() {
+      this.pos = 0;
+    },
+    getBaseStreams: function DecodeStream_getBaseStreams() {
+      if (this.str && this.str.getBaseStreams) {
+        return this.str.getBaseStreams();
+      }
+      return [];
+    }
+  };
+
+  return DecodeStream;
+})();
+
+var StreamsSequenceStream = (function StreamsSequenceStreamClosure() {
+  function StreamsSequenceStream(streams) {
+    this.streams = streams;
+    DecodeStream.call(this, /* maybeLength = */ null);
+  }
+
+  StreamsSequenceStream.prototype = Object.create(DecodeStream.prototype);
+
+  StreamsSequenceStream.prototype.readBlock =
+      function streamSequenceStreamReadBlock() {
+
+    var streams = this.streams;
+    if (streams.length === 0) {
+      this.eof = true;
+      return;
+    }
+    var stream = streams.shift();
+    var chunk = stream.getBytes();
+    var bufferLength = this.bufferLength;
+    var newLength = bufferLength + chunk.length;
+    var buffer = this.ensureBuffer(newLength);
+    buffer.set(chunk, bufferLength);
+    this.bufferLength = newLength;
+  };
+
+  StreamsSequenceStream.prototype.getBaseStreams =
+    function StreamsSequenceStream_getBaseStreams() {
+
+    var baseStreams = [];
+    for (var i = 0, ii = this.streams.length; i < ii; i++) {
+      var stream = this.streams[i];
+      if (stream.getBaseStreams) {
+        Util.appendToArray(baseStreams, stream.getBaseStreams());
+      }
+    }
+    return baseStreams;
+  };
+
+  return StreamsSequenceStream;
+})();
+
+var FlateStream = (function FlateStreamClosure() {
+  var codeLenCodeMap = new Int32Array([
+    16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15
+  ]);
+
+  var lengthDecode = new Int32Array([
+    0x00003, 0x00004, 0x00005, 0x00006, 0x00007, 0x00008, 0x00009, 0x0000a,
+    0x1000b, 0x1000d, 0x1000f, 0x10011, 0x20013, 0x20017, 0x2001b, 0x2001f,
+    0x30023, 0x3002b, 0x30033, 0x3003b, 0x40043, 0x40053, 0x40063, 0x40073,
+    0x50083, 0x500a3, 0x500c3, 0x500e3, 0x00102, 0x00102, 0x00102
+  ]);
+
+  var distDecode = new Int32Array([
+    0x00001, 0x00002, 0x00003, 0x00004, 0x10005, 0x10007, 0x20009, 0x2000d,
+    0x30011, 0x30019, 0x40021, 0x40031, 0x50041, 0x50061, 0x60081, 0x600c1,
+    0x70101, 0x70181, 0x80201, 0x80301, 0x90401, 0x90601, 0xa0801, 0xa0c01,
+    0xb1001, 0xb1801, 0xc2001, 0xc3001, 0xd4001, 0xd6001
+  ]);
+
+  var fixedLitCodeTab = [new Int32Array([
+    0x70100, 0x80050, 0x80010, 0x80118, 0x70110, 0x80070, 0x80030, 0x900c0,
+    0x70108, 0x80060, 0x80020, 0x900a0, 0x80000, 0x80080, 0x80040, 0x900e0,
+    0x70104, 0x80058, 0x80018, 0x90090, 0x70114, 0x80078, 0x80038, 0x900d0,
+    0x7010c, 0x80068, 0x80028, 0x900b0, 0x80008, 0x80088, 0x80048, 0x900f0,
+    0x70102, 0x80054, 0x80014, 0x8011c, 0x70112, 0x80074, 0x80034, 0x900c8,
+    0x7010a, 0x80064, 0x80024, 0x900a8, 0x80004, 0x80084, 0x80044, 0x900e8,
+    0x70106, 0x8005c, 0x8001c, 0x90098, 0x70116, 0x8007c, 0x8003c, 0x900d8,
+    0x7010e, 0x8006c, 0x8002c, 0x900b8, 0x8000c, 0x8008c, 0x8004c, 0x900f8,
+    0x70101, 0x80052, 0x80012, 0x8011a, 0x70111, 0x80072, 0x80032, 0x900c4,
+    0x70109, 0x80062, 0x80022, 0x900a4, 0x80002, 0x80082, 0x80042, 0x900e4,
+    0x70105, 0x8005a, 0x8001a, 0x90094, 0x70115, 0x8007a, 0x8003a, 0x900d4,
+    0x7010d, 0x8006a, 0x8002a, 0x900b4, 0x8000a, 0x8008a, 0x8004a, 0x900f4,
+    0x70103, 0x80056, 0x80016, 0x8011e, 0x70113, 0x80076, 0x80036, 0x900cc,
+    0x7010b, 0x80066, 0x80026, 0x900ac, 0x80006, 0x80086, 0x80046, 0x900ec,
+    0x70107, 0x8005e, 0x8001e, 0x9009c, 0x70117, 0x8007e, 0x8003e, 0x900dc,
+    0x7010f, 0x8006e, 0x8002e, 0x900bc, 0x8000e, 0x8008e, 0x8004e, 0x900fc,
+    0x70100, 0x80051, 0x80011, 0x80119, 0x70110, 0x80071, 0x80031, 0x900c2,
+    0x70108, 0x80061, 0x80021, 0x900a2, 0x80001, 0x80081, 0x80041, 0x900e2,
+    0x70104, 0x80059, 0x80019, 0x90092, 0x70114, 0x80079, 0x80039, 0x900d2,
+    0x7010c, 0x80069, 0x80029, 0x900b2, 0x80009, 0x80089, 0x80049, 0x900f2,
+    0x70102, 0x80055, 0x80015, 0x8011d, 0x70112, 0x80075, 0x80035, 0x900ca,
+    0x7010a, 0x80065, 0x80025, 0x900aa, 0x80005, 0x80085, 0x80045, 0x900ea,
+    0x70106, 0x8005d, 0x8001d, 0x9009a, 0x70116, 0x8007d, 0x8003d, 0x900da,
+    0x7010e, 0x8006d, 0x8002d, 0x900ba, 0x8000d, 0x8008d, 0x8004d, 0x900fa,
+    0x70101, 0x80053, 0x80013, 0x8011b, 0x70111, 0x80073, 0x80033, 0x900c6,
+    0x70109, 0x80063, 0x80023, 0x900a6, 0x80003, 0x80083, 0x80043, 0x900e6,
+    0x70105, 0x8005b, 0x8001b, 0x90096, 0x70115, 0x8007b, 0x8003b, 0x900d6,
+    0x7010d, 0x8006b, 0x8002b, 0x900b6, 0x8000b, 0x8008b, 0x8004b, 0x900f6,
+    0x70103, 0x80057, 0x80017, 0x8011f, 0x70113, 0x80077, 0x80037, 0x900ce,
+    0x7010b, 0x80067, 0x80027, 0x900ae, 0x80007, 0x80087, 0x80047, 0x900ee,
+    0x70107, 0x8005f, 0x8001f, 0x9009e, 0x70117, 0x8007f, 0x8003f, 0x900de,
+    0x7010f, 0x8006f, 0x8002f, 0x900be, 0x8000f, 0x8008f, 0x8004f, 0x900fe,
+    0x70100, 0x80050, 0x80010, 0x80118, 0x70110, 0x80070, 0x80030, 0x900c1,
+    0x70108, 0x80060, 0x80020, 0x900a1, 0x80000, 0x80080, 0x80040, 0x900e1,
+    0x70104, 0x80058, 0x80018, 0x90091, 0x70114, 0x80078, 0x80038, 0x900d1,
+    0x7010c, 0x80068, 0x80028, 0x900b1, 0x80008, 0x80088, 0x80048, 0x900f1,
+    0x70102, 0x80054, 0x80014, 0x8011c, 0x70112, 0x80074, 0x80034, 0x900c9,
+    0x7010a, 0x80064, 0x80024, 0x900a9, 0x80004, 0x80084, 0x80044, 0x900e9,
+    0x70106, 0x8005c, 0x8001c, 0x90099, 0x70116, 0x8007c, 0x8003c, 0x900d9,
+    0x7010e, 0x8006c, 0x8002c, 0x900b9, 0x8000c, 0x8008c, 0x8004c, 0x900f9,
+    0x70101, 0x80052, 0x80012, 0x8011a, 0x70111, 0x80072, 0x80032, 0x900c5,
+    0x70109, 0x80062, 0x80022, 0x900a5, 0x80002, 0x80082, 0x80042, 0x900e5,
+    0x70105, 0x8005a, 0x8001a, 0x90095, 0x70115, 0x8007a, 0x8003a, 0x900d5,
+    0x7010d, 0x8006a, 0x8002a, 0x900b5, 0x8000a, 0x8008a, 0x8004a, 0x900f5,
+    0x70103, 0x80056, 0x80016, 0x8011e, 0x70113, 0x80076, 0x80036, 0x900cd,
+    0x7010b, 0x80066, 0x80026, 0x900ad, 0x80006, 0x80086, 0x80046, 0x900ed,
+    0x70107, 0x8005e, 0x8001e, 0x9009d, 0x70117, 0x8007e, 0x8003e, 0x900dd,
+    0x7010f, 0x8006e, 0x8002e, 0x900bd, 0x8000e, 0x8008e, 0x8004e, 0x900fd,
+    0x70100, 0x80051, 0x80011, 0x80119, 0x70110, 0x80071, 0x80031, 0x900c3,
+    0x70108, 0x80061, 0x80021, 0x900a3, 0x80001, 0x80081, 0x80041, 0x900e3,
+    0x70104, 0x80059, 0x80019, 0x90093, 0x70114, 0x80079, 0x80039, 0x900d3,
+    0x7010c, 0x80069, 0x80029, 0x900b3, 0x80009, 0x80089, 0x80049, 0x900f3,
+    0x70102, 0x80055, 0x80015, 0x8011d, 0x70112, 0x80075, 0x80035, 0x900cb,
+    0x7010a, 0x80065, 0x80025, 0x900ab, 0x80005, 0x80085, 0x80045, 0x900eb,
+    0x70106, 0x8005d, 0x8001d, 0x9009b, 0x70116, 0x8007d, 0x8003d, 0x900db,
+    0x7010e, 0x8006d, 0x8002d, 0x900bb, 0x8000d, 0x8008d, 0x8004d, 0x900fb,
+    0x70101, 0x80053, 0x80013, 0x8011b, 0x70111, 0x80073, 0x80033, 0x900c7,
+    0x70109, 0x80063, 0x80023, 0x900a7, 0x80003, 0x80083, 0x80043, 0x900e7,
+    0x70105, 0x8005b, 0x8001b, 0x90097, 0x70115, 0x8007b, 0x8003b, 0x900d7,
+    0x7010d, 0x8006b, 0x8002b, 0x900b7, 0x8000b, 0x8008b, 0x8004b, 0x900f7,
+    0x70103, 0x80057, 0x80017, 0x8011f, 0x70113, 0x80077, 0x80037, 0x900cf,
+    0x7010b, 0x80067, 0x80027, 0x900af, 0x80007, 0x80087, 0x80047, 0x900ef,
+    0x70107, 0x8005f, 0x8001f, 0x9009f, 0x70117, 0x8007f, 0x8003f, 0x900df,
+    0x7010f, 0x8006f, 0x8002f, 0x900bf, 0x8000f, 0x8008f, 0x8004f, 0x900ff
+  ]), 9];
+
+  var fixedDistCodeTab = [new Int32Array([
+    0x50000, 0x50010, 0x50008, 0x50018, 0x50004, 0x50014, 0x5000c, 0x5001c,
+    0x50002, 0x50012, 0x5000a, 0x5001a, 0x50006, 0x50016, 0x5000e, 0x00000,
+    0x50001, 0x50011, 0x50009, 0x50019, 0x50005, 0x50015, 0x5000d, 0x5001d,
+    0x50003, 0x50013, 0x5000b, 0x5001b, 0x50007, 0x50017, 0x5000f, 0x00000
+  ]), 5];
+
+  function FlateStream(str, maybeLength) {
+    this.str = str;
+    this.dict = str.dict;
+
+    var cmf = str.getByte();
+    var flg = str.getByte();
+    if (cmf === -1 || flg === -1) {
+      error('Invalid header in flate stream: ' + cmf + ', ' + flg);
+    }
+    if ((cmf & 0x0f) !== 0x08) {
+      error('Unknown compression method in flate stream: ' + cmf + ', ' + flg);
+    }
+    if ((((cmf << 8) + flg) % 31) !== 0) {
+      error('Bad FCHECK in flate stream: ' + cmf + ', ' + flg);
+    }
+    if (flg & 0x20) {
+      error('FDICT bit set in flate stream: ' + cmf + ', ' + flg);
+    }
+
+    this.codeSize = 0;
+    this.codeBuf = 0;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  FlateStream.prototype = Object.create(DecodeStream.prototype);
+
+  FlateStream.prototype.getBits = function FlateStream_getBits(bits) {
+    var str = this.str;
+    var codeSize = this.codeSize;
+    var codeBuf = this.codeBuf;
+
+    var b;
+    while (codeSize < bits) {
+      if ((b = str.getByte()) === -1) {
+        error('Bad encoding in flate stream');
+      }
+      codeBuf |= b << codeSize;
+      codeSize += 8;
+    }
+    b = codeBuf & ((1 << bits) - 1);
+    this.codeBuf = codeBuf >> bits;
+    this.codeSize = codeSize -= bits;
+
+    return b;
+  };
+
+  FlateStream.prototype.getCode = function FlateStream_getCode(table) {
+    var str = this.str;
+    var codes = table[0];
+    var maxLen = table[1];
+    var codeSize = this.codeSize;
+    var codeBuf = this.codeBuf;
+
+    var b;
+    while (codeSize < maxLen) {
+      if ((b = str.getByte()) === -1) {
+        // premature end of stream. code might however still be valid.
+        // codeSize < codeLen check below guards against incomplete codeVal.
+        break;
+      }
+      codeBuf |= (b << codeSize);
+      codeSize += 8;
+    }
+    var code = codes[codeBuf & ((1 << maxLen) - 1)];
+    var codeLen = code >> 16;
+    var codeVal = code & 0xffff;
+    if (codeLen < 1 || codeSize < codeLen) {
+      error('Bad encoding in flate stream');
+    }
+    this.codeBuf = (codeBuf >> codeLen);
+    this.codeSize = (codeSize - codeLen);
+    return codeVal;
+  };
+
+  FlateStream.prototype.generateHuffmanTable =
+      function flateStreamGenerateHuffmanTable(lengths) {
+    var n = lengths.length;
+
+    // find max code length
+    var maxLen = 0;
+    var i;
+    for (i = 0; i < n; ++i) {
+      if (lengths[i] > maxLen) {
+        maxLen = lengths[i];
+      }
+    }
+
+    // build the table
+    var size = 1 << maxLen;
+    var codes = new Int32Array(size);
+    for (var len = 1, code = 0, skip = 2;
+         len <= maxLen;
+         ++len, code <<= 1, skip <<= 1) {
+      for (var val = 0; val < n; ++val) {
+        if (lengths[val] === len) {
+          // bit-reverse the code
+          var code2 = 0;
+          var t = code;
+          for (i = 0; i < len; ++i) {
+            code2 = (code2 << 1) | (t & 1);
+            t >>= 1;
+          }
+
+          // fill the table entries
+          for (i = code2; i < size; i += skip) {
+            codes[i] = (len << 16) | val;
+          }
+          ++code;
+        }
+      }
+    }
+
+    return [codes, maxLen];
+  };
+
+  FlateStream.prototype.readBlock = function FlateStream_readBlock() {
+    var buffer, len;
+    var str = this.str;
+    // read block header
+    var hdr = this.getBits(3);
+    if (hdr & 1) {
+      this.eof = true;
+    }
+    hdr >>= 1;
+
+    if (hdr === 0) { // uncompressed block
+      var b;
+
+      if ((b = str.getByte()) === -1) {
+        error('Bad block header in flate stream');
+      }
+      var blockLen = b;
+      if ((b = str.getByte()) === -1) {
+        error('Bad block header in flate stream');
+      }
+      blockLen |= (b << 8);
+      if ((b = str.getByte()) === -1) {
+        error('Bad block header in flate stream');
+      }
+      var check = b;
+      if ((b = str.getByte()) === -1) {
+        error('Bad block header in flate stream');
+      }
+      check |= (b << 8);
+      if (check !== (~blockLen & 0xffff) &&
+          (blockLen !== 0 || check !== 0)) {
+        // Ignoring error for bad "empty" block (see issue 1277)
+        error('Bad uncompressed block length in flate stream');
+      }
+
+      this.codeBuf = 0;
+      this.codeSize = 0;
+
+      var bufferLength = this.bufferLength;
+      buffer = this.ensureBuffer(bufferLength + blockLen);
+      var end = bufferLength + blockLen;
+      this.bufferLength = end;
+      if (blockLen === 0) {
+        if (str.peekByte() === -1) {
+          this.eof = true;
+        }
+      } else {
+        for (var n = bufferLength; n < end; ++n) {
+          if ((b = str.getByte()) === -1) {
+            this.eof = true;
+            break;
+          }
+          buffer[n] = b;
+        }
+      }
+      return;
+    }
+
+    var litCodeTable;
+    var distCodeTable;
+    if (hdr === 1) { // compressed block, fixed codes
+      litCodeTable = fixedLitCodeTab;
+      distCodeTable = fixedDistCodeTab;
+    } else if (hdr === 2) { // compressed block, dynamic codes
+      var numLitCodes = this.getBits(5) + 257;
+      var numDistCodes = this.getBits(5) + 1;
+      var numCodeLenCodes = this.getBits(4) + 4;
+
+      // build the code lengths code table
+      var codeLenCodeLengths = new Uint8Array(codeLenCodeMap.length);
+
+      var i;
+      for (i = 0; i < numCodeLenCodes; ++i) {
+        codeLenCodeLengths[codeLenCodeMap[i]] = this.getBits(3);
+      }
+      var codeLenCodeTab = this.generateHuffmanTable(codeLenCodeLengths);
+
+      // build the literal and distance code tables
+      len = 0;
+      i = 0;
+      var codes = numLitCodes + numDistCodes;
+      var codeLengths = new Uint8Array(codes);
+      var bitsLength, bitsOffset, what;
+      while (i < codes) {
+        var code = this.getCode(codeLenCodeTab);
+        if (code === 16) {
+          bitsLength = 2; bitsOffset = 3; what = len;
+        } else if (code === 17) {
+          bitsLength = 3; bitsOffset = 3; what = (len = 0);
+        } else if (code === 18) {
+          bitsLength = 7; bitsOffset = 11; what = (len = 0);
+        } else {
+          codeLengths[i++] = len = code;
+          continue;
+        }
+
+        var repeatLength = this.getBits(bitsLength) + bitsOffset;
+        while (repeatLength-- > 0) {
+          codeLengths[i++] = what;
+        }
+      }
+
+      litCodeTable =
+        this.generateHuffmanTable(codeLengths.subarray(0, numLitCodes));
+      distCodeTable =
+        this.generateHuffmanTable(codeLengths.subarray(numLitCodes, codes));
+    } else {
+      error('Unknown block type in flate stream');
+    }
+
+    buffer = this.buffer;
+    var limit = buffer ? buffer.length : 0;
+    var pos = this.bufferLength;
+    while (true) {
+      var code1 = this.getCode(litCodeTable);
+      if (code1 < 256) {
+        if (pos + 1 >= limit) {
+          buffer = this.ensureBuffer(pos + 1);
+          limit = buffer.length;
+        }
+        buffer[pos++] = code1;
+        continue;
+      }
+      if (code1 === 256) {
+        this.bufferLength = pos;
+        return;
+      }
+      code1 -= 257;
+      code1 = lengthDecode[code1];
+      var code2 = code1 >> 16;
+      if (code2 > 0) {
+        code2 = this.getBits(code2);
+      }
+      len = (code1 & 0xffff) + code2;
+      code1 = this.getCode(distCodeTable);
+      code1 = distDecode[code1];
+      code2 = code1 >> 16;
+      if (code2 > 0) {
+        code2 = this.getBits(code2);
+      }
+      var dist = (code1 & 0xffff) + code2;
+      if (pos + len >= limit) {
+        buffer = this.ensureBuffer(pos + len);
+        limit = buffer.length;
+      }
+      for (var k = 0; k < len; ++k, ++pos) {
+        buffer[pos] = buffer[pos - dist];
+      }
+    }
+  };
+
+  return FlateStream;
+})();
+
+var PredictorStream = (function PredictorStreamClosure() {
+  function PredictorStream(str, maybeLength, params) {
+    var predictor = this.predictor = params.get('Predictor') || 1;
+
+    if (predictor <= 1) {
+      return str; // no prediction
+    }
+    if (predictor !== 2 && (predictor < 10 || predictor > 15)) {
+      error('Unsupported predictor: ' + predictor);
+    }
+
+    if (predictor === 2) {
+      this.readBlock = this.readBlockTiff;
+    } else {
+      this.readBlock = this.readBlockPng;
+    }
+
+    this.str = str;
+    this.dict = str.dict;
+
+    var colors = this.colors = params.get('Colors') || 1;
+    var bits = this.bits = params.get('BitsPerComponent') || 8;
+    var columns = this.columns = params.get('Columns') || 1;
+
+    this.pixBytes = (colors * bits + 7) >> 3;
+    this.rowBytes = (columns * colors * bits + 7) >> 3;
+
+    DecodeStream.call(this, maybeLength);
+    return this;
+  }
+
+  PredictorStream.prototype = Object.create(DecodeStream.prototype);
+
+  PredictorStream.prototype.readBlockTiff =
+      function predictorStreamReadBlockTiff() {
+    var rowBytes = this.rowBytes;
+
+    var bufferLength = this.bufferLength;
+    var buffer = this.ensureBuffer(bufferLength + rowBytes);
+
+    var bits = this.bits;
+    var colors = this.colors;
+
+    var rawBytes = this.str.getBytes(rowBytes);
+    this.eof = !rawBytes.length;
+    if (this.eof) {
+      return;
+    }
+
+    var inbuf = 0, outbuf = 0;
+    var inbits = 0, outbits = 0;
+    var pos = bufferLength;
+    var i;
+
+    if (bits === 1) {
+      for (i = 0; i < rowBytes; ++i) {
+        var c = rawBytes[i];
+        inbuf = (inbuf << 8) | c;
+        // bitwise addition is exclusive or
+        // first shift inbuf and then add
+        buffer[pos++] = (c ^ (inbuf >> colors)) & 0xFF;
+        // truncate inbuf (assumes colors < 16)
+        inbuf &= 0xFFFF;
+      }
+    } else if (bits === 8) {
+      for (i = 0; i < colors; ++i) {
+        buffer[pos++] = rawBytes[i];
+      }
+      for (; i < rowBytes; ++i) {
+        buffer[pos] = buffer[pos - colors] + rawBytes[i];
+        pos++;
+      }
+    } else {
+      var compArray = new Uint8Array(colors + 1);
+      var bitMask = (1 << bits) - 1;
+      var j = 0, k = bufferLength;
+      var columns = this.columns;
+      for (i = 0; i < columns; ++i) {
+        for (var kk = 0; kk < colors; ++kk) {
+          if (inbits < bits) {
+            inbuf = (inbuf << 8) | (rawBytes[j++] & 0xFF);
+            inbits += 8;
+          }
+          compArray[kk] = (compArray[kk] +
+                           (inbuf >> (inbits - bits))) & bitMask;
+          inbits -= bits;
+          outbuf = (outbuf << bits) | compArray[kk];
+          outbits += bits;
+          if (outbits >= 8) {
+            buffer[k++] = (outbuf >> (outbits - 8)) & 0xFF;
+            outbits -= 8;
+          }
+        }
+      }
+      if (outbits > 0) {
+        buffer[k++] = (outbuf << (8 - outbits)) +
+                      (inbuf & ((1 << (8 - outbits)) - 1));
+      }
+    }
+    this.bufferLength += rowBytes;
+  };
+
+  PredictorStream.prototype.readBlockPng =
+      function predictorStreamReadBlockPng() {
+
+    var rowBytes = this.rowBytes;
+    var pixBytes = this.pixBytes;
+
+    var predictor = this.str.getByte();
+    var rawBytes = this.str.getBytes(rowBytes);
+    this.eof = !rawBytes.length;
+    if (this.eof) {
+      return;
+    }
+
+    var bufferLength = this.bufferLength;
+    var buffer = this.ensureBuffer(bufferLength + rowBytes);
+
+    var prevRow = buffer.subarray(bufferLength - rowBytes, bufferLength);
+    if (prevRow.length === 0) {
+      prevRow = new Uint8Array(rowBytes);
+    }
+
+    var i, j = bufferLength, up, c;
+    switch (predictor) {
+      case 0:
+        for (i = 0; i < rowBytes; ++i) {
+          buffer[j++] = rawBytes[i];
+        }
+        break;
+      case 1:
+        for (i = 0; i < pixBytes; ++i) {
+          buffer[j++] = rawBytes[i];
+        }
+        for (; i < rowBytes; ++i) {
+          buffer[j] = (buffer[j - pixBytes] + rawBytes[i]) & 0xFF;
+          j++;
+        }
+        break;
+      case 2:
+        for (i = 0; i < rowBytes; ++i) {
+          buffer[j++] = (prevRow[i] + rawBytes[i]) & 0xFF;
+        }
+        break;
+      case 3:
+        for (i = 0; i < pixBytes; ++i) {
+          buffer[j++] = (prevRow[i] >> 1) + rawBytes[i];
+        }
+        for (; i < rowBytes; ++i) {
+          buffer[j] = (((prevRow[i] + buffer[j - pixBytes]) >> 1) +
+                           rawBytes[i]) & 0xFF;
+          j++;
+        }
+        break;
+      case 4:
+        // we need to save the up left pixels values. the simplest way
+        // is to create a new buffer
+        for (i = 0; i < pixBytes; ++i) {
+          up = prevRow[i];
+          c = rawBytes[i];
+          buffer[j++] = up + c;
+        }
+        for (; i < rowBytes; ++i) {
+          up = prevRow[i];
+          var upLeft = prevRow[i - pixBytes];
+          var left = buffer[j - pixBytes];
+          var p = left + up - upLeft;
+
+          var pa = p - left;
+          if (pa < 0) {
+            pa = -pa;
+          }
+          var pb = p - up;
+          if (pb < 0) {
+            pb = -pb;
+          }
+          var pc = p - upLeft;
+          if (pc < 0) {
+            pc = -pc;
+          }
+
+          c = rawBytes[i];
+          if (pa <= pb && pa <= pc) {
+            buffer[j++] = left + c;
+          } else if (pb <= pc) {
+            buffer[j++] = up + c;
+          } else {
+            buffer[j++] = upLeft + c;
+          }
+        }
+        break;
+      default:
+        error('Unsupported predictor: ' + predictor);
+    }
+    this.bufferLength += rowBytes;
+  };
+
+  return PredictorStream;
+})();
+
+/**
+ * Depending on the type of JPEG a JpegStream is handled in different ways. For
+ * JPEG's that are supported natively such as DeviceGray and DeviceRGB the image
+ * data is stored and then loaded by the browser.  For unsupported JPEG's we use
+ * a library to decode these images and the stream behaves like all the other
+ * DecodeStreams.
+ */
+var JpegStream = (function JpegStreamClosure() {
+  function JpegStream(stream, maybeLength, dict, xref) {
+    // Some images may contain 'junk' before the SOI (start-of-image) marker.
+    // Note: this seems to mainly affect inline images.
+    var ch;
+    while ((ch = stream.getByte()) !== -1) {
+      if (ch === 0xFF) { // Find the first byte of the SOI marker (0xFFD8).
+        stream.skip(-1); // Reset the stream position to the SOI.
+        break;
+      }
+    }
+    this.stream = stream;
+    this.maybeLength = maybeLength;
+    this.dict = dict;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  JpegStream.prototype = Object.create(DecodeStream.prototype);
+
+  Object.defineProperty(JpegStream.prototype, 'bytes', {
+    get: function JpegStream_bytes() {
+      // If this.maybeLength is null, we'll get the entire stream.
+      return shadow(this, 'bytes', this.stream.getBytes(this.maybeLength));
+    },
+    configurable: true
+  });
+
+  JpegStream.prototype.ensureBuffer = function JpegStream_ensureBuffer(req) {
+    if (this.bufferLength) {
+      return;
+    }
+    try {
+      var jpegImage = new JpegImage();
+
+      // checking if values needs to be transformed before conversion
+      if (this.forceRGB && this.dict && isArray(this.dict.get('Decode'))) {
+        var decodeArr = this.dict.get('Decode');
+        var bitsPerComponent = this.dict.get('BitsPerComponent') || 8;
+        var decodeArrLength = decodeArr.length;
+        var transform = new Int32Array(decodeArrLength);
+        var transformNeeded = false;
+        var maxValue = (1 << bitsPerComponent) - 1;
+        for (var i = 0; i < decodeArrLength; i += 2) {
+          transform[i] = ((decodeArr[i + 1] - decodeArr[i]) * 256) | 0;
+          transform[i + 1] = (decodeArr[i] * maxValue) | 0;
+          if (transform[i] !== 256 || transform[i + 1] !== 0) {
+            transformNeeded = true;
+          }
+        }
+        if (transformNeeded) {
+          jpegImage.decodeTransform = transform;
+        }
+      }
+
+      jpegImage.parse(this.bytes);
+      var data = jpegImage.getData(this.drawWidth, this.drawHeight,
+                                   this.forceRGB);
+      this.buffer = data;
+      this.bufferLength = data.length;
+      this.eof = true;
+    } catch (e) {
+      error('JPEG error: ' + e);
+    }
+  };
+
+  JpegStream.prototype.getBytes = function JpegStream_getBytes(length) {
+    this.ensureBuffer();
+    return this.buffer;
+  };
+
+  JpegStream.prototype.getIR = function JpegStream_getIR() {
+    return PDFJS.createObjectURL(this.bytes, 'image/jpeg');
+  };
+  /**
+   * Checks if the image can be decoded and displayed by the browser without any
+   * further processing such as color space conversions.
+   */
+  JpegStream.prototype.isNativelySupported =
+      function JpegStream_isNativelySupported(xref, res) {
+    var cs = ColorSpace.parse(this.dict.get('ColorSpace', 'CS'), xref, res);
+    return cs.name === 'DeviceGray' || cs.name === 'DeviceRGB';
+  };
+  /**
+   * Checks if the image can be decoded by the browser.
+   */
+  JpegStream.prototype.isNativelyDecodable =
+      function JpegStream_isNativelyDecodable(xref, res) {
+    var cs = ColorSpace.parse(this.dict.get('ColorSpace', 'CS'), xref, res);
+    var numComps = cs.numComps;
+    return numComps === 1 || numComps === 3;
+  };
+
+  return JpegStream;
+})();
+
+/**
+ * For JPEG 2000's we use a library to decode these images and
+ * the stream behaves like all the other DecodeStreams.
+ */
+var JpxStream = (function JpxStreamClosure() {
+  function JpxStream(stream, maybeLength, dict) {
+    this.stream = stream;
+    this.maybeLength = maybeLength;
+    this.dict = dict;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  JpxStream.prototype = Object.create(DecodeStream.prototype);
+
+  Object.defineProperty(JpxStream.prototype, 'bytes', {
+    get: function JpxStream_bytes() {
+      // If this.maybeLength is null, we'll get the entire stream.
+      return shadow(this, 'bytes', this.stream.getBytes(this.maybeLength));
+    },
+    configurable: true
+  });
+
+  JpxStream.prototype.ensureBuffer = function JpxStream_ensureBuffer(req) {
+    if (this.bufferLength) {
+      return;
+    }
+
+    var jpxImage = new JpxImage();
+    jpxImage.parse(this.bytes);
+
+    var width = jpxImage.width;
+    var height = jpxImage.height;
+    var componentsCount = jpxImage.componentsCount;
+    var tileCount = jpxImage.tiles.length;
+    if (tileCount === 1) {
+      this.buffer = jpxImage.tiles[0].items;
+    } else {
+      var data = new Uint8Array(width * height * componentsCount);
+
+      for (var k = 0; k < tileCount; k++) {
+        var tileComponents = jpxImage.tiles[k];
+        var tileWidth = tileComponents.width;
+        var tileHeight = tileComponents.height;
+        var tileLeft = tileComponents.left;
+        var tileTop = tileComponents.top;
+
+        var src = tileComponents.items;
+        var srcPosition = 0;
+        var dataPosition = (width * tileTop + tileLeft) * componentsCount;
+        var imgRowSize = width * componentsCount;
+        var tileRowSize = tileWidth * componentsCount;
+
+        for (var j = 0; j < tileHeight; j++) {
+          var rowBytes = src.subarray(srcPosition, srcPosition + tileRowSize);
+          data.set(rowBytes, dataPosition);
+          srcPosition += tileRowSize;
+          dataPosition += imgRowSize;
+        }
+      }
+      this.buffer = data;
+    }
+    this.bufferLength = this.buffer.length;
+    this.eof = true;
+  };
+
+  return JpxStream;
+})();
+
+/**
+ * For JBIG2's we use a library to decode these images and
+ * the stream behaves like all the other DecodeStreams.
+ */
+var Jbig2Stream = (function Jbig2StreamClosure() {
+  function Jbig2Stream(stream, maybeLength, dict) {
+    this.stream = stream;
+    this.maybeLength = maybeLength;
+    this.dict = dict;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  Jbig2Stream.prototype = Object.create(DecodeStream.prototype);
+
+  Object.defineProperty(Jbig2Stream.prototype, 'bytes', {
+    get: function Jbig2Stream_bytes() {
+      // If this.maybeLength is null, we'll get the entire stream.
+      return shadow(this, 'bytes', this.stream.getBytes(this.maybeLength));
+    },
+    configurable: true
+  });
+
+  Jbig2Stream.prototype.ensureBuffer = function Jbig2Stream_ensureBuffer(req) {
+    if (this.bufferLength) {
+      return;
+    }
+
+    var jbig2Image = new Jbig2Image();
+
+    var chunks = [], xref = this.dict.xref;
+    var decodeParams = xref.fetchIfRef(this.dict.get('DecodeParms'));
+
+    // According to the PDF specification, DecodeParms can be either
+    // a dictionary, or an array whose elements are dictionaries.
+    if (isArray(decodeParams)) {
+      if (decodeParams.length > 1) {
+        warn('JBIG2 - \'DecodeParms\' array with multiple elements ' +
+             'not supported.');
+      }
+      decodeParams = xref.fetchIfRef(decodeParams[0]);
+    }
+    if (decodeParams && decodeParams.has('JBIG2Globals')) {
+      var globalsStream = decodeParams.get('JBIG2Globals');
+      var globals = globalsStream.getBytes();
+      chunks.push({data: globals, start: 0, end: globals.length});
+    }
+    chunks.push({data: this.bytes, start: 0, end: this.bytes.length});
+    var data = jbig2Image.parseChunks(chunks);
+    var dataLength = data.length;
+
+    // JBIG2 had black as 1 and white as 0, inverting the colors
+    for (var i = 0; i < dataLength; i++) {
+      data[i] ^= 0xFF;
+    }
+
+    this.buffer = data;
+    this.bufferLength = dataLength;
+    this.eof = true;
+  };
+
+  return Jbig2Stream;
+})();
+
+var DecryptStream = (function DecryptStreamClosure() {
+  function DecryptStream(str, maybeLength, decrypt) {
+    this.str = str;
+    this.dict = str.dict;
+    this.decrypt = decrypt;
+    this.nextChunk = null;
+    this.initialized = false;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  var chunkSize = 512;
+
+  DecryptStream.prototype = Object.create(DecodeStream.prototype);
+
+  DecryptStream.prototype.readBlock = function DecryptStream_readBlock() {
+    var chunk;
+    if (this.initialized) {
+      chunk = this.nextChunk;
+    } else {
+      chunk = this.str.getBytes(chunkSize);
+      this.initialized = true;
+    }
+    if (!chunk || chunk.length === 0) {
+      this.eof = true;
+      return;
+    }
+    this.nextChunk = this.str.getBytes(chunkSize);
+    var hasMoreData = this.nextChunk && this.nextChunk.length > 0;
+
+    var decrypt = this.decrypt;
+    chunk = decrypt(chunk, !hasMoreData);
+
+    var bufferLength = this.bufferLength;
+    var i, n = chunk.length;
+    var buffer = this.ensureBuffer(bufferLength + n);
+    for (i = 0; i < n; i++) {
+      buffer[bufferLength++] = chunk[i];
+    }
+    this.bufferLength = bufferLength;
+  };
+
+  return DecryptStream;
+})();
+
+var Ascii85Stream = (function Ascii85StreamClosure() {
+  function Ascii85Stream(str, maybeLength) {
+    this.str = str;
+    this.dict = str.dict;
+    this.input = new Uint8Array(5);
+
+    // Most streams increase in size when decoded, but Ascii85 streams
+    // typically shrink by ~20%.
+    if (maybeLength) {
+      maybeLength = 0.8 * maybeLength;
+    }
+    DecodeStream.call(this, maybeLength);
+  }
+
+  Ascii85Stream.prototype = Object.create(DecodeStream.prototype);
+
+  Ascii85Stream.prototype.readBlock = function Ascii85Stream_readBlock() {
+    var TILDA_CHAR = 0x7E; // '~'
+    var Z_LOWER_CHAR = 0x7A; // 'z'
+    var EOF = -1;
+
+    var str = this.str;
+
+    var c = str.getByte();
+    while (Lexer.isSpace(c)) {
+      c = str.getByte();
+    }
+
+    if (c === EOF || c === TILDA_CHAR) {
+      this.eof = true;
+      return;
+    }
+
+    var bufferLength = this.bufferLength, buffer;
+    var i;
+
+    // special code for z
+    if (c === Z_LOWER_CHAR) {
+      buffer = this.ensureBuffer(bufferLength + 4);
+      for (i = 0; i < 4; ++i) {
+        buffer[bufferLength + i] = 0;
+      }
+      this.bufferLength += 4;
+    } else {
+      var input = this.input;
+      input[0] = c;
+      for (i = 1; i < 5; ++i) {
+        c = str.getByte();
+        while (Lexer.isSpace(c)) {
+          c = str.getByte();
+        }
+
+        input[i] = c;
+
+        if (c === EOF || c === TILDA_CHAR) {
+          break;
+        }
+      }
+      buffer = this.ensureBuffer(bufferLength + i - 1);
+      this.bufferLength += i - 1;
+
+      // partial ending;
+      if (i < 5) {
+        for (; i < 5; ++i) {
+          input[i] = 0x21 + 84;
+        }
+        this.eof = true;
+      }
+      var t = 0;
+      for (i = 0; i < 5; ++i) {
+        t = t * 85 + (input[i] - 0x21);
+      }
+
+      for (i = 3; i >= 0; --i) {
+        buffer[bufferLength + i] = t & 0xFF;
+        t >>= 8;
+      }
+    }
+  };
+
+  return Ascii85Stream;
+})();
+
+var AsciiHexStream = (function AsciiHexStreamClosure() {
+  function AsciiHexStream(str, maybeLength) {
+    this.str = str;
+    this.dict = str.dict;
+
+    this.firstDigit = -1;
+
+    // Most streams increase in size when decoded, but AsciiHex streams shrink
+    // by 50%.
+    if (maybeLength) {
+      maybeLength = 0.5 * maybeLength;
+    }
+    DecodeStream.call(this, maybeLength);
+  }
+
+  AsciiHexStream.prototype = Object.create(DecodeStream.prototype);
+
+  AsciiHexStream.prototype.readBlock = function AsciiHexStream_readBlock() {
+    var UPSTREAM_BLOCK_SIZE = 8000;
+    var bytes = this.str.getBytes(UPSTREAM_BLOCK_SIZE);
+    if (!bytes.length) {
+      this.eof = true;
+      return;
+    }
+
+    var maxDecodeLength = (bytes.length + 1) >> 1;
+    var buffer = this.ensureBuffer(this.bufferLength + maxDecodeLength);
+    var bufferLength = this.bufferLength;
+
+    var firstDigit = this.firstDigit;
+    for (var i = 0, ii = bytes.length; i < ii; i++) {
+      var ch = bytes[i], digit;
+      if (ch >= 0x30 && ch <= 0x39) { // '0'-'9'
+        digit = ch & 0x0F;
+      } else if ((ch >= 0x41 && ch <= 0x46) || (ch >= 0x61 && ch <= 0x66)) {
+        // 'A'-'Z', 'a'-'z'
+        digit = (ch & 0x0F) + 9;
+      } else if (ch === 0x3E) { // '>'
+        this.eof = true;
+        break;
+      } else { // probably whitespace
+        continue; // ignoring
+      }
+      if (firstDigit < 0) {
+        firstDigit = digit;
+      } else {
+        buffer[bufferLength++] = (firstDigit << 4) | digit;
+        firstDigit = -1;
+      }
+    }
+    if (firstDigit >= 0 && this.eof) {
+      // incomplete byte
+      buffer[bufferLength++] = (firstDigit << 4);
+      firstDigit = -1;
+    }
+    this.firstDigit = firstDigit;
+    this.bufferLength = bufferLength;
+  };
+
+  return AsciiHexStream;
+})();
+
+var RunLengthStream = (function RunLengthStreamClosure() {
+  function RunLengthStream(str, maybeLength) {
+    this.str = str;
+    this.dict = str.dict;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  RunLengthStream.prototype = Object.create(DecodeStream.prototype);
+
+  RunLengthStream.prototype.readBlock = function RunLengthStream_readBlock() {
+    // The repeatHeader has following format. The first byte defines type of run
+    // and amount of bytes to repeat/copy: n = 0 through 127 - copy next n bytes
+    // (in addition to the second byte from the header), n = 129 through 255 -
+    // duplicate the second byte from the header (257 - n) times, n = 128 - end.
+    var repeatHeader = this.str.getBytes(2);
+    if (!repeatHeader || repeatHeader.length < 2 || repeatHeader[0] === 128) {
+      this.eof = true;
+      return;
+    }
+
+    var buffer;
+    var bufferLength = this.bufferLength;
+    var n = repeatHeader[0];
+    if (n < 128) {
+      // copy n bytes
+      buffer = this.ensureBuffer(bufferLength + n + 1);
+      buffer[bufferLength++] = repeatHeader[1];
+      if (n > 0) {
+        var source = this.str.getBytes(n);
+        buffer.set(source, bufferLength);
+        bufferLength += n;
+      }
+    } else {
+      n = 257 - n;
+      var b = repeatHeader[1];
+      buffer = this.ensureBuffer(bufferLength + n + 1);
+      for (var i = 0; i < n; i++) {
+        buffer[bufferLength++] = b;
+      }
+    }
+    this.bufferLength = bufferLength;
+  };
+
+  return RunLengthStream;
+})();
+
+var CCITTFaxStream = (function CCITTFaxStreamClosure() {
+
+  var ccittEOL = -2;
+  var twoDimPass = 0;
+  var twoDimHoriz = 1;
+  var twoDimVert0 = 2;
+  var twoDimVertR1 = 3;
+  var twoDimVertL1 = 4;
+  var twoDimVertR2 = 5;
+  var twoDimVertL2 = 6;
+  var twoDimVertR3 = 7;
+  var twoDimVertL3 = 8;
+
+  var twoDimTable = [
+    [-1, -1], [-1, -1],                   // 000000x
+    [7, twoDimVertL3],                    // 0000010
+    [7, twoDimVertR3],                    // 0000011
+    [6, twoDimVertL2], [6, twoDimVertL2], // 000010x
+    [6, twoDimVertR2], [6, twoDimVertR2], // 000011x
+    [4, twoDimPass], [4, twoDimPass],     // 0001xxx
+    [4, twoDimPass], [4, twoDimPass],
+    [4, twoDimPass], [4, twoDimPass],
+    [4, twoDimPass], [4, twoDimPass],
+    [3, twoDimHoriz], [3, twoDimHoriz],   // 001xxxx
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimHoriz], [3, twoDimHoriz],
+    [3, twoDimVertL1], [3, twoDimVertL1], // 010xxxx
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertL1], [3, twoDimVertL1],
+    [3, twoDimVertR1], [3, twoDimVertR1], // 011xxxx
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [3, twoDimVertR1], [3, twoDimVertR1],
+    [1, twoDimVert0], [1, twoDimVert0],   // 1xxxxxx
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0],
+    [1, twoDimVert0], [1, twoDimVert0]
+  ];
+
+  var whiteTable1 = [
+    [-1, -1],                               // 00000
+    [12, ccittEOL],                         // 00001
+    [-1, -1], [-1, -1],                     // 0001x
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1], // 001xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1], // 010xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1], // 011xx
+    [11, 1792], [11, 1792],                 // 1000x
+    [12, 1984],                             // 10010
+    [12, 2048],                             // 10011
+    [12, 2112],                             // 10100
+    [12, 2176],                             // 10101
+    [12, 2240],                             // 10110
+    [12, 2304],                             // 10111
+    [11, 1856], [11, 1856],                 // 1100x
+    [11, 1920], [11, 1920],                 // 1101x
+    [12, 2368],                             // 11100
+    [12, 2432],                             // 11101
+    [12, 2496],                             // 11110
+    [12, 2560]                              // 11111
+  ];
+
+  var whiteTable2 = [
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],     // 0000000xx
+    [8, 29], [8, 29],                           // 00000010x
+    [8, 30], [8, 30],                           // 00000011x
+    [8, 45], [8, 45],                           // 00000100x
+    [8, 46], [8, 46],                           // 00000101x
+    [7, 22], [7, 22], [7, 22], [7, 22],         // 0000011xx
+    [7, 23], [7, 23], [7, 23], [7, 23],         // 0000100xx
+    [8, 47], [8, 47],                           // 00001010x
+    [8, 48], [8, 48],                           // 00001011x
+    [6, 13], [6, 13], [6, 13], [6, 13],         // 000011xxx
+    [6, 13], [6, 13], [6, 13], [6, 13],
+    [7, 20], [7, 20], [7, 20], [7, 20],         // 0001000xx
+    [8, 33], [8, 33],                           // 00010010x
+    [8, 34], [8, 34],                           // 00010011x
+    [8, 35], [8, 35],                           // 00010100x
+    [8, 36], [8, 36],                           // 00010101x
+    [8, 37], [8, 37],                           // 00010110x
+    [8, 38], [8, 38],                           // 00010111x
+    [7, 19], [7, 19], [7, 19], [7, 19],         // 0001100xx
+    [8, 31], [8, 31],                           // 00011010x
+    [8, 32], [8, 32],                           // 00011011x
+    [6, 1], [6, 1], [6, 1], [6, 1],             // 000111xxx
+    [6, 1], [6, 1], [6, 1], [6, 1],
+    [6, 12], [6, 12], [6, 12], [6, 12],         // 001000xxx
+    [6, 12], [6, 12], [6, 12], [6, 12],
+    [8, 53], [8, 53],                           // 00100100x
+    [8, 54], [8, 54],                           // 00100101x
+    [7, 26], [7, 26], [7, 26], [7, 26],         // 0010011xx
+    [8, 39], [8, 39],                           // 00101000x
+    [8, 40], [8, 40],                           // 00101001x
+    [8, 41], [8, 41],                           // 00101010x
+    [8, 42], [8, 42],                           // 00101011x
+    [8, 43], [8, 43],                           // 00101100x
+    [8, 44], [8, 44],                           // 00101101x
+    [7, 21], [7, 21], [7, 21], [7, 21],         // 0010111xx
+    [7, 28], [7, 28], [7, 28], [7, 28],         // 0011000xx
+    [8, 61], [8, 61],                           // 00110010x
+    [8, 62], [8, 62],                           // 00110011x
+    [8, 63], [8, 63],                           // 00110100x
+    [8, 0], [8, 0],                             // 00110101x
+    [8, 320], [8, 320],                         // 00110110x
+    [8, 384], [8, 384],                         // 00110111x
+    [5, 10], [5, 10], [5, 10], [5, 10],         // 00111xxxx
+    [5, 10], [5, 10], [5, 10], [5, 10],
+    [5, 10], [5, 10], [5, 10], [5, 10],
+    [5, 10], [5, 10], [5, 10], [5, 10],
+    [5, 11], [5, 11], [5, 11], [5, 11],         // 01000xxxx
+    [5, 11], [5, 11], [5, 11], [5, 11],
+    [5, 11], [5, 11], [5, 11], [5, 11],
+    [5, 11], [5, 11], [5, 11], [5, 11],
+    [7, 27], [7, 27], [7, 27], [7, 27],         // 0100100xx
+    [8, 59], [8, 59],                           // 01001010x
+    [8, 60], [8, 60],                           // 01001011x
+    [9, 1472],                                  // 010011000
+    [9, 1536],                                  // 010011001
+    [9, 1600],                                  // 010011010
+    [9, 1728],                                  // 010011011
+    [7, 18], [7, 18], [7, 18], [7, 18],         // 0100111xx
+    [7, 24], [7, 24], [7, 24], [7, 24],         // 0101000xx
+    [8, 49], [8, 49],                           // 01010010x
+    [8, 50], [8, 50],                           // 01010011x
+    [8, 51], [8, 51],                           // 01010100x
+    [8, 52], [8, 52],                           // 01010101x
+    [7, 25], [7, 25], [7, 25], [7, 25],         // 0101011xx
+    [8, 55], [8, 55],                           // 01011000x
+    [8, 56], [8, 56],                           // 01011001x
+    [8, 57], [8, 57],                           // 01011010x
+    [8, 58], [8, 58],                           // 01011011x
+    [6, 192], [6, 192], [6, 192], [6, 192],     // 010111xxx
+    [6, 192], [6, 192], [6, 192], [6, 192],
+    [6, 1664], [6, 1664], [6, 1664], [6, 1664], // 011000xxx
+    [6, 1664], [6, 1664], [6, 1664], [6, 1664],
+    [8, 448], [8, 448],                         // 01100100x
+    [8, 512], [8, 512],                         // 01100101x
+    [9, 704],                                   // 011001100
+    [9, 768],                                   // 011001101
+    [8, 640], [8, 640],                         // 01100111x
+    [8, 576], [8, 576],                         // 01101000x
+    [9, 832],                                   // 011010010
+    [9, 896],                                   // 011010011
+    [9, 960],                                   // 011010100
+    [9, 1024],                                  // 011010101
+    [9, 1088],                                  // 011010110
+    [9, 1152],                                  // 011010111
+    [9, 1216],                                  // 011011000
+    [9, 1280],                                  // 011011001
+    [9, 1344],                                  // 011011010
+    [9, 1408],                                  // 011011011
+    [7, 256], [7, 256], [7, 256], [7, 256],     // 0110111xx
+    [4, 2], [4, 2], [4, 2], [4, 2],             // 0111xxxxx
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 2], [4, 2], [4, 2], [4, 2],
+    [4, 3], [4, 3], [4, 3], [4, 3],             // 1000xxxxx
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [4, 3], [4, 3], [4, 3], [4, 3],
+    [5, 128], [5, 128], [5, 128], [5, 128],     // 10010xxxx
+    [5, 128], [5, 128], [5, 128], [5, 128],
+    [5, 128], [5, 128], [5, 128], [5, 128],
+    [5, 128], [5, 128], [5, 128], [5, 128],
+    [5, 8], [5, 8], [5, 8], [5, 8],             // 10011xxxx
+    [5, 8], [5, 8], [5, 8], [5, 8],
+    [5, 8], [5, 8], [5, 8], [5, 8],
+    [5, 8], [5, 8], [5, 8], [5, 8],
+    [5, 9], [5, 9], [5, 9], [5, 9],             // 10100xxxx
+    [5, 9], [5, 9], [5, 9], [5, 9],
+    [5, 9], [5, 9], [5, 9], [5, 9],
+    [5, 9], [5, 9], [5, 9], [5, 9],
+    [6, 16], [6, 16], [6, 16], [6, 16],         // 101010xxx
+    [6, 16], [6, 16], [6, 16], [6, 16],
+    [6, 17], [6, 17], [6, 17], [6, 17],         // 101011xxx
+    [6, 17], [6, 17], [6, 17], [6, 17],
+    [4, 4], [4, 4], [4, 4], [4, 4],             // 1011xxxxx
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 4], [4, 4], [4, 4], [4, 4],
+    [4, 5], [4, 5], [4, 5], [4, 5],             // 1100xxxxx
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [4, 5], [4, 5], [4, 5], [4, 5],
+    [6, 14], [6, 14], [6, 14], [6, 14],         // 110100xxx
+    [6, 14], [6, 14], [6, 14], [6, 14],
+    [6, 15], [6, 15], [6, 15], [6, 15],         // 110101xxx
+    [6, 15], [6, 15], [6, 15], [6, 15],
+    [5, 64], [5, 64], [5, 64], [5, 64],         // 11011xxxx
+    [5, 64], [5, 64], [5, 64], [5, 64],
+    [5, 64], [5, 64], [5, 64], [5, 64],
+    [5, 64], [5, 64], [5, 64], [5, 64],
+    [4, 6], [4, 6], [4, 6], [4, 6],             // 1110xxxxx
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 6], [4, 6], [4, 6], [4, 6],
+    [4, 7], [4, 7], [4, 7], [4, 7],             // 1111xxxxx
+    [4, 7], [4, 7], [4, 7], [4, 7],
+    [4, 7], [4, 7], [4, 7], [4, 7],
+    [4, 7], [4, 7], [4, 7], [4, 7],
+    [4, 7], [4, 7], [4, 7], [4, 7],
+    [4, 7], [4, 7], [4, 7], [4, 7],
+    [4, 7], [4, 7], [4, 7], [4, 7],
+    [4, 7], [4, 7], [4, 7], [4, 7]
+  ];
+
+  var blackTable1 = [
+    [-1, -1], [-1, -1],                             // 000000000000x
+    [12, ccittEOL], [12, ccittEOL],                 // 000000000001x
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000001xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000010xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000011xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000100xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000101xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000110xx
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1],         // 00000000111xx
+    [11, 1792], [11, 1792], [11, 1792], [11, 1792], // 00000001000xx
+    [12, 1984], [12, 1984],                         // 000000010010x
+    [12, 2048], [12, 2048],                         // 000000010011x
+    [12, 2112], [12, 2112],                         // 000000010100x
+    [12, 2176], [12, 2176],                         // 000000010101x
+    [12, 2240], [12, 2240],                         // 000000010110x
+    [12, 2304], [12, 2304],                         // 000000010111x
+    [11, 1856], [11, 1856], [11, 1856], [11, 1856], // 00000001100xx
+    [11, 1920], [11, 1920], [11, 1920], [11, 1920], // 00000001101xx
+    [12, 2368], [12, 2368],                         // 000000011100x
+    [12, 2432], [12, 2432],                         // 000000011101x
+    [12, 2496], [12, 2496],                         // 000000011110x
+    [12, 2560], [12, 2560],                         // 000000011111x
+    [10, 18], [10, 18], [10, 18], [10, 18],         // 0000001000xxx
+    [10, 18], [10, 18], [10, 18], [10, 18],
+    [12, 52], [12, 52],                             // 000000100100x
+    [13, 640],                                      // 0000001001010
+    [13, 704],                                      // 0000001001011
+    [13, 768],                                      // 0000001001100
+    [13, 832],                                      // 0000001001101
+    [12, 55], [12, 55],                             // 000000100111x
+    [12, 56], [12, 56],                             // 000000101000x
+    [13, 1280],                                     // 0000001010010
+    [13, 1344],                                     // 0000001010011
+    [13, 1408],                                     // 0000001010100
+    [13, 1472],                                     // 0000001010101
+    [12, 59], [12, 59],                             // 000000101011x
+    [12, 60], [12, 60],                             // 000000101100x
+    [13, 1536],                                     // 0000001011010
+    [13, 1600],                                     // 0000001011011
+    [11, 24], [11, 24], [11, 24], [11, 24],         // 00000010111xx
+    [11, 25], [11, 25], [11, 25], [11, 25],         // 00000011000xx
+    [13, 1664],                                     // 0000001100100
+    [13, 1728],                                     // 0000001100101
+    [12, 320], [12, 320],                           // 000000110011x
+    [12, 384], [12, 384],                           // 000000110100x
+    [12, 448], [12, 448],                           // 000000110101x
+    [13, 512],                                      // 0000001101100
+    [13, 576],                                      // 0000001101101
+    [12, 53], [12, 53],                             // 000000110111x
+    [12, 54], [12, 54],                             // 000000111000x
+    [13, 896],                                      // 0000001110010
+    [13, 960],                                      // 0000001110011
+    [13, 1024],                                     // 0000001110100
+    [13, 1088],                                     // 0000001110101
+    [13, 1152],                                     // 0000001110110
+    [13, 1216],                                     // 0000001110111
+    [10, 64], [10, 64], [10, 64], [10, 64],         // 0000001111xxx
+    [10, 64], [10, 64], [10, 64], [10, 64]
+  ];
+
+  var blackTable2 = [
+    [8, 13], [8, 13], [8, 13], [8, 13],     // 00000100xxxx
+    [8, 13], [8, 13], [8, 13], [8, 13],
+    [8, 13], [8, 13], [8, 13], [8, 13],
+    [8, 13], [8, 13], [8, 13], [8, 13],
+    [11, 23], [11, 23],                     // 00000101000x
+    [12, 50],                               // 000001010010
+    [12, 51],                               // 000001010011
+    [12, 44],                               // 000001010100
+    [12, 45],                               // 000001010101
+    [12, 46],                               // 000001010110
+    [12, 47],                               // 000001010111
+    [12, 57],                               // 000001011000
+    [12, 58],                               // 000001011001
+    [12, 61],                               // 000001011010
+    [12, 256],                              // 000001011011
+    [10, 16], [10, 16], [10, 16], [10, 16], // 0000010111xx
+    [10, 17], [10, 17], [10, 17], [10, 17], // 0000011000xx
+    [12, 48],                               // 000001100100
+    [12, 49],                               // 000001100101
+    [12, 62],                               // 000001100110
+    [12, 63],                               // 000001100111
+    [12, 30],                               // 000001101000
+    [12, 31],                               // 000001101001
+    [12, 32],                               // 000001101010
+    [12, 33],                               // 000001101011
+    [12, 40],                               // 000001101100
+    [12, 41],                               // 000001101101
+    [11, 22], [11, 22],                     // 00000110111x
+    [8, 14], [8, 14], [8, 14], [8, 14],     // 00000111xxxx
+    [8, 14], [8, 14], [8, 14], [8, 14],
+    [8, 14], [8, 14], [8, 14], [8, 14],
+    [8, 14], [8, 14], [8, 14], [8, 14],
+    [7, 10], [7, 10], [7, 10], [7, 10],     // 0000100xxxxx
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 10], [7, 10], [7, 10], [7, 10],
+    [7, 11], [7, 11], [7, 11], [7, 11],     // 0000101xxxxx
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [7, 11], [7, 11], [7, 11], [7, 11],
+    [9, 15], [9, 15], [9, 15], [9, 15],     // 000011000xxx
+    [9, 15], [9, 15], [9, 15], [9, 15],
+    [12, 128],                              // 000011001000
+    [12, 192],                              // 000011001001
+    [12, 26],                               // 000011001010
+    [12, 27],                               // 000011001011
+    [12, 28],                               // 000011001100
+    [12, 29],                               // 000011001101
+    [11, 19], [11, 19],                     // 00001100111x
+    [11, 20], [11, 20],                     // 00001101000x
+    [12, 34],                               // 000011010010
+    [12, 35],                               // 000011010011
+    [12, 36],                               // 000011010100
+    [12, 37],                               // 000011010101
+    [12, 38],                               // 000011010110
+    [12, 39],                               // 000011010111
+    [11, 21], [11, 21],                     // 00001101100x
+    [12, 42],                               // 000011011010
+    [12, 43],                               // 000011011011
+    [10, 0], [10, 0], [10, 0], [10, 0],     // 0000110111xx
+    [7, 12], [7, 12], [7, 12], [7, 12],     // 0000111xxxxx
+    [7, 12], [7, 12], [7, 12], [7, 12],
+    [7, 12], [7, 12], [7, 12], [7, 12],
+    [7, 12], [7, 12], [7, 12], [7, 12],
+    [7, 12], [7, 12], [7, 12], [7, 12],
+    [7, 12], [7, 12], [7, 12], [7, 12],
+    [7, 12], [7, 12], [7, 12], [7, 12],
+    [7, 12], [7, 12], [7, 12], [7, 12]
+  ];
+
+  var blackTable3 = [
+    [-1, -1], [-1, -1], [-1, -1], [-1, -1], // 0000xx
+    [6, 9],                                 // 000100
+    [6, 8],                                 // 000101
+    [5, 7], [5, 7],                         // 00011x
+    [4, 6], [4, 6], [4, 6], [4, 6],         // 0010xx
+    [4, 5], [4, 5], [4, 5], [4, 5],         // 0011xx
+    [3, 1], [3, 1], [3, 1], [3, 1],         // 010xxx
+    [3, 1], [3, 1], [3, 1], [3, 1],
+    [3, 4], [3, 4], [3, 4], [3, 4],         // 011xxx
+    [3, 4], [3, 4], [3, 4], [3, 4],
+    [2, 3], [2, 3], [2, 3], [2, 3],         // 10xxxx
+    [2, 3], [2, 3], [2, 3], [2, 3],
+    [2, 3], [2, 3], [2, 3], [2, 3],
+    [2, 3], [2, 3], [2, 3], [2, 3],
+    [2, 2], [2, 2], [2, 2], [2, 2],         // 11xxxx
+    [2, 2], [2, 2], [2, 2], [2, 2],
+    [2, 2], [2, 2], [2, 2], [2, 2],
+    [2, 2], [2, 2], [2, 2], [2, 2]
+  ];
+
+  function CCITTFaxStream(str, maybeLength, params) {
+    this.str = str;
+    this.dict = str.dict;
+
+    params = params || Dict.empty;
+
+    this.encoding = params.get('K') || 0;
+    this.eoline = params.get('EndOfLine') || false;
+    this.byteAlign = params.get('EncodedByteAlign') || false;
+    this.columns = params.get('Columns') || 1728;
+    this.rows = params.get('Rows') || 0;
+    var eoblock = params.get('EndOfBlock');
+    if (eoblock === null || eoblock === undefined) {
+      eoblock = true;
+    }
+    this.eoblock = eoblock;
+    this.black = params.get('BlackIs1') || false;
+
+    this.codingLine = new Uint32Array(this.columns + 1);
+    this.refLine = new Uint32Array(this.columns + 2);
+
+    this.codingLine[0] = this.columns;
+    this.codingPos = 0;
+
+    this.row = 0;
+    this.nextLine2D = this.encoding < 0;
+    this.inputBits = 0;
+    this.inputBuf = 0;
+    this.outputBits = 0;
+
+    var code1;
+    while ((code1 = this.lookBits(12)) === 0) {
+      this.eatBits(1);
+    }
+    if (code1 === 1) {
+      this.eatBits(12);
+    }
+    if (this.encoding > 0) {
+      this.nextLine2D = !this.lookBits(1);
+      this.eatBits(1);
+    }
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  CCITTFaxStream.prototype = Object.create(DecodeStream.prototype);
+
+  CCITTFaxStream.prototype.readBlock = function CCITTFaxStream_readBlock() {
+    while (!this.eof) {
+      var c = this.lookChar();
+      this.ensureBuffer(this.bufferLength + 1);
+      this.buffer[this.bufferLength++] = c;
+    }
+  };
+
+  CCITTFaxStream.prototype.addPixels =
+      function ccittFaxStreamAddPixels(a1, blackPixels) {
+    var codingLine = this.codingLine;
+    var codingPos = this.codingPos;
+
+    if (a1 > codingLine[codingPos]) {
+      if (a1 > this.columns) {
+        info('row is wrong length');
+        this.err = true;
+        a1 = this.columns;
+      }
+      if ((codingPos & 1) ^ blackPixels) {
+        ++codingPos;
+      }
+
+      codingLine[codingPos] = a1;
+    }
+    this.codingPos = codingPos;
+  };
+
+  CCITTFaxStream.prototype.addPixelsNeg =
+      function ccittFaxStreamAddPixelsNeg(a1, blackPixels) {
+    var codingLine = this.codingLine;
+    var codingPos = this.codingPos;
+
+    if (a1 > codingLine[codingPos]) {
+      if (a1 > this.columns) {
+        info('row is wrong length');
+        this.err = true;
+        a1 = this.columns;
+      }
+      if ((codingPos & 1) ^ blackPixels) {
+        ++codingPos;
+      }
+
+      codingLine[codingPos] = a1;
+    } else if (a1 < codingLine[codingPos]) {
+      if (a1 < 0) {
+        info('invalid code');
+        this.err = true;
+        a1 = 0;
+      }
+      while (codingPos > 0 && a1 < codingLine[codingPos - 1]) {
+        --codingPos;
+      }
+      codingLine[codingPos] = a1;
+    }
+
+    this.codingPos = codingPos;
+  };
+
+  CCITTFaxStream.prototype.lookChar = function CCITTFaxStream_lookChar() {
+    var refLine = this.refLine;
+    var codingLine = this.codingLine;
+    var columns = this.columns;
+
+    var refPos, blackPixels, bits, i;
+
+    if (this.outputBits === 0) {
+      if (this.eof) {
+        return null;
+      }
+      this.err = false;
+
+      var code1, code2, code3;
+      if (this.nextLine2D) {
+        for (i = 0; codingLine[i] < columns; ++i) {
+          refLine[i] = codingLine[i];
+        }
+        refLine[i++] = columns;
+        refLine[i] = columns;
+        codingLine[0] = 0;
+        this.codingPos = 0;
+        refPos = 0;
+        blackPixels = 0;
+
+        while (codingLine[this.codingPos] < columns) {
+          code1 = this.getTwoDimCode();
+          switch (code1) {
+            case twoDimPass:
+              this.addPixels(refLine[refPos + 1], blackPixels);
+              if (refLine[refPos + 1] < columns) {
+                refPos += 2;
+              }
+              break;
+            case twoDimHoriz:
+              code1 = code2 = 0;
+              if (blackPixels) {
+                do {
+                  code1 += (code3 = this.getBlackCode());
+                } while (code3 >= 64);
+                do {
+                  code2 += (code3 = this.getWhiteCode());
+                } while (code3 >= 64);
+              } else {
+                do {
+                  code1 += (code3 = this.getWhiteCode());
+                } while (code3 >= 64);
+                do {
+                  code2 += (code3 = this.getBlackCode());
+                } while (code3 >= 64);
+              }
+              this.addPixels(codingLine[this.codingPos] +
+                             code1, blackPixels);
+              if (codingLine[this.codingPos] < columns) {
+                this.addPixels(codingLine[this.codingPos] + code2,
+                               blackPixels ^ 1);
+              }
+              while (refLine[refPos] <= codingLine[this.codingPos] &&
+                     refLine[refPos] < columns) {
+                refPos += 2;
+              }
+              break;
+            case twoDimVertR3:
+              this.addPixels(refLine[refPos] + 3, blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                ++refPos;
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case twoDimVertR2:
+              this.addPixels(refLine[refPos] + 2, blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                ++refPos;
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case twoDimVertR1:
+              this.addPixels(refLine[refPos] + 1, blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                ++refPos;
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case twoDimVert0:
+              this.addPixels(refLine[refPos], blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                ++refPos;
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case twoDimVertL3:
+              this.addPixelsNeg(refLine[refPos] - 3, blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                if (refPos > 0) {
+                  --refPos;
+                } else {
+                  ++refPos;
+                }
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case twoDimVertL2:
+              this.addPixelsNeg(refLine[refPos] - 2, blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                if (refPos > 0) {
+                  --refPos;
+                } else {
+                  ++refPos;
+                }
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case twoDimVertL1:
+              this.addPixelsNeg(refLine[refPos] - 1, blackPixels);
+              blackPixels ^= 1;
+              if (codingLine[this.codingPos] < columns) {
+                if (refPos > 0) {
+                  --refPos;
+                } else {
+                  ++refPos;
+                }
+                while (refLine[refPos] <= codingLine[this.codingPos] &&
+                       refLine[refPos] < columns) {
+                  refPos += 2;
+                }
+              }
+              break;
+            case EOF:
+              this.addPixels(columns, 0);
+              this.eof = true;
+              break;
+            default:
+              info('bad 2d code');
+              this.addPixels(columns, 0);
+              this.err = true;
+          }
+        }
+      } else {
+        codingLine[0] = 0;
+        this.codingPos = 0;
+        blackPixels = 0;
+        while (codingLine[this.codingPos] < columns) {
+          code1 = 0;
+          if (blackPixels) {
+            do {
+              code1 += (code3 = this.getBlackCode());
+            } while (code3 >= 64);
+          } else {
+            do {
+              code1 += (code3 = this.getWhiteCode());
+            } while (code3 >= 64);
+          }
+          this.addPixels(codingLine[this.codingPos] + code1, blackPixels);
+          blackPixels ^= 1;
+        }
+      }
+
+      var gotEOL = false;
+
+      if (this.byteAlign) {
+        this.inputBits &= ~7;
+      }
+
+      if (!this.eoblock && this.row === this.rows - 1) {
+        this.eof = true;
+      } else {
+        code1 = this.lookBits(12);
+        if (this.eoline) {
+          while (code1 !== EOF && code1 !== 1) {
+            this.eatBits(1);
+            code1 = this.lookBits(12);
+          }
+        } else {
+          while (code1 === 0) {
+            this.eatBits(1);
+            code1 = this.lookBits(12);
+          }
+        }
+        if (code1 === 1) {
+          this.eatBits(12);
+          gotEOL = true;
+        } else if (code1 === EOF) {
+          this.eof = true;
+        }
+      }
+
+      if (!this.eof && this.encoding > 0) {
+        this.nextLine2D = !this.lookBits(1);
+        this.eatBits(1);
+      }
+
+      if (this.eoblock && gotEOL && this.byteAlign) {
+        code1 = this.lookBits(12);
+        if (code1 === 1) {
+          this.eatBits(12);
+          if (this.encoding > 0) {
+            this.lookBits(1);
+            this.eatBits(1);
+          }
+          if (this.encoding >= 0) {
+            for (i = 0; i < 4; ++i) {
+              code1 = this.lookBits(12);
+              if (code1 !== 1) {
+                info('bad rtc code: ' + code1);
+              }
+              this.eatBits(12);
+              if (this.encoding > 0) {
+                this.lookBits(1);
+                this.eatBits(1);
+              }
+            }
+          }
+          this.eof = true;
+        }
+      } else if (this.err && this.eoline) {
+        while (true) {
+          code1 = this.lookBits(13);
+          if (code1 === EOF) {
+            this.eof = true;
+            return null;
+          }
+          if ((code1 >> 1) === 1) {
+            break;
+          }
+          this.eatBits(1);
+        }
+        this.eatBits(12);
+        if (this.encoding > 0) {
+          this.eatBits(1);
+          this.nextLine2D = !(code1 & 1);
+        }
+      }
+
+      if (codingLine[0] > 0) {
+        this.outputBits = codingLine[this.codingPos = 0];
+      } else {
+        this.outputBits = codingLine[this.codingPos = 1];
+      }
+      this.row++;
+    }
+
+    var c;
+    if (this.outputBits >= 8) {
+      c = (this.codingPos & 1) ? 0 : 0xFF;
+      this.outputBits -= 8;
+      if (this.outputBits === 0 && codingLine[this.codingPos] < columns) {
+        this.codingPos++;
+        this.outputBits = (codingLine[this.codingPos] -
+                           codingLine[this.codingPos - 1]);
+      }
+    } else {
+      bits = 8;
+      c = 0;
+      do {
+        if (this.outputBits > bits) {
+          c <<= bits;
+          if (!(this.codingPos & 1)) {
+            c |= 0xFF >> (8 - bits);
+          }
+          this.outputBits -= bits;
+          bits = 0;
+        } else {
+          c <<= this.outputBits;
+          if (!(this.codingPos & 1)) {
+            c |= 0xFF >> (8 - this.outputBits);
+          }
+          bits -= this.outputBits;
+          this.outputBits = 0;
+          if (codingLine[this.codingPos] < columns) {
+            this.codingPos++;
+            this.outputBits = (codingLine[this.codingPos] -
+                               codingLine[this.codingPos - 1]);
+          } else if (bits > 0) {
+            c <<= bits;
+            bits = 0;
+          }
+        }
+      } while (bits);
+    }
+    if (this.black) {
+      c ^= 0xFF;
+    }
+    return c;
+  };
+
+  // This functions returns the code found from the table.
+  // The start and end parameters set the boundaries for searching the table.
+  // The limit parameter is optional. Function returns an array with three
+  // values. The first array element indicates whether a valid code is being
+  // returned. The second array element is the actual code. The third array
+  // element indicates whether EOF was reached.
+  CCITTFaxStream.prototype.findTableCode =
+      function ccittFaxStreamFindTableCode(start, end, table, limit) {
+
+    var limitValue = limit || 0;
+    for (var i = start; i <= end; ++i) {
+      var code = this.lookBits(i);
+      if (code === EOF) {
+        return [true, 1, false];
+      }
+      if (i < end) {
+        code <<= end - i;
+      }
+      if (!limitValue || code >= limitValue) {
+        var p = table[code - limitValue];
+        if (p[0] === i) {
+          this.eatBits(i);
+          return [true, p[1], true];
+        }
+      }
+    }
+    return [false, 0, false];
+  };
+
+  CCITTFaxStream.prototype.getTwoDimCode =
+      function ccittFaxStreamGetTwoDimCode() {
+
+    var code = 0;
+    var p;
+    if (this.eoblock) {
+      code = this.lookBits(7);
+      p = twoDimTable[code];
+      if (p && p[0] > 0) {
+        this.eatBits(p[0]);
+        return p[1];
+      }
+    } else {
+      var result = this.findTableCode(1, 7, twoDimTable);
+      if (result[0] && result[2]) {
+        return result[1];
+      }
+    }
+    info('Bad two dim code');
+    return EOF;
+  };
+
+  CCITTFaxStream.prototype.getWhiteCode =
+      function ccittFaxStreamGetWhiteCode() {
+
+    var code = 0;
+    var p;
+    if (this.eoblock) {
+      code = this.lookBits(12);
+      if (code === EOF) {
+        return 1;
+      }
+
+      if ((code >> 5) === 0) {
+        p = whiteTable1[code];
+      } else {
+        p = whiteTable2[code >> 3];
+      }
+
+      if (p[0] > 0) {
+        this.eatBits(p[0]);
+        return p[1];
+      }
+    } else {
+      var result = this.findTableCode(1, 9, whiteTable2);
+      if (result[0]) {
+        return result[1];
+      }
+
+      result = this.findTableCode(11, 12, whiteTable1);
+      if (result[0]) {
+        return result[1];
+      }
+    }
+    info('bad white code');
+    this.eatBits(1);
+    return 1;
+  };
+
+  CCITTFaxStream.prototype.getBlackCode =
+      function ccittFaxStreamGetBlackCode() {
+
+    var code, p;
+    if (this.eoblock) {
+      code = this.lookBits(13);
+      if (code === EOF) {
+        return 1;
+      }
+      if ((code >> 7) === 0) {
+        p = blackTable1[code];
+      } else if ((code >> 9) === 0 && (code >> 7) !== 0) {
+        p = blackTable2[(code >> 1) - 64];
+      } else {
+        p = blackTable3[code >> 7];
+      }
+
+      if (p[0] > 0) {
+        this.eatBits(p[0]);
+        return p[1];
+      }
+    } else {
+      var result = this.findTableCode(2, 6, blackTable3);
+      if (result[0]) {
+        return result[1];
+      }
+
+      result = this.findTableCode(7, 12, blackTable2, 64);
+      if (result[0]) {
+        return result[1];
+      }
+
+      result = this.findTableCode(10, 13, blackTable1);
+      if (result[0]) {
+        return result[1];
+      }
+    }
+    info('bad black code');
+    this.eatBits(1);
+    return 1;
+  };
+
+  CCITTFaxStream.prototype.lookBits = function CCITTFaxStream_lookBits(n) {
+    var c;
+    while (this.inputBits < n) {
+      if ((c = this.str.getByte()) === -1) {
+        if (this.inputBits === 0) {
+          return EOF;
+        }
+        return ((this.inputBuf << (n - this.inputBits)) &
+                (0xFFFF >> (16 - n)));
+      }
+      this.inputBuf = (this.inputBuf << 8) + c;
+      this.inputBits += 8;
+    }
+    return (this.inputBuf >> (this.inputBits - n)) & (0xFFFF >> (16 - n));
+  };
+
+  CCITTFaxStream.prototype.eatBits = function CCITTFaxStream_eatBits(n) {
+    if ((this.inputBits -= n) < 0) {
+      this.inputBits = 0;
+    }
+  };
+
+  return CCITTFaxStream;
+})();
+
+var LZWStream = (function LZWStreamClosure() {
+  function LZWStream(str, maybeLength, earlyChange) {
+    this.str = str;
+    this.dict = str.dict;
+    this.cachedData = 0;
+    this.bitsCached = 0;
+
+    var maxLzwDictionarySize = 4096;
+    var lzwState = {
+      earlyChange: earlyChange,
+      codeLength: 9,
+      nextCode: 258,
+      dictionaryValues: new Uint8Array(maxLzwDictionarySize),
+      dictionaryLengths: new Uint16Array(maxLzwDictionarySize),
+      dictionaryPrevCodes: new Uint16Array(maxLzwDictionarySize),
+      currentSequence: new Uint8Array(maxLzwDictionarySize),
+      currentSequenceLength: 0
+    };
+    for (var i = 0; i < 256; ++i) {
+      lzwState.dictionaryValues[i] = i;
+      lzwState.dictionaryLengths[i] = 1;
+    }
+    this.lzwState = lzwState;
+
+    DecodeStream.call(this, maybeLength);
+  }
+
+  LZWStream.prototype = Object.create(DecodeStream.prototype);
+
+  LZWStream.prototype.readBits = function LZWStream_readBits(n) {
+    var bitsCached = this.bitsCached;
+    var cachedData = this.cachedData;
+    while (bitsCached < n) {
+      var c = this.str.getByte();
+      if (c === -1) {
+        this.eof = true;
+        return null;
+      }
+      cachedData = (cachedData << 8) | c;
+      bitsCached += 8;
+    }
+    this.bitsCached = (bitsCached -= n);
+    this.cachedData = cachedData;
+    this.lastCode = null;
+    return (cachedData >>> bitsCached) & ((1 << n) - 1);
+  };
+
+  LZWStream.prototype.readBlock = function LZWStream_readBlock() {
+    var blockSize = 512;
+    var estimatedDecodedSize = blockSize * 2, decodedSizeDelta = blockSize;
+    var i, j, q;
+
+    var lzwState = this.lzwState;
+    if (!lzwState) {
+      return; // eof was found
+    }
+
+    var earlyChange = lzwState.earlyChange;
+    var nextCode = lzwState.nextCode;
+    var dictionaryValues = lzwState.dictionaryValues;
+    var dictionaryLengths = lzwState.dictionaryLengths;
+    var dictionaryPrevCodes = lzwState.dictionaryPrevCodes;
+    var codeLength = lzwState.codeLength;
+    var prevCode = lzwState.prevCode;
+    var currentSequence = lzwState.currentSequence;
+    var currentSequenceLength = lzwState.currentSequenceLength;
+
+    var decodedLength = 0;
+    var currentBufferLength = this.bufferLength;
+    var buffer = this.ensureBuffer(this.bufferLength + estimatedDecodedSize);
+
+    for (i = 0; i < blockSize; i++) {
+      var code = this.readBits(codeLength);
+      var hasPrev = currentSequenceLength > 0;
+      if (code < 256) {
+        currentSequence[0] = code;
+        currentSequenceLength = 1;
+      } else if (code >= 258) {
+        if (code < nextCode) {
+          currentSequenceLength = dictionaryLengths[code];
+          for (j = currentSequenceLength - 1, q = code; j >= 0; j--) {
+            currentSequence[j] = dictionaryValues[q];
+            q = dictionaryPrevCodes[q];
+          }
+        } else {
+          currentSequence[currentSequenceLength++] = currentSequence[0];
+        }
+      } else if (code === 256) {
+        codeLength = 9;
+        nextCode = 258;
+        currentSequenceLength = 0;
+        continue;
+      } else {
+        this.eof = true;
+        delete this.lzwState;
+        break;
+      }
+
+      if (hasPrev) {
+        dictionaryPrevCodes[nextCode] = prevCode;
+        dictionaryLengths[nextCode] = dictionaryLengths[prevCode] + 1;
+        dictionaryValues[nextCode] = currentSequence[0];
+        nextCode++;
+        codeLength = (nextCode + earlyChange) & (nextCode + earlyChange - 1) ?
+          codeLength : Math.min(Math.log(nextCode + earlyChange) /
+          0.6931471805599453 + 1, 12) | 0;
+      }
+      prevCode = code;
+
+      decodedLength += currentSequenceLength;
+      if (estimatedDecodedSize < decodedLength) {
+        do {
+          estimatedDecodedSize += decodedSizeDelta;
+        } while (estimatedDecodedSize < decodedLength);
+        buffer = this.ensureBuffer(this.bufferLength + estimatedDecodedSize);
+      }
+      for (j = 0; j < currentSequenceLength; j++) {
+        buffer[currentBufferLength++] = currentSequence[j];
+      }
+    }
+    lzwState.nextCode = nextCode;
+    lzwState.codeLength = codeLength;
+    lzwState.prevCode = prevCode;
+    lzwState.currentSequenceLength = currentSequenceLength;
+
+    this.bufferLength = currentBufferLength;
+  };
+
+  return LZWStream;
+})();
+
+var NullStream = (function NullStreamClosure() {
+  function NullStream() {
+    Stream.call(this, new Uint8Array(0));
+  }
+
+  NullStream.prototype = Stream.prototype;
+
+  return NullStream;
+})();
+
+
+var WorkerMessageHandler = PDFJS.WorkerMessageHandler = {
+  setup: function wphSetup(handler) {
+    var pdfManager;
+
+    function loadDocument(recoveryMode) {
+      var loadDocumentCapability = createPromiseCapability();
+
+      var parseSuccess = function parseSuccess() {
+        var numPagesPromise = pdfManager.ensureDoc('numPages');
+        var fingerprintPromise = pdfManager.ensureDoc('fingerprint');
+        var encryptedPromise = pdfManager.ensureXRef('encrypt');
+        Promise.all([numPagesPromise, fingerprintPromise,
+                     encryptedPromise]).then(function onDocReady(results) {
+          var doc = {
+            numPages: results[0],
+            fingerprint: results[1],
+            encrypted: !!results[2],
+          };
+          loadDocumentCapability.resolve(doc);
+        },
+        parseFailure);
+      };
+
+      var parseFailure = function parseFailure(e) {
+        loadDocumentCapability.reject(e);
+      };
+
+      pdfManager.ensureDoc('checkHeader', []).then(function() {
+        pdfManager.ensureDoc('parseStartXRef', []).then(function() {
+          pdfManager.ensureDoc('parse', [recoveryMode]).then(
+            parseSuccess, parseFailure);
+        }, parseFailure);
+      }, parseFailure);
+
+      return loadDocumentCapability.promise;
+    }
+
+    function getPdfManager(data) {
+      var pdfManagerCapability = createPromiseCapability();
+
+      var source = data.source;
+      var disableRange = data.disableRange;
+      if (source.data) {
+        try {
+          pdfManager = new LocalPdfManager(source.data, source.password);
+          pdfManagerCapability.resolve();
+        } catch (ex) {
+          pdfManagerCapability.reject(ex);
+        }
+        return pdfManagerCapability.promise;
+      } else if (source.chunkedViewerLoading) {
+        try {
+          pdfManager = new NetworkPdfManager(source, handler);
+          pdfManagerCapability.resolve();
+        } catch (ex) {
+          pdfManagerCapability.reject(ex);
+        }
+        return pdfManagerCapability.promise;
+      }
+
+      var networkManager = new NetworkManager(source.url, {
+        httpHeaders: source.httpHeaders,
+        withCredentials: source.withCredentials
+      });
+      var cachedChunks = [];
+      var fullRequestXhrId = networkManager.requestFull({
+        onHeadersReceived: function onHeadersReceived() {
+          if (disableRange) {
+            return;
+          }
+
+          var fullRequestXhr = networkManager.getRequestXhr(fullRequestXhrId);
+          if (fullRequestXhr.getResponseHeader('Accept-Ranges') !== 'bytes') {
+            return;
+          }
+
+          var contentEncoding =
+            fullRequestXhr.getResponseHeader('Content-Encoding') || 'identity';
+          if (contentEncoding !== 'identity') {
+            return;
+          }
+
+          var length = fullRequestXhr.getResponseHeader('Content-Length');
+          length = parseInt(length, 10);
+          if (!isInt(length)) {
+            return;
+          }
+          source.length = length;
+          if (length <= 2 * RANGE_CHUNK_SIZE) {
+            // The file size is smaller than the size of two chunks, so it does
+            // not make any sense to abort the request and retry with a range
+            // request.
+            return;
+          }
+
+          if (networkManager.isStreamingRequest(fullRequestXhrId)) {
+            // We can continue fetching when progressive loading is enabled,
+            // and we don't need the autoFetch feature.
+            source.disableAutoFetch = true;
+          } else {
+            // NOTE: by cancelling the full request, and then issuing range
+            // requests, there will be an issue for sites where you can only
+            // request the pdf once. However, if this is the case, then the
+            // server should not be returning that it can support range
+            // requests.
+            networkManager.abortRequest(fullRequestXhrId);
+          }
+
+          try {
+            pdfManager = new NetworkPdfManager(source, handler);
+            pdfManagerCapability.resolve(pdfManager);
+          } catch (ex) {
+            pdfManagerCapability.reject(ex);
+          }
+        },
+
+        onProgressiveData: source.disableStream ? null :
+            function onProgressiveData(chunk) {
+          if (!pdfManager) {
+            cachedChunks.push(chunk);
+            return;
+          }
+          pdfManager.sendProgressiveData(chunk);
+        },
+
+        onDone: function onDone(args) {
+          if (pdfManager) {
+            return; // already processed
+          }
+
+          var pdfFile;
+          if (args === null) {
+            // TODO add some streaming manager, e.g. for unknown length files.
+            // The data was returned in the onProgressiveData, combining...
+            var pdfFileLength = 0, pos = 0;
+            cachedChunks.forEach(function (chunk) {
+              pdfFileLength += chunk.byteLength;
+            });
+            if (source.length && pdfFileLength !== source.length) {
+              warn('reported HTTP length is different from actual');
+            }
+            var pdfFileArray = new Uint8Array(pdfFileLength);
+            cachedChunks.forEach(function (chunk) {
+              pdfFileArray.set(new Uint8Array(chunk), pos);
+              pos += chunk.byteLength;
+            });
+            pdfFile = pdfFileArray.buffer;
+          } else {
+            pdfFile = args.chunk;
+          }
+
+          // the data is array, instantiating directly from it
+          try {
+            pdfManager = new LocalPdfManager(pdfFile, source.password);
+            pdfManagerCapability.resolve();
+          } catch (ex) {
+            pdfManagerCapability.reject(ex);
+          }
+        },
+
+        onError: function onError(status) {
+          var exception;
+          if (status === 404) {
+            exception = new MissingPDFException('Missing PDF "' +
+                                                source.url + '".');
+            handler.send('MissingPDF', exception);
+          } else {
+            exception = new UnexpectedResponseException(
+              'Unexpected server response (' + status +
+              ') while retrieving PDF "' + source.url + '".', status);
+            handler.send('UnexpectedResponse', exception);
+          }
+        },
+
+        onProgress: function onProgress(evt) {
+          handler.send('DocProgress', {
+            loaded: evt.loaded,
+            total: evt.lengthComputable ? evt.total : source.length
+          });
+        }
+      });
+
+      return pdfManagerCapability.promise;
+    }
+
+    handler.on('test', function wphSetupTest(data) {
+      // check if Uint8Array can be sent to worker
+      if (!(data instanceof Uint8Array)) {
+        handler.send('test', false);
+        return;
+      }
+      // making sure postMessage transfers are working
+      var supportTransfers = data[0] === 255;
+      handler.postMessageTransfers = supportTransfers;
+      // check if the response property is supported by xhr
+      var xhr = new XMLHttpRequest();
+      var responseExists = 'response' in xhr;
+      // check if the property is actually implemented
+      try {
+        var dummy = xhr.responseType;
+      } catch (e) {
+        responseExists = false;
+      }
+      if (!responseExists) {
+        handler.send('test', false);
+        return;
+      }
+      handler.send('test', {
+        supportTypedArray: true,
+        supportTransfers: supportTransfers
+      });
+    });
+
+    handler.on('GetDocRequest', function wphSetupDoc(data) {
+
+      var onSuccess = function(doc) {
+        handler.send('GetDoc', { pdfInfo: doc });
+      };
+
+      var onFailure = function(e) {
+        if (e instanceof PasswordException) {
+          if (e.code === PasswordResponses.NEED_PASSWORD) {
+            handler.send('NeedPassword', e);
+          } else if (e.code === PasswordResponses.INCORRECT_PASSWORD) {
+            handler.send('IncorrectPassword', e);
+          }
+        } else if (e instanceof InvalidPDFException) {
+          handler.send('InvalidPDF', e);
+        } else if (e instanceof MissingPDFException) {
+          handler.send('MissingPDF', e);
+        } else if (e instanceof UnexpectedResponseException) {
+          handler.send('UnexpectedResponse', e);
+        } else {
+          handler.send('UnknownError',
+                       new UnknownErrorException(e.message, e.toString()));
+        }
+      };
+
+      PDFJS.maxImageSize = data.maxImageSize === undefined ?
+                           -1 : data.maxImageSize;
+      PDFJS.disableFontFace = data.disableFontFace;
+      PDFJS.disableCreateObjectURL = data.disableCreateObjectURL;
+      PDFJS.verbosity = data.verbosity;
+      PDFJS.cMapUrl = data.cMapUrl === undefined ?
+                           null : data.cMapUrl;
+      PDFJS.cMapPacked = data.cMapPacked === true;
+
+      getPdfManager(data).then(function () {
+        handler.send('PDFManagerReady', null);
+        pdfManager.onLoadedStream().then(function(stream) {
+          handler.send('DataLoaded', { length: stream.bytes.byteLength });
+        });
+      }).then(function pdfManagerReady() {
+        loadDocument(false).then(onSuccess, function loadFailure(ex) {
+          // Try again with recoveryMode == true
+          if (!(ex instanceof XRefParseException)) {
+            if (ex instanceof PasswordException) {
+              // after password exception prepare to receive a new password
+              // to repeat loading
+              pdfManager.passwordChanged().then(pdfManagerReady);
+            }
+
+            onFailure(ex);
+            return;
+          }
+
+          pdfManager.requestLoadedStream();
+          pdfManager.onLoadedStream().then(function() {
+            loadDocument(true).then(onSuccess, onFailure);
+          });
+        }, onFailure);
+      }, onFailure);
+    });
+
+    handler.on('GetPage', function wphSetupGetPage(data) {
+      return pdfManager.getPage(data.pageIndex).then(function(page) {
+        var rotatePromise = pdfManager.ensure(page, 'rotate');
+        var refPromise = pdfManager.ensure(page, 'ref');
+        var viewPromise = pdfManager.ensure(page, 'view');
+
+        return Promise.all([rotatePromise, refPromise, viewPromise]).then(
+            function(results) {
+          return {
+            rotate: results[0],
+            ref: results[1],
+            view: results[2]
+          };
+        });
+      });
+    });
+
+    handler.on('GetPageIndex', function wphSetupGetPageIndex(data) {
+      var ref = new Ref(data.ref.num, data.ref.gen);
+      var catalog = pdfManager.pdfDocument.catalog;
+      return catalog.getPageIndex(ref);
+    });
+
+    handler.on('GetDestinations',
+      function wphSetupGetDestinations(data) {
+        return pdfManager.ensureCatalog('destinations');
+      }
+    );
+
+    handler.on('GetDestination',
+      function wphSetupGetDestination(data) {
+        return pdfManager.ensureCatalog('getDestination', [ data.id ]);
+      }
+    );
+
+    handler.on('GetAttachments',
+      function wphSetupGetAttachments(data) {
+        return pdfManager.ensureCatalog('attachments');
+      }
+    );
+
+    handler.on('GetJavaScript',
+      function wphSetupGetJavaScript(data) {
+        return pdfManager.ensureCatalog('javaScript');
+      }
+    );
+
+    handler.on('GetOutline',
+      function wphSetupGetOutline(data) {
+        return pdfManager.ensureCatalog('documentOutline');
+      }
+    );
+
+    handler.on('GetMetadata',
+      function wphSetupGetMetadata(data) {
+        return Promise.all([pdfManager.ensureDoc('documentInfo'),
+                            pdfManager.ensureCatalog('metadata')]);
+      }
+    );
+
+    handler.on('GetData', function wphSetupGetData(data) {
+      pdfManager.requestLoadedStream();
+      return pdfManager.onLoadedStream().then(function(stream) {
+        return stream.bytes;
+      });
+    });
+
+    handler.on('GetStats',
+      function wphSetupGetStats(data) {
+        return pdfManager.pdfDocument.xref.stats;
+      }
+    );
+
+    handler.on('UpdatePassword', function wphSetupUpdatePassword(data) {
+      pdfManager.updatePassword(data);
+    });
+
+    handler.on('GetAnnotations', function wphSetupGetAnnotations(data) {
+      return pdfManager.getPage(data.pageIndex).then(function(page) {
+        return pdfManager.ensure(page, 'getAnnotationsData', []);
+      });
+    });
+
+    handler.on('RenderPageRequest', function wphSetupRenderPage(data) {
+      pdfManager.getPage(data.pageIndex).then(function(page) {
+
+        var pageNum = data.pageIndex + 1;
+        var start = Date.now();
+        // Pre compile the pdf page and fetch the fonts/images.
+        page.getOperatorList(handler, data.intent).then(function(operatorList) {
+
+          info('page=' + pageNum + ' - getOperatorList: time=' +
+               (Date.now() - start) + 'ms, len=' + operatorList.fnArray.length);
+
+        }, function(e) {
+
+          var minimumStackMessage =
+            'worker.js: while trying to getPage() and getOperatorList()';
+
+          var wrappedException;
+
+          // Turn the error into an obj that can be serialized
+          if (typeof e === 'string') {
+            wrappedException = {
+              message: e,
+              stack: minimumStackMessage
+            };
+          } else if (typeof e === 'object') {
+            wrappedException = {
+              message: e.message || e.toString(),
+              stack: e.stack || minimumStackMessage
+            };
+          } else {
+            wrappedException = {
+              message: 'Unknown exception type: ' + (typeof e),
+              stack: minimumStackMessage
+            };
+          }
+
+          handler.send('PageError', {
+            pageNum: pageNum,
+            error: wrappedException,
+            intent: data.intent
+          });
+        });
+      });
+    }, this);
+
+    handler.on('GetTextContent', function wphExtractText(data) {
+      return pdfManager.getPage(data.pageIndex).then(function(page) {
+        var pageNum = data.pageIndex + 1;
+        var start = Date.now();
+        return page.extractTextContent().then(function(textContent) {
+          info('text indexing: page=' + pageNum + ' - time=' +
+               (Date.now() - start) + 'ms');
+          return textContent;
+        });
+      });
+    });
+
+    handler.on('Cleanup', function wphCleanup(data) {
+      return pdfManager.cleanup();
+    });
+
+    handler.on('Terminate', function wphTerminate(data) {
+      pdfManager.terminate();
+    });
+  }
+};
+
+var consoleTimer = {};
+
+var workerConsole = {
+  log: function log() {
+    var args = Array.prototype.slice.call(arguments);
+    globalScope.postMessage({
+      action: 'console_log',
+      data: args
+    });
+  },
+
+  error: function error() {
+    var args = Array.prototype.slice.call(arguments);
+    globalScope.postMessage({
+      action: 'console_error',
+      data: args
+    });
+    throw 'pdf.js execution error';
+  },
+
+  time: function time(name) {
+    consoleTimer[name] = Date.now();
+  },
+
+  timeEnd: function timeEnd(name) {
+    var time = consoleTimer[name];
+    if (!time) {
+      error('Unknown timer name ' + name);
+    }
+    this.log('Timer:', name, Date.now() - time);
+  }
+};
+
+
+// Worker thread?
+if (typeof window === 'undefined') {
+  if (!('console' in globalScope)) {
+    globalScope.console = workerConsole;
+  }
+
+  // Listen for unsupported features so we can pass them on to the main thread.
+  PDFJS.UnsupportedManager.listen(function (msg) {
+    globalScope.postMessage({
+      action: '_unsupported_feature',
+      data: msg
+    });
+  });
+
+  var handler = new MessageHandler('worker_processor', this);
+  WorkerMessageHandler.setup(handler);
+}
+
+
+/* This class implements the QM Coder decoding as defined in
+ *   JPEG 2000 Part I Final Committee Draft Version 1.0
+ *   Annex C.3 Arithmetic decoding procedure
+ * available at http://www.jpeg.org/public/fcd15444-1.pdf
+ *
+ * The arithmetic decoder is used in conjunction with context models to decode
+ * JPEG2000 and JBIG2 streams.
+ */
+var ArithmeticDecoder = (function ArithmeticDecoderClosure() {
+  // Table C-2
+  var QeTable = [
+    {qe: 0x5601, nmps: 1, nlps: 1, switchFlag: 1},
+    {qe: 0x3401, nmps: 2, nlps: 6, switchFlag: 0},
+    {qe: 0x1801, nmps: 3, nlps: 9, switchFlag: 0},
+    {qe: 0x0AC1, nmps: 4, nlps: 12, switchFlag: 0},
+    {qe: 0x0521, nmps: 5, nlps: 29, switchFlag: 0},
+    {qe: 0x0221, nmps: 38, nlps: 33, switchFlag: 0},
+    {qe: 0x5601, nmps: 7, nlps: 6, switchFlag: 1},
+    {qe: 0x5401, nmps: 8, nlps: 14, switchFlag: 0},
+    {qe: 0x4801, nmps: 9, nlps: 14, switchFlag: 0},
+    {qe: 0x3801, nmps: 10, nlps: 14, switchFlag: 0},
+    {qe: 0x3001, nmps: 11, nlps: 17, switchFlag: 0},
+    {qe: 0x2401, nmps: 12, nlps: 18, switchFlag: 0},
+    {qe: 0x1C01, nmps: 13, nlps: 20, switchFlag: 0},
+    {qe: 0x1601, nmps: 29, nlps: 21, switchFlag: 0},
+    {qe: 0x5601, nmps: 15, nlps: 14, switchFlag: 1},
+    {qe: 0x5401, nmps: 16, nlps: 14, switchFlag: 0},
+    {qe: 0x5101, nmps: 17, nlps: 15, switchFlag: 0},
+    {qe: 0x4801, nmps: 18, nlps: 16, switchFlag: 0},
+    {qe: 0x3801, nmps: 19, nlps: 17, switchFlag: 0},
+    {qe: 0x3401, nmps: 20, nlps: 18, switchFlag: 0},
+    {qe: 0x3001, nmps: 21, nlps: 19, switchFlag: 0},
+    {qe: 0x2801, nmps: 22, nlps: 19, switchFlag: 0},
+    {qe: 0x2401, nmps: 23, nlps: 20, switchFlag: 0},
+    {qe: 0x2201, nmps: 24, nlps: 21, switchFlag: 0},
+    {qe: 0x1C01, nmps: 25, nlps: 22, switchFlag: 0},
+    {qe: 0x1801, nmps: 26, nlps: 23, switchFlag: 0},
+    {qe: 0x1601, nmps: 27, nlps: 24, switchFlag: 0},
+    {qe: 0x1401, nmps: 28, nlps: 25, switchFlag: 0},
+    {qe: 0x1201, nmps: 29, nlps: 26, switchFlag: 0},
+    {qe: 0x1101, nmps: 30, nlps: 27, switchFlag: 0},
+    {qe: 0x0AC1, nmps: 31, nlps: 28, switchFlag: 0},
+    {qe: 0x09C1, nmps: 32, nlps: 29, switchFlag: 0},
+    {qe: 0x08A1, nmps: 33, nlps: 30, switchFlag: 0},
+    {qe: 0x0521, nmps: 34, nlps: 31, switchFlag: 0},
+    {qe: 0x0441, nmps: 35, nlps: 32, switchFlag: 0},
+    {qe: 0x02A1, nmps: 36, nlps: 33, switchFlag: 0},
+    {qe: 0x0221, nmps: 37, nlps: 34, switchFlag: 0},
+    {qe: 0x0141, nmps: 38, nlps: 35, switchFlag: 0},
+    {qe: 0x0111, nmps: 39, nlps: 36, switchFlag: 0},
+    {qe: 0x0085, nmps: 40, nlps: 37, switchFlag: 0},
+    {qe: 0x0049, nmps: 41, nlps: 38, switchFlag: 0},
+    {qe: 0x0025, nmps: 42, nlps: 39, switchFlag: 0},
+    {qe: 0x0015, nmps: 43, nlps: 40, switchFlag: 0},
+    {qe: 0x0009, nmps: 44, nlps: 41, switchFlag: 0},
+    {qe: 0x0005, nmps: 45, nlps: 42, switchFlag: 0},
+    {qe: 0x0001, nmps: 45, nlps: 43, switchFlag: 0},
+    {qe: 0x5601, nmps: 46, nlps: 46, switchFlag: 0}
+  ];
+
+  // C.3.5 Initialisation of the decoder (INITDEC)
+  function ArithmeticDecoder(data, start, end) {
+    this.data = data;
+    this.bp = start;
+    this.dataEnd = end;
+
+    this.chigh = data[start];
+    this.clow = 0;
+
+    this.byteIn();
+
+    this.chigh = ((this.chigh << 7) & 0xFFFF) | ((this.clow >> 9) & 0x7F);
+    this.clow = (this.clow << 7) & 0xFFFF;
+    this.ct -= 7;
+    this.a = 0x8000;
+  }
+
+  ArithmeticDecoder.prototype = {
+    // C.3.4 Compressed data input (BYTEIN)
+    byteIn: function ArithmeticDecoder_byteIn() {
+      var data = this.data;
+      var bp = this.bp;
+      if (data[bp] === 0xFF) {
+        var b1 = data[bp + 1];
+        if (b1 > 0x8F) {
+          this.clow += 0xFF00;
+          this.ct = 8;
+        } else {
+          bp++;
+          this.clow += (data[bp] << 9);
+          this.ct = 7;
+          this.bp = bp;
+        }
+      } else {
+        bp++;
+        this.clow += bp < this.dataEnd ? (data[bp] << 8) : 0xFF00;
+        this.ct = 8;
+        this.bp = bp;
+      }
+      if (this.clow > 0xFFFF) {
+        this.chigh += (this.clow >> 16);
+        this.clow &= 0xFFFF;
+      }
+    },
+    // C.3.2 Decoding a decision (DECODE)
+    readBit: function ArithmeticDecoder_readBit(contexts, pos) {
+      // contexts are packed into 1 byte:
+      // highest 7 bits carry cx.index, lowest bit carries cx.mps
+      var cx_index = contexts[pos] >> 1, cx_mps = contexts[pos] & 1;
+      var qeTableIcx = QeTable[cx_index];
+      var qeIcx = qeTableIcx.qe;
+      var d;
+      var a = this.a - qeIcx;
+
+      if (this.chigh < qeIcx) {
+        // exchangeLps
+        if (a < qeIcx) {
+          a = qeIcx;
+          d = cx_mps;
+          cx_index = qeTableIcx.nmps;
+        } else {
+          a = qeIcx;
+          d = 1 ^ cx_mps;
+          if (qeTableIcx.switchFlag === 1) {
+            cx_mps = d;
+          }
+          cx_index = qeTableIcx.nlps;
+        }
+      } else {
+        this.chigh -= qeIcx;
+        if ((a & 0x8000) !== 0) {
+          this.a = a;
+          return cx_mps;
+        }
+        // exchangeMps
+        if (a < qeIcx) {
+          d = 1 ^ cx_mps;
+          if (qeTableIcx.switchFlag === 1) {
+            cx_mps = d;
+          }
+          cx_index = qeTableIcx.nlps;
+        } else {
+          d = cx_mps;
+          cx_index = qeTableIcx.nmps;
+        }
+      }
+      // C.3.3 renormD;
+      do {
+        if (this.ct === 0) {
+          this.byteIn();
+        }
+
+        a <<= 1;
+        this.chigh = ((this.chigh << 1) & 0xFFFF) | ((this.clow >> 15) & 1);
+        this.clow = (this.clow << 1) & 0xFFFF;
+        this.ct--;
+      } while ((a & 0x8000) === 0);
+      this.a = a;
+
+      contexts[pos] = cx_index << 1 | cx_mps;
+      return d;
+    }
+  };
+
+  return ArithmeticDecoder;
+})();
+
+
+var JpegImage = (function jpegImage() {
+  var dctZigZag = new Uint8Array([
+     0,
+     1,  8,
+    16,  9,  2,
+     3, 10, 17, 24,
+    32, 25, 18, 11, 4,
+     5, 12, 19, 26, 33, 40,
+    48, 41, 34, 27, 20, 13,  6,
+     7, 14, 21, 28, 35, 42, 49, 56,
+    57, 50, 43, 36, 29, 22, 15,
+    23, 30, 37, 44, 51, 58,
+    59, 52, 45, 38, 31,
+    39, 46, 53, 60,
+    61, 54, 47,
+    55, 62,
+    63
+  ]);
+
+  var dctCos1  =  4017;   // cos(pi/16)
+  var dctSin1  =   799;   // sin(pi/16)
+  var dctCos3  =  3406;   // cos(3*pi/16)
+  var dctSin3  =  2276;   // sin(3*pi/16)
+  var dctCos6  =  1567;   // cos(6*pi/16)
+  var dctSin6  =  3784;   // sin(6*pi/16)
+  var dctSqrt2 =  5793;   // sqrt(2)
+  var dctSqrt1d2 = 2896;  // sqrt(2) / 2
+
+  function constructor() {
+  }
+
+  function buildHuffmanTable(codeLengths, values) {
+    var k = 0, code = [], i, j, length = 16;
+    while (length > 0 && !codeLengths[length - 1]) {
+      length--;
+    }
+    code.push({children: [], index: 0});
+    var p = code[0], q;
+    for (i = 0; i < length; i++) {
+      for (j = 0; j < codeLengths[i]; j++) {
+        p = code.pop();
+        p.children[p.index] = values[k];
+        while (p.index > 0) {
+          p = code.pop();
+        }
+        p.index++;
+        code.push(p);
+        while (code.length <= i) {
+          code.push(q = {children: [], index: 0});
+          p.children[p.index] = q.children;
+          p = q;
+        }
+        k++;
+      }
+      if (i + 1 < length) {
+        // p here points to last code
+        code.push(q = {children: [], index: 0});
+        p.children[p.index] = q.children;
+        p = q;
+      }
+    }
+    return code[0].children;
+  }
+
+  function getBlockBufferOffset(component, row, col) {
+    return 64 * ((component.blocksPerLine + 1) * row + col);
+  }
+
+  function decodeScan(data, offset, frame, components, resetInterval,
+                      spectralStart, spectralEnd, successivePrev, successive) {
+    var precision = frame.precision;
+    var samplesPerLine = frame.samplesPerLine;
+    var scanLines = frame.scanLines;
+    var mcusPerLine = frame.mcusPerLine;
+    var progressive = frame.progressive;
+    var maxH = frame.maxH, maxV = frame.maxV;
+
+    var startOffset = offset, bitsData = 0, bitsCount = 0;
+
+    function readBit() {
+      if (bitsCount > 0) {
+        bitsCount--;
+        return (bitsData >> bitsCount) & 1;
+      }
+      bitsData = data[offset++];
+      if (bitsData === 0xFF) {
+        var nextByte = data[offset++];
+        if (nextByte) {
+          throw 'unexpected marker: ' +
+            ((bitsData << 8) | nextByte).toString(16);
+        }
+        // unstuff 0
+      }
+      bitsCount = 7;
+      return bitsData >>> 7;
+    }
+
+    function decodeHuffman(tree) {
+      var node = tree;
+      while (true) {
+        node = node[readBit()];
+        if (typeof node === 'number') {
+          return node;
+        }
+        if (typeof node !== 'object') {
+          throw 'invalid huffman sequence';
+        }
+      }
+    }
+
+    function receive(length) {
+      var n = 0;
+      while (length > 0) {
+        n = (n << 1) | readBit();
+        length--;
+      }
+      return n;
+    }
+
+    function receiveAndExtend(length) {
+      if (length === 1) {
+        return readBit() === 1 ? 1 : -1;
+      }
+      var n = receive(length);
+      if (n >= 1 << (length - 1)) {
+        return n;
+      }
+      return n + (-1 << length) + 1;
+    }
+
+    function decodeBaseline(component, offset) {
+      var t = decodeHuffman(component.huffmanTableDC);
+      var diff = t === 0 ? 0 : receiveAndExtend(t);
+      component.blockData[offset] = (component.pred += diff);
+      var k = 1;
+      while (k < 64) {
+        var rs = decodeHuffman(component.huffmanTableAC);
+        var s = rs & 15, r = rs >> 4;
+        if (s === 0) {
+          if (r < 15) {
+            break;
+          }
+          k += 16;
+          continue;
+        }
+        k += r;
+        var z = dctZigZag[k];
+        component.blockData[offset + z] = receiveAndExtend(s);
+        k++;
+      }
+    }
+
+    function decodeDCFirst(component, offset) {
+      var t = decodeHuffman(component.huffmanTableDC);
+      var diff = t === 0 ? 0 : (receiveAndExtend(t) << successive);
+      component.blockData[offset] = (component.pred += diff);
+    }
+
+    function decodeDCSuccessive(component, offset) {
+      component.blockData[offset] |= readBit() << successive;
+    }
+
+    var eobrun = 0;
+    function decodeACFirst(component, offset) {
+      if (eobrun > 0) {
+        eobrun--;
+        return;
+      }
+      var k = spectralStart, e = spectralEnd;
+      while (k <= e) {
+        var rs = decodeHuffman(component.huffmanTableAC);
+        var s = rs & 15, r = rs >> 4;
+        if (s === 0) {
+          if (r < 15) {
+            eobrun = receive(r) + (1 << r) - 1;
+            break;
+          }
+          k += 16;
+          continue;
+        }
+        k += r;
+        var z = dctZigZag[k];
+        component.blockData[offset + z] =
+          receiveAndExtend(s) * (1 << successive);
+        k++;
+      }
+    }
+
+    var successiveACState = 0, successiveACNextValue;
+    function decodeACSuccessive(component, offset) {
+      var k = spectralStart;
+      var e = spectralEnd;
+      var r = 0;
+      var s;
+      var rs;
+      while (k <= e) {
+        var z = dctZigZag[k];
+        switch (successiveACState) {
+        case 0: // initial state
+          rs = decodeHuffman(component.huffmanTableAC);
+          s = rs & 15;
+          r = rs >> 4;
+          if (s === 0) {
+            if (r < 15) {
+              eobrun = receive(r) + (1 << r);
+              successiveACState = 4;
+            } else {
+              r = 16;
+              successiveACState = 1;
+            }
+          } else {
+            if (s !== 1) {
+              throw 'invalid ACn encoding';
+            }
+            successiveACNextValue = receiveAndExtend(s);
+            successiveACState = r ? 2 : 3;
+          }
+          continue;
+        case 1: // skipping r zero items
+        case 2:
+          if (component.blockData[offset + z]) {
+            component.blockData[offset + z] += (readBit() << successive);
+          } else {
+            r--;
+            if (r === 0) {
+              successiveACState = successiveACState === 2 ? 3 : 0;
+            }
+          }
+          break;
+        case 3: // set value for a zero item
+          if (component.blockData[offset + z]) {
+            component.blockData[offset + z] += (readBit() << successive);
+          } else {
+            component.blockData[offset + z] =
+              successiveACNextValue << successive;
+            successiveACState = 0;
+          }
+          break;
+        case 4: // eob
+          if (component.blockData[offset + z]) {
+            component.blockData[offset + z] += (readBit() << successive);
+          }
+          break;
+        }
+        k++;
+      }
+      if (successiveACState === 4) {
+        eobrun--;
+        if (eobrun === 0) {
+          successiveACState = 0;
+        }
+      }
+    }
+
+    function decodeMcu(component, decode, mcu, row, col) {
+      var mcuRow = (mcu / mcusPerLine) | 0;
+      var mcuCol = mcu % mcusPerLine;
+      var blockRow = mcuRow * component.v + row;
+      var blockCol = mcuCol * component.h + col;
+      var offset = getBlockBufferOffset(component, blockRow, blockCol);
+      decode(component, offset);
+    }
+
+    function decodeBlock(component, decode, mcu) {
+      var blockRow = (mcu / component.blocksPerLine) | 0;
+      var blockCol = mcu % component.blocksPerLine;
+      var offset = getBlockBufferOffset(component, blockRow, blockCol);
+      decode(component, offset);
+    }
+
+    var componentsLength = components.length;
+    var component, i, j, k, n;
+    var decodeFn;
+    if (progressive) {
+      if (spectralStart === 0) {
+        decodeFn = successivePrev === 0 ? decodeDCFirst : decodeDCSuccessive;
+      } else {
+        decodeFn = successivePrev === 0 ? decodeACFirst : decodeACSuccessive;
+      }
+    } else {
+      decodeFn = decodeBaseline;
+    }
+
+    var mcu = 0, marker;
+    var mcuExpected;
+    if (componentsLength === 1) {
+      mcuExpected = components[0].blocksPerLine * components[0].blocksPerColumn;
+    } else {
+      mcuExpected = mcusPerLine * frame.mcusPerColumn;
+    }
+    if (!resetInterval) {
+      resetInterval = mcuExpected;
+    }
+
+    var h, v;
+    while (mcu < mcuExpected) {
+      // reset interval stuff
+      for (i = 0; i < componentsLength; i++) {
+        components[i].pred = 0;
+      }
+      eobrun = 0;
+
+      if (componentsLength === 1) {
+        component = components[0];
+        for (n = 0; n < resetInterval; n++) {
+          decodeBlock(component, decodeFn, mcu);
+          mcu++;
+        }
+      } else {
+        for (n = 0; n < resetInterval; n++) {
+          for (i = 0; i < componentsLength; i++) {
+            component = components[i];
+            h = component.h;
+            v = component.v;
+            for (j = 0; j < v; j++) {
+              for (k = 0; k < h; k++) {
+                decodeMcu(component, decodeFn, mcu, j, k);
+              }
+            }
+          }
+          mcu++;
+        }
+      }
+
+      // find marker
+      bitsCount = 0;
+      marker = (data[offset] << 8) | data[offset + 1];
+      if (marker <= 0xFF00) {
+        throw 'marker was not found';
+      }
+
+      if (marker >= 0xFFD0 && marker <= 0xFFD7) { // RSTx
+        offset += 2;
+      } else {
+        break;
+      }
+    }
+
+    return offset - startOffset;
+  }
+
+  // A port of poppler's IDCT method which in turn is taken from:
+  //   Christoph Loeffler, Adriaan Ligtenberg, George S. Moschytz,
+  //   'Practical Fast 1-D DCT Algorithms with 11 Multiplications',
+  //   IEEE Intl. Conf. on Acoustics, Speech & Signal Processing, 1989,
+  //   988-991.
+  function quantizeAndInverse(component, blockBufferOffset, p) {
+    var qt = component.quantizationTable, blockData = component.blockData;
+    var v0, v1, v2, v3, v4, v5, v6, v7;
+    var p0, p1, p2, p3, p4, p5, p6, p7;
+    var t;
+
+    // inverse DCT on rows
+    for (var row = 0; row < 64; row += 8) {
+      // gather block data
+      p0 = blockData[blockBufferOffset + row];
+      p1 = blockData[blockBufferOffset + row + 1];
+      p2 = blockData[blockBufferOffset + row + 2];
+      p3 = blockData[blockBufferOffset + row + 3];
+      p4 = blockData[blockBufferOffset + row + 4];
+      p5 = blockData[blockBufferOffset + row + 5];
+      p6 = blockData[blockBufferOffset + row + 6];
+      p7 = blockData[blockBufferOffset + row + 7];
+
+      // dequant p0
+      p0 *= qt[row];
+
+      // check for all-zero AC coefficients
+      if ((p1 | p2 | p3 | p4 | p5 | p6 | p7) === 0) {
+        t = (dctSqrt2 * p0 + 512) >> 10;
+        p[row] = t;
+        p[row + 1] = t;
+        p[row + 2] = t;
+        p[row + 3] = t;
+        p[row + 4] = t;
+        p[row + 5] = t;
+        p[row + 6] = t;
+        p[row + 7] = t;
+        continue;
+      }
+      // dequant p1 ... p7
+      p1 *= qt[row + 1];
+      p2 *= qt[row + 2];
+      p3 *= qt[row + 3];
+      p4 *= qt[row + 4];
+      p5 *= qt[row + 5];
+      p6 *= qt[row + 6];
+      p7 *= qt[row + 7];
+
+      // stage 4
+      v0 = (dctSqrt2 * p0 + 128) >> 8;
+      v1 = (dctSqrt2 * p4 + 128) >> 8;
+      v2 = p2;
+      v3 = p6;
+      v4 = (dctSqrt1d2 * (p1 - p7) + 128) >> 8;
+      v7 = (dctSqrt1d2 * (p1 + p7) + 128) >> 8;
+      v5 = p3 << 4;
+      v6 = p5 << 4;
+
+      // stage 3
+      v0 = (v0 + v1 + 1) >> 1;
+      v1 = v0 - v1;
+      t  = (v2 * dctSin6 + v3 * dctCos6 + 128) >> 8;
+      v2 = (v2 * dctCos6 - v3 * dctSin6 + 128) >> 8;
+      v3 = t;
+      v4 = (v4 + v6 + 1) >> 1;
+      v6 = v4 - v6;
+      v7 = (v7 + v5 + 1) >> 1;
+      v5 = v7 - v5;
+
+      // stage 2
+      v0 = (v0 + v3 + 1) >> 1;
+      v3 = v0 - v3;
+      v1 = (v1 + v2 + 1) >> 1;
+      v2 = v1 - v2;
+      t  = (v4 * dctSin3 + v7 * dctCos3 + 2048) >> 12;
+      v4 = (v4 * dctCos3 - v7 * dctSin3 + 2048) >> 12;
+      v7 = t;
+      t  = (v5 * dctSin1 + v6 * dctCos1 + 2048) >> 12;
+      v5 = (v5 * dctCos1 - v6 * dctSin1 + 2048) >> 12;
+      v6 = t;
+
+      // stage 1
+      p[row] = v0 + v7;
+      p[row + 7] = v0 - v7;
+      p[row + 1] = v1 + v6;
+      p[row + 6] = v1 - v6;
+      p[row + 2] = v2 + v5;
+      p[row + 5] = v2 - v5;
+      p[row + 3] = v3 + v4;
+      p[row + 4] = v3 - v4;
+    }
+
+    // inverse DCT on columns
+    for (var col = 0; col < 8; ++col) {
+      p0 = p[col];
+      p1 = p[col +  8];
+      p2 = p[col + 16];
+      p3 = p[col + 24];
+      p4 = p[col + 32];
+      p5 = p[col + 40];
+      p6 = p[col + 48];
+      p7 = p[col + 56];
+
+      // check for all-zero AC coefficients
+      if ((p1 | p2 | p3 | p4 | p5 | p6 | p7) === 0) {
+        t = (dctSqrt2 * p0 + 8192) >> 14;
+        // convert to 8 bit
+        t = (t < -2040) ? 0 : (t >= 2024) ? 255 : (t + 2056) >> 4;
+        blockData[blockBufferOffset + col] = t;
+        blockData[blockBufferOffset + col +  8] = t;
+        blockData[blockBufferOffset + col + 16] = t;
+        blockData[blockBufferOffset + col + 24] = t;
+        blockData[blockBufferOffset + col + 32] = t;
+        blockData[blockBufferOffset + col + 40] = t;
+        blockData[blockBufferOffset + col + 48] = t;
+        blockData[blockBufferOffset + col + 56] = t;
+        continue;
+      }
+
+      // stage 4
+      v0 = (dctSqrt2 * p0 + 2048) >> 12;
+      v1 = (dctSqrt2 * p4 + 2048) >> 12;
+      v2 = p2;
+      v3 = p6;
+      v4 = (dctSqrt1d2 * (p1 - p7) + 2048) >> 12;
+      v7 = (dctSqrt1d2 * (p1 + p7) + 2048) >> 12;
+      v5 = p3;
+      v6 = p5;
+
+      // stage 3
+      // Shift v0 by 128.5 << 5 here, so we don't need to shift p0...p7 when
+      // converting to UInt8 range later.
+      v0 = ((v0 + v1 + 1) >> 1) + 4112;
+      v1 = v0 - v1;
+      t  = (v2 * dctSin6 + v3 * dctCos6 + 2048) >> 12;
+      v2 = (v2 * dctCos6 - v3 * dctSin6 + 2048) >> 12;
+      v3 = t;
+      v4 = (v4 + v6 + 1) >> 1;
+      v6 = v4 - v6;
+      v7 = (v7 + v5 + 1) >> 1;
+      v5 = v7 - v5;
+
+      // stage 2
+      v0 = (v0 + v3 + 1) >> 1;
+      v3 = v0 - v3;
+      v1 = (v1 + v2 + 1) >> 1;
+      v2 = v1 - v2;
+      t  = (v4 * dctSin3 + v7 * dctCos3 + 2048) >> 12;
+      v4 = (v4 * dctCos3 - v7 * dctSin3 + 2048) >> 12;
+      v7 = t;
+      t  = (v5 * dctSin1 + v6 * dctCos1 + 2048) >> 12;
+      v5 = (v5 * dctCos1 - v6 * dctSin1 + 2048) >> 12;
+      v6 = t;
+
+      // stage 1
+      p0 = v0 + v7;
+      p7 = v0 - v7;
+      p1 = v1 + v6;
+      p6 = v1 - v6;
+      p2 = v2 + v5;
+      p5 = v2 - v5;
+      p3 = v3 + v4;
+      p4 = v3 - v4;
+
+      // convert to 8-bit integers
+      p0 = (p0 < 16) ? 0 : (p0 >= 4080) ? 255 : p0 >> 4;
+      p1 = (p1 < 16) ? 0 : (p1 >= 4080) ? 255 : p1 >> 4;
+      p2 = (p2 < 16) ? 0 : (p2 >= 4080) ? 255 : p2 >> 4;
+      p3 = (p3 < 16) ? 0 : (p3 >= 4080) ? 255 : p3 >> 4;
+      p4 = (p4 < 16) ? 0 : (p4 >= 4080) ? 255 : p4 >> 4;
+      p5 = (p5 < 16) ? 0 : (p5 >= 4080) ? 255 : p5 >> 4;
+      p6 = (p6 < 16) ? 0 : (p6 >= 4080) ? 255 : p6 >> 4;
+      p7 = (p7 < 16) ? 0 : (p7 >= 4080) ? 255 : p7 >> 4;
+
+      // store block data
+      blockData[blockBufferOffset + col] = p0;
+      blockData[blockBufferOffset + col +  8] = p1;
+      blockData[blockBufferOffset + col + 16] = p2;
+      blockData[blockBufferOffset + col + 24] = p3;
+      blockData[blockBufferOffset + col + 32] = p4;
+      blockData[blockBufferOffset + col + 40] = p5;
+      blockData[blockBufferOffset + col + 48] = p6;
+      blockData[blockBufferOffset + col + 56] = p7;
+    }
+  }
+
+  function buildComponentData(frame, component) {
+    var blocksPerLine = component.blocksPerLine;
+    var blocksPerColumn = component.blocksPerColumn;
+    var computationBuffer = new Int16Array(64);
+
+    for (var blockRow = 0; blockRow < blocksPerColumn; blockRow++) {
+      for (var blockCol = 0; blockCol < blocksPerLine; blockCol++) {
+        var offset = getBlockBufferOffset(component, blockRow, blockCol);
+        quantizeAndInverse(component, offset, computationBuffer);
+      }
+    }
+    return component.blockData;
+  }
+
+  function clamp0to255(a) {
+    return a <= 0 ? 0 : a >= 255 ? 255 : a;
+  }
+
+  constructor.prototype = {
+    parse: function parse(data) {
+
+      function readUint16() {
+        var value = (data[offset] << 8) | data[offset + 1];
+        offset += 2;
+        return value;
+      }
+
+      function readDataBlock() {
+        var length = readUint16();
+        var array = data.subarray(offset, offset + length - 2);
+        offset += array.length;
+        return array;
+      }
+
+      function prepareComponents(frame) {
+        var mcusPerLine = Math.ceil(frame.samplesPerLine / 8 / frame.maxH);
+        var mcusPerColumn = Math.ceil(frame.scanLines / 8 / frame.maxV);
+        for (var i = 0; i < frame.components.length; i++) {
+          component = frame.components[i];
+          var blocksPerLine = Math.ceil(Math.ceil(frame.samplesPerLine / 8) *
+                                        component.h / frame.maxH);
+          var blocksPerColumn = Math.ceil(Math.ceil(frame.scanLines  / 8) *
+                                          component.v / frame.maxV);
+          var blocksPerLineForMcu = mcusPerLine * component.h;
+          var blocksPerColumnForMcu = mcusPerColumn * component.v;
+
+          var blocksBufferSize = 64 * blocksPerColumnForMcu *
+                                      (blocksPerLineForMcu + 1);
+          component.blockData = new Int16Array(blocksBufferSize);
+          component.blocksPerLine = blocksPerLine;
+          component.blocksPerColumn = blocksPerColumn;
+        }
+        frame.mcusPerLine = mcusPerLine;
+        frame.mcusPerColumn = mcusPerColumn;
+      }
+
+      var offset = 0, length = data.length;
+      var jfif = null;
+      var adobe = null;
+      var pixels = null;
+      var frame, resetInterval;
+      var quantizationTables = [];
+      var huffmanTablesAC = [], huffmanTablesDC = [];
+      var fileMarker = readUint16();
+      if (fileMarker !== 0xFFD8) { // SOI (Start of Image)
+        throw 'SOI not found';
+      }
+
+      fileMarker = readUint16();
+      while (fileMarker !== 0xFFD9) { // EOI (End of image)
+        var i, j, l;
+        switch(fileMarker) {
+          case 0xFFE0: // APP0 (Application Specific)
+          case 0xFFE1: // APP1
+          case 0xFFE2: // APP2
+          case 0xFFE3: // APP3
+          case 0xFFE4: // APP4
+          case 0xFFE5: // APP5
+          case 0xFFE6: // APP6
+          case 0xFFE7: // APP7
+          case 0xFFE8: // APP8
+          case 0xFFE9: // APP9
+          case 0xFFEA: // APP10
+          case 0xFFEB: // APP11
+          case 0xFFEC: // APP12
+          case 0xFFED: // APP13
+          case 0xFFEE: // APP14
+          case 0xFFEF: // APP15
+          case 0xFFFE: // COM (Comment)
+            var appData = readDataBlock();
+
+            if (fileMarker === 0xFFE0) {
+              if (appData[0] === 0x4A && appData[1] === 0x46 &&
+                  appData[2] === 0x49 && appData[3] === 0x46 &&
+                  appData[4] === 0) { // 'JFIF\x00'
+                jfif = {
+                  version: { major: appData[5], minor: appData[6] },
+                  densityUnits: appData[7],
+                  xDensity: (appData[8] << 8) | appData[9],
+                  yDensity: (appData[10] << 8) | appData[11],
+                  thumbWidth: appData[12],
+                  thumbHeight: appData[13],
+                  thumbData: appData.subarray(14, 14 +
+                                              3 * appData[12] * appData[13])
+                };
+              }
+            }
+            // TODO APP1 - Exif
+            if (fileMarker === 0xFFEE) {
+              if (appData[0] === 0x41 && appData[1] === 0x64 &&
+                  appData[2] === 0x6F && appData[3] === 0x62 &&
+                  appData[4] === 0x65) { // 'Adobe'
+                adobe = {
+                  version: (appData[5] << 8) | appData[6],
+                  flags0: (appData[7] << 8) | appData[8],
+                  flags1: (appData[9] << 8) | appData[10],
+                  transformCode: appData[11]
+                };
+              }
+            }
+            break;
+
+          case 0xFFDB: // DQT (Define Quantization Tables)
+            var quantizationTablesLength = readUint16();
+            var quantizationTablesEnd = quantizationTablesLength + offset - 2;
+            var z;
+            while (offset < quantizationTablesEnd) {
+              var quantizationTableSpec = data[offset++];
+              var tableData = new Uint16Array(64);
+              if ((quantizationTableSpec >> 4) === 0) { // 8 bit values
+                for (j = 0; j < 64; j++) {
+                  z = dctZigZag[j];
+                  tableData[z] = data[offset++];
+                }
+              } else if ((quantizationTableSpec >> 4) === 1) { //16 bit
+                for (j = 0; j < 64; j++) {
+                  z = dctZigZag[j];
+                  tableData[z] = readUint16();
+                }
+              } else {
+                throw 'DQT: invalid table spec';
+              }
+              quantizationTables[quantizationTableSpec & 15] = tableData;
+            }
+            break;
+
+          case 0xFFC0: // SOF0 (Start of Frame, Baseline DCT)
+          case 0xFFC1: // SOF1 (Start of Frame, Extended DCT)
+          case 0xFFC2: // SOF2 (Start of Frame, Progressive DCT)
+            if (frame) {
+              throw 'Only single frame JPEGs supported';
+            }
+            readUint16(); // skip data length
+            frame = {};
+            frame.extended = (fileMarker === 0xFFC1);
+            frame.progressive = (fileMarker === 0xFFC2);
+            frame.precision = data[offset++];
+            frame.scanLines = readUint16();
+            frame.samplesPerLine = readUint16();
+            frame.components = [];
+            frame.componentIds = {};
+            var componentsCount = data[offset++], componentId;
+            var maxH = 0, maxV = 0;
+            for (i = 0; i < componentsCount; i++) {
+              componentId = data[offset];
+              var h = data[offset + 1] >> 4;
+              var v = data[offset + 1] & 15;
+              if (maxH < h) {
+                maxH = h;
+              }
+              if (maxV < v) {
+                maxV = v;
+              }
+              var qId = data[offset + 2];
+              l = frame.components.push({
+                h: h,
+                v: v,
+                quantizationTable: quantizationTables[qId]
+              });
+              frame.componentIds[componentId] = l - 1;
+              offset += 3;
+            }
+            frame.maxH = maxH;
+            frame.maxV = maxV;
+            prepareComponents(frame);
+            break;
+
+          case 0xFFC4: // DHT (Define Huffman Tables)
+            var huffmanLength = readUint16();
+            for (i = 2; i < huffmanLength;) {
+              var huffmanTableSpec = data[offset++];
+              var codeLengths = new Uint8Array(16);
+              var codeLengthSum = 0;
+              for (j = 0; j < 16; j++, offset++) {
+                codeLengthSum += (codeLengths[j] = data[offset]);
+              }
+              var huffmanValues = new Uint8Array(codeLengthSum);
+              for (j = 0; j < codeLengthSum; j++, offset++) {
+                huffmanValues[j] = data[offset];
+              }
+              i += 17 + codeLengthSum;
+
+              ((huffmanTableSpec >> 4) === 0 ?
+                huffmanTablesDC : huffmanTablesAC)[huffmanTableSpec & 15] =
+                buildHuffmanTable(codeLengths, huffmanValues);
+            }
+            break;
+
+          case 0xFFDD: // DRI (Define Restart Interval)
+            readUint16(); // skip data length
+            resetInterval = readUint16();
+            break;
+
+          case 0xFFDA: // SOS (Start of Scan)
+            var scanLength = readUint16();
+            var selectorsCount = data[offset++];
+            var components = [], component;
+            for (i = 0; i < selectorsCount; i++) {
+              var componentIndex = frame.componentIds[data[offset++]];
+              component = frame.components[componentIndex];
+              var tableSpec = data[offset++];
+              component.huffmanTableDC = huffmanTablesDC[tableSpec >> 4];
+              component.huffmanTableAC = huffmanTablesAC[tableSpec & 15];
+              components.push(component);
+            }
+            var spectralStart = data[offset++];
+            var spectralEnd = data[offset++];
+            var successiveApproximation = data[offset++];
+            var processed = decodeScan(data, offset,
+              frame, components, resetInterval,
+              spectralStart, spectralEnd,
+              successiveApproximation >> 4, successiveApproximation & 15);
+            offset += processed;
+            break;
+
+          case 0xFFFF: // Fill bytes
+            if (data[offset] !== 0xFF) { // Avoid skipping a valid marker.
+              offset--;
+            }
+            break;
+
+          default:
+            if (data[offset - 3] === 0xFF &&
+                data[offset - 2] >= 0xC0 && data[offset - 2] <= 0xFE) {
+              // could be incorrect encoding -- last 0xFF byte of the previous
+              // block was eaten by the encoder
+              offset -= 3;
+              break;
+            }
+            throw 'unknown JPEG marker ' + fileMarker.toString(16);
+        }
+        fileMarker = readUint16();
+      }
+
+      this.width = frame.samplesPerLine;
+      this.height = frame.scanLines;
+      this.jfif = jfif;
+      this.adobe = adobe;
+      this.components = [];
+      for (i = 0; i < frame.components.length; i++) {
+        component = frame.components[i];
+        this.components.push({
+          output: buildComponentData(frame, component),
+          scaleX: component.h / frame.maxH,
+          scaleY: component.v / frame.maxV,
+          blocksPerLine: component.blocksPerLine,
+          blocksPerColumn: component.blocksPerColumn
+        });
+      }
+      this.numComponents = this.components.length;
+    },
+
+    _getLinearizedBlockData: function getLinearizedBlockData(width, height) {
+      var scaleX = this.width / width, scaleY = this.height / height;
+
+      var component, componentScaleX, componentScaleY, blocksPerScanline;
+      var x, y, i, j, k;
+      var index;
+      var offset = 0;
+      var output;
+      var numComponents = this.components.length;
+      var dataLength = width * height * numComponents;
+      var data = new Uint8Array(dataLength);
+      var xScaleBlockOffset = new Uint32Array(width);
+      var mask3LSB = 0xfffffff8; // used to clear the 3 LSBs
+
+      for (i = 0; i < numComponents; i++) {
+        component = this.components[i];
+        componentScaleX = component.scaleX * scaleX;
+        componentScaleY = component.scaleY * scaleY;
+        offset = i;
+        output = component.output;
+        blocksPerScanline = (component.blocksPerLine + 1) << 3;
+        // precalculate the xScaleBlockOffset
+        for (x = 0; x < width; x++) {
+          j = 0 | (x * componentScaleX);
+          xScaleBlockOffset[x] = ((j & mask3LSB) << 3) | (j & 7);
+        }
+        // linearize the blocks of the component
+        for (y = 0; y < height; y++) {
+          j = 0 | (y * componentScaleY);
+          index = blocksPerScanline * (j & mask3LSB) | ((j & 7) << 3);
+          for (x = 0; x < width; x++) {
+            data[offset] = output[index + xScaleBlockOffset[x]];
+            offset += numComponents;
+          }
+        }
+      }
+
+      // decodeTransform contains pairs of multiplier (-256..256) and additive
+      var transform = this.decodeTransform;
+      if (transform) {
+        for (i = 0; i < dataLength;) {
+          for (j = 0, k = 0; j < numComponents; j++, i++, k += 2) {
+            data[i] = ((data[i] * transform[k]) >> 8) + transform[k + 1];
+          }
+        }
+      }
+      return data;
+    },
+
+    _isColorConversionNeeded: function isColorConversionNeeded() {
+      if (this.adobe && this.adobe.transformCode) {
+        // The adobe transform marker overrides any previous setting
+        return true;
+      } else if (this.numComponents === 3) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    _convertYccToRgb: function convertYccToRgb(data) {
+      var Y, Cb, Cr;
+      for (var i = 0, length = data.length; i < length; i += 3) {
+        Y  = data[i    ];
+        Cb = data[i + 1];
+        Cr = data[i + 2];
+        data[i    ] = clamp0to255(Y - 179.456 + 1.402 * Cr);
+        data[i + 1] = clamp0to255(Y + 135.459 - 0.344 * Cb - 0.714 * Cr);
+        data[i + 2] = clamp0to255(Y - 226.816 + 1.772 * Cb);
+      }
+      return data;
+    },
+
+    _convertYcckToRgb: function convertYcckToRgb(data) {
+      var Y, Cb, Cr, k;
+      var offset = 0;
+      for (var i = 0, length = data.length; i < length; i += 4) {
+        Y  = data[i];
+        Cb = data[i + 1];
+        Cr = data[i + 2];
+        k = data[i + 3];
+
+        var r = -122.67195406894 +
+          Cb * (-6.60635669420364e-5 * Cb + 0.000437130475926232 * Cr -
+                5.4080610064599e-5 * Y + 0.00048449797120281 * k -
+                0.154362151871126) +
+          Cr * (-0.000957964378445773 * Cr + 0.000817076911346625 * Y -
+                0.00477271405408747 * k + 1.53380253221734) +
+          Y * (0.000961250184130688 * Y - 0.00266257332283933 * k +
+               0.48357088451265) +
+          k * (-0.000336197177618394 * k + 0.484791561490776);
+
+        var g = 107.268039397724 +
+          Cb * (2.19927104525741e-5 * Cb - 0.000640992018297945 * Cr +
+                0.000659397001245577 * Y + 0.000426105652938837 * k -
+                0.176491792462875) +
+          Cr * (-0.000778269941513683 * Cr + 0.00130872261408275 * Y +
+                0.000770482631801132 * k - 0.151051492775562) +
+          Y * (0.00126935368114843 * Y - 0.00265090189010898 * k +
+               0.25802910206845) +
+          k * (-0.000318913117588328 * k - 0.213742400323665);
+
+        var b = -20.810012546947 +
+          Cb * (-0.000570115196973677 * Cb - 2.63409051004589e-5 * Cr +
+                0.0020741088115012 * Y - 0.00288260236853442 * k +
+                0.814272968359295) +
+          Cr * (-1.53496057440975e-5 * Cr - 0.000132689043961446 * Y +
+                0.000560833691242812 * k - 0.195152027534049) +
+          Y * (0.00174418132927582 * Y - 0.00255243321439347 * k +
+               0.116935020465145) +
+          k * (-0.000343531996510555 * k + 0.24165260232407);
+
+        data[offset++] = clamp0to255(r);
+        data[offset++] = clamp0to255(g);
+        data[offset++] = clamp0to255(b);
+      }
+      return data;
+    },
+
+    _convertYcckToCmyk: function convertYcckToCmyk(data) {
+      var Y, Cb, Cr;
+      for (var i = 0, length = data.length; i < length; i += 4) {
+        Y  = data[i];
+        Cb = data[i + 1];
+        Cr = data[i + 2];
+        data[i    ] = clamp0to255(434.456 - Y - 1.402 * Cr);
+        data[i + 1] = clamp0to255(119.541 - Y + 0.344 * Cb + 0.714 * Cr);
+        data[i + 2] = clamp0to255(481.816 - Y - 1.772 * Cb);
+        // K in data[i + 3] is unchanged
+      }
+      return data;
+    },
+
+    _convertCmykToRgb: function convertCmykToRgb(data) {
+      var c, m, y, k;
+      var offset = 0;
+      var min = -255 * 255 * 255;
+      var scale = 1 / 255 / 255;
+      for (var i = 0, length = data.length; i < length; i += 4) {
+        c = data[i];
+        m = data[i + 1];
+        y = data[i + 2];
+        k = data[i + 3];
+
+        var r =
+          c * (-4.387332384609988 * c + 54.48615194189176 * m +
+               18.82290502165302 * y + 212.25662451639585 * k -
+               72734.4411664936) +
+          m * (1.7149763477362134 * m - 5.6096736904047315 * y -
+               17.873870861415444 * k - 1401.7366389350734) +
+          y * (-2.5217340131683033 * y - 21.248923337353073 * k +
+               4465.541406466231) -
+          k * (21.86122147463605 * k + 48317.86113160301);
+        var g =
+          c * (8.841041422036149 * c + 60.118027045597366 * m +
+               6.871425592049007 * y + 31.159100130055922 * k -
+               20220.756542821975) +
+          m * (-15.310361306967817 * m + 17.575251261109482 * y +
+               131.35250912493976 * k - 48691.05921601825) +
+          y * (4.444339102852739 * y + 9.8632861493405 * k -
+               6341.191035517494) -
+          k * (20.737325471181034 * k + 47890.15695978492);
+        var b =
+          c * (0.8842522430003296 * c + 8.078677503112928 * m +
+               30.89978309703729 * y - 0.23883238689178934 * k -
+               3616.812083916688) +
+          m * (10.49593273432072 * m + 63.02378494754052 * y +
+               50.606957656360734 * k - 28620.90484698408) +
+          y * (0.03296041114873217 * y + 115.60384449646641 * k -
+               49363.43385999684) -
+          k * (22.33816807309886 * k + 45932.16563550634);
+
+        data[offset++] = r >= 0 ? 255 : r <= min ? 0 : 255 + r * scale | 0;
+        data[offset++] = g >= 0 ? 255 : g <= min ? 0 : 255 + g * scale | 0;
+        data[offset++] = b >= 0 ? 255 : b <= min ? 0 : 255 + b * scale | 0;
+      }
+      return data;
+    },
+
+    getData: function getData(width, height, forceRGBoutput) {
+      if (this.numComponents > 4) {
+        throw 'Unsupported color mode';
+      }
+      // type of data: Uint8Array(width * height * numComponents)
+      var data = this._getLinearizedBlockData(width, height);
+
+      if (this.numComponents === 3) {
+        return this._convertYccToRgb(data);
+      } else if (this.numComponents === 4) {
+        if (this._isColorConversionNeeded()) {
+          if (forceRGBoutput) {
+            return this._convertYcckToRgb(data);
+          } else {
+            return this._convertYcckToCmyk(data);
+          }
+        } else if (forceRGBoutput) {
+          return this._convertCmykToRgb(data);
+        }
+      }
+      return data;
+    }
+  };
+
+  return constructor;
+})();
+
+
+var JpxImage = (function JpxImageClosure() {
+  // Table E.1
+  var SubbandsGainLog2 = {
+    'LL': 0,
+    'LH': 1,
+    'HL': 1,
+    'HH': 2
+  };
+  function JpxImage() {
+    this.failOnCorruptedImage = false;
+  }
+  JpxImage.prototype = {
+    parse: function JpxImage_parse(data) {
+
+      var head = readUint16(data, 0);
+      // No box header, immediate start of codestream (SOC)
+      if (head === 0xFF4F) {
+        this.parseCodestream(data, 0, data.length);
+        return;
+      }
+
+      var position = 0, length = data.length;
+      while (position < length) {
+        var headerSize = 8;
+        var lbox = readUint32(data, position);
+        var tbox = readUint32(data, position + 4);
+        position += headerSize;
+        if (lbox === 1) {
+          // XLBox: read UInt64 according to spec.
+          // JavaScript's int precision of 53 bit should be sufficient here.
+          lbox = readUint32(data, position) * 4294967296 +
+                 readUint32(data, position + 4);
+          position += 8;
+          headerSize += 8;
+        }
+        if (lbox === 0) {
+          lbox = length - position + headerSize;
+        }
+        if (lbox < headerSize) {
+          throw new Error('JPX Error: Invalid box field size');
+        }
+        var dataLength = lbox - headerSize;
+        var jumpDataLength = true;
+        switch (tbox) {
+          case 0x6A703268: // 'jp2h'
+            jumpDataLength = false; // parsing child boxes
+            break;
+          case 0x636F6C72: // 'colr'
+            // Colorspaces are not used, the CS from the PDF is used.
+            var method = data[position];
+            var precedence = data[position + 1];
+            var approximation = data[position + 2];
+            if (method === 1) {
+              // enumerated colorspace
+              var colorspace = readUint32(data, position + 3);
+              switch (colorspace) {
+                case 16: // this indicates a sRGB colorspace
+                case 17: // this indicates a grayscale colorspace
+                case 18: // this indicates a YUV colorspace
+                  break;
+                default:
+                  warn('Unknown colorspace ' + colorspace);
+                  break;
+              }
+            } else if (method === 2) {
+              info('ICC profile not supported');
+            }
+            break;
+          case 0x6A703263: // 'jp2c'
+            this.parseCodestream(data, position, position + dataLength);
+            break;
+          case 0x6A502020: // 'jP\024\024'
+            if (0x0d0a870a !== readUint32(data, position)) {
+              warn('Invalid JP2 signature');
+            }
+            break;
+          // The following header types are valid but currently not used:
+          case 0x6A501A1A: // 'jP\032\032'
+          case 0x66747970: // 'ftyp'
+          case 0x72726571: // 'rreq'
+          case 0x72657320: // 'res '
+          case 0x69686472: // 'ihdr'
+            break;
+          default:
+            var headerType = String.fromCharCode((tbox >> 24) & 0xFF,
+                                                 (tbox >> 16) & 0xFF,
+                                                 (tbox >> 8) & 0xFF,
+                                                 tbox & 0xFF);
+            warn('Unsupported header type ' + tbox + ' (' + headerType + ')');
+            break;
+        }
+        if (jumpDataLength) {
+          position += dataLength;
+        }
+      }
+    },
+    parseImageProperties: function JpxImage_parseImageProperties(stream) {
+      var newByte = stream.getByte();
+      while (newByte >= 0) {
+        var oldByte = newByte;
+        newByte = stream.getByte();
+        var code = (oldByte << 8) | newByte;
+        // Image and tile size (SIZ)
+        if (code === 0xFF51) {
+          stream.skip(4);
+          var Xsiz = stream.getInt32() >>> 0; // Byte 4
+          var Ysiz = stream.getInt32() >>> 0; // Byte 8
+          var XOsiz = stream.getInt32() >>> 0; // Byte 12
+          var YOsiz = stream.getInt32() >>> 0; // Byte 16
+          stream.skip(16);
+          var Csiz = stream.getUint16(); // Byte 36
+          this.width = Xsiz - XOsiz;
+          this.height = Ysiz - YOsiz;
+          this.componentsCount = Csiz;
+          // Results are always returned as Uint8Arrays
+          this.bitsPerComponent = 8;
+          return;
+        }
+      }
+      throw new Error('JPX Error: No size marker found in JPX stream');
+    },
+    parseCodestream: function JpxImage_parseCodestream(data, start, end) {
+      var context = {};
+      try {
+        var doNotRecover = false;
+        var position = start;
+        while (position + 1 < end) {
+          var code = readUint16(data, position);
+          position += 2;
+
+          var length = 0, j, sqcd, spqcds, spqcdSize, scalarExpounded, tile;
+          switch (code) {
+            case 0xFF4F: // Start of codestream (SOC)
+              context.mainHeader = true;
+              break;
+            case 0xFFD9: // End of codestream (EOC)
+              break;
+            case 0xFF51: // Image and tile size (SIZ)
+              length = readUint16(data, position);
+              var siz = {};
+              siz.Xsiz = readUint32(data, position + 4);
+              siz.Ysiz = readUint32(data, position + 8);
+              siz.XOsiz = readUint32(data, position + 12);
+              siz.YOsiz = readUint32(data, position + 16);
+              siz.XTsiz = readUint32(data, position + 20);
+              siz.YTsiz = readUint32(data, position + 24);
+              siz.XTOsiz = readUint32(data, position + 28);
+              siz.YTOsiz = readUint32(data, position + 32);
+              var componentsCount = readUint16(data, position + 36);
+              siz.Csiz = componentsCount;
+              var components = [];
+              j = position + 38;
+              for (var i = 0; i < componentsCount; i++) {
+                var component = {
+                  precision: (data[j] & 0x7F) + 1,
+                  isSigned: !!(data[j] & 0x80),
+                  XRsiz: data[j + 1],
+                  YRsiz: data[j + 1]
+                };
+                calculateComponentDimensions(component, siz);
+                components.push(component);
+              }
+              context.SIZ = siz;
+              context.components = components;
+              calculateTileGrids(context, components);
+              context.QCC = [];
+              context.COC = [];
+              break;
+            case 0xFF5C: // Quantization default (QCD)
+              length = readUint16(data, position);
+              var qcd = {};
+              j = position + 2;
+              sqcd = data[j++];
+              switch (sqcd & 0x1F) {
+                case 0:
+                  spqcdSize = 8;
+                  scalarExpounded = true;
+                  break;
+                case 1:
+                  spqcdSize = 16;
+                  scalarExpounded = false;
+                  break;
+                case 2:
+                  spqcdSize = 16;
+                  scalarExpounded = true;
+                  break;
+                default:
+                  throw new Error('JPX Error: Invalid SQcd value ' + sqcd);
+              }
+              qcd.noQuantization = (spqcdSize === 8);
+              qcd.scalarExpounded = scalarExpounded;
+              qcd.guardBits = sqcd >> 5;
+              spqcds = [];
+              while (j < length + position) {
+                var spqcd = {};
+                if (spqcdSize === 8) {
+                  spqcd.epsilon = data[j++] >> 3;
+                  spqcd.mu = 0;
+                } else {
+                  spqcd.epsilon = data[j] >> 3;
+                  spqcd.mu = ((data[j] & 0x7) << 8) | data[j + 1];
+                  j += 2;
+                }
+                spqcds.push(spqcd);
+              }
+              qcd.SPqcds = spqcds;
+              if (context.mainHeader) {
+                context.QCD = qcd;
+              } else {
+                context.currentTile.QCD = qcd;
+                context.currentTile.QCC = [];
+              }
+              break;
+            case 0xFF5D: // Quantization component (QCC)
+              length = readUint16(data, position);
+              var qcc = {};
+              j = position + 2;
+              var cqcc;
+              if (context.SIZ.Csiz < 257) {
+                cqcc = data[j++];
+              } else {
+                cqcc = readUint16(data, j);
+                j += 2;
+              }
+              sqcd = data[j++];
+              switch (sqcd & 0x1F) {
+                case 0:
+                  spqcdSize = 8;
+                  scalarExpounded = true;
+                  break;
+                case 1:
+                  spqcdSize = 16;
+                  scalarExpounded = false;
+                  break;
+                case 2:
+                  spqcdSize = 16;
+                  scalarExpounded = true;
+                  break;
+                default:
+                  throw new Error('JPX Error: Invalid SQcd value ' + sqcd);
+              }
+              qcc.noQuantization = (spqcdSize === 8);
+              qcc.scalarExpounded = scalarExpounded;
+              qcc.guardBits = sqcd >> 5;
+              spqcds = [];
+              while (j < (length + position)) {
+                spqcd = {};
+                if (spqcdSize === 8) {
+                  spqcd.epsilon = data[j++] >> 3;
+                  spqcd.mu = 0;
+                } else {
+                  spqcd.epsilon = data[j] >> 3;
+                  spqcd.mu = ((data[j] & 0x7) << 8) | data[j + 1];
+                  j += 2;
+                }
+                spqcds.push(spqcd);
+              }
+              qcc.SPqcds = spqcds;
+              if (context.mainHeader) {
+                context.QCC[cqcc] = qcc;
+              } else {
+                context.currentTile.QCC[cqcc] = qcc;
+              }
+              break;
+            case 0xFF52: // Coding style default (COD)
+              length = readUint16(data, position);
+              var cod = {};
+              j = position + 2;
+              var scod = data[j++];
+              cod.entropyCoderWithCustomPrecincts = !!(scod & 1);
+              cod.sopMarkerUsed = !!(scod & 2);
+              cod.ephMarkerUsed = !!(scod & 4);
+              cod.progressionOrder = data[j++];
+              cod.layersCount = readUint16(data, j);
+              j += 2;
+              cod.multipleComponentTransform = data[j++];
+
+              cod.decompositionLevelsCount = data[j++];
+              cod.xcb = (data[j++] & 0xF) + 2;
+              cod.ycb = (data[j++] & 0xF) + 2;
+              var blockStyle = data[j++];
+              cod.selectiveArithmeticCodingBypass = !!(blockStyle & 1);
+              cod.resetContextProbabilities = !!(blockStyle & 2);
+              cod.terminationOnEachCodingPass = !!(blockStyle & 4);
+              cod.verticalyStripe = !!(blockStyle & 8);
+              cod.predictableTermination = !!(blockStyle & 16);
+              cod.segmentationSymbolUsed = !!(blockStyle & 32);
+              cod.reversibleTransformation = data[j++];
+              if (cod.entropyCoderWithCustomPrecincts) {
+                var precinctsSizes = [];
+                while (j < length + position) {
+                  var precinctsSize = data[j++];
+                  precinctsSizes.push({
+                    PPx: precinctsSize & 0xF,
+                    PPy: precinctsSize >> 4
+                  });
+                }
+                cod.precinctsSizes = precinctsSizes;
+              }
+              var unsupported = [];
+              if (cod.selectiveArithmeticCodingBypass) {
+                unsupported.push('selectiveArithmeticCodingBypass');
+              }
+              if (cod.resetContextProbabilities) {
+                unsupported.push('resetContextProbabilities');
+              }
+              if (cod.terminationOnEachCodingPass) {
+                unsupported.push('terminationOnEachCodingPass');
+              }
+              if (cod.verticalyStripe) {
+                unsupported.push('verticalyStripe');
+              }
+              if (cod.predictableTermination) {
+                unsupported.push('predictableTermination');
+              }
+              if (unsupported.length > 0) {
+                doNotRecover = true;
+                throw new Error('JPX Error: Unsupported COD options (' +
+                                unsupported.join(', ') + ')');
+              }
+              if (context.mainHeader) {
+                context.COD = cod;
+              } else {
+                context.currentTile.COD = cod;
+                context.currentTile.COC = [];
+              }
+              break;
+            case 0xFF90: // Start of tile-part (SOT)
+              length = readUint16(data, position);
+              tile = {};
+              tile.index = readUint16(data, position + 2);
+              tile.length = readUint32(data, position + 4);
+              tile.dataEnd = tile.length + position - 2;
+              tile.partIndex = data[position + 8];
+              tile.partsCount = data[position + 9];
+
+              context.mainHeader = false;
+              if (tile.partIndex === 0) {
+                // reset component specific settings
+                tile.COD = context.COD;
+                tile.COC = context.COC.slice(0); // clone of the global COC
+                tile.QCD = context.QCD;
+                tile.QCC = context.QCC.slice(0); // clone of the global COC
+              }
+              context.currentTile = tile;
+              break;
+            case 0xFF93: // Start of data (SOD)
+              tile = context.currentTile;
+              if (tile.partIndex === 0) {
+                initializeTile(context, tile.index);
+                buildPackets(context);
+              }
+
+              // moving to the end of the data
+              length = tile.dataEnd - position;
+              parseTilePackets(context, data, position, length);
+              break;
+            case 0xFF55: // Tile-part lengths, main header (TLM)
+            case 0xFF57: // Packet length, main header (PLM)
+            case 0xFF58: // Packet length, tile-part header (PLT)
+            case 0xFF64: // Comment (COM)
+              length = readUint16(data, position);
+              // skipping content
+              break;
+            case 0xFF53: // Coding style component (COC)
+              throw new Error('JPX Error: Codestream code 0xFF53 (COC) is ' +
+                              'not implemented');
+            default:
+              throw new Error('JPX Error: Unknown codestream code: ' +
+                              code.toString(16));
+          }
+          position += length;
+        }
+      } catch (e) {
+        if (doNotRecover || this.failOnCorruptedImage) {
+          throw e;
+        } else {
+          warn('Trying to recover from ' + e.message);
+        }
+      }
+      this.tiles = transformComponents(context);
+      this.width = context.SIZ.Xsiz - context.SIZ.XOsiz;
+      this.height = context.SIZ.Ysiz - context.SIZ.YOsiz;
+      this.componentsCount = context.SIZ.Csiz;
+    }
+  };
+  function calculateComponentDimensions(component, siz) {
+    // Section B.2 Component mapping
+    component.x0 = Math.ceil(siz.XOsiz / component.XRsiz);
+    component.x1 = Math.ceil(siz.Xsiz / component.XRsiz);
+    component.y0 = Math.ceil(siz.YOsiz / component.YRsiz);
+    component.y1 = Math.ceil(siz.Ysiz / component.YRsiz);
+    component.width = component.x1 - component.x0;
+    component.height = component.y1 - component.y0;
+  }
+  function calculateTileGrids(context, components) {
+    var siz = context.SIZ;
+    // Section B.3 Division into tile and tile-components
+    var tile, tiles = [];
+    var numXtiles = Math.ceil((siz.Xsiz - siz.XTOsiz) / siz.XTsiz);
+    var numYtiles = Math.ceil((siz.Ysiz - siz.YTOsiz) / siz.YTsiz);
+    for (var q = 0; q < numYtiles; q++) {
+      for (var p = 0; p < numXtiles; p++) {
+        tile = {};
+        tile.tx0 = Math.max(siz.XTOsiz + p * siz.XTsiz, siz.XOsiz);
+        tile.ty0 = Math.max(siz.YTOsiz + q * siz.YTsiz, siz.YOsiz);
+        tile.tx1 = Math.min(siz.XTOsiz + (p + 1) * siz.XTsiz, siz.Xsiz);
+        tile.ty1 = Math.min(siz.YTOsiz + (q + 1) * siz.YTsiz, siz.Ysiz);
+        tile.width = tile.tx1 - tile.tx0;
+        tile.height = tile.ty1 - tile.ty0;
+        tile.components = [];
+        tiles.push(tile);
+      }
+    }
+    context.tiles = tiles;
+
+    var componentsCount = siz.Csiz;
+    for (var i = 0, ii = componentsCount; i < ii; i++) {
+      var component = components[i];
+      for (var j = 0, jj = tiles.length; j < jj; j++) {
+        var tileComponent = {};
+        tile = tiles[j];
+        tileComponent.tcx0 = Math.ceil(tile.tx0 / component.XRsiz);
+        tileComponent.tcy0 = Math.ceil(tile.ty0 / component.YRsiz);
+        tileComponent.tcx1 = Math.ceil(tile.tx1 / component.XRsiz);
+        tileComponent.tcy1 = Math.ceil(tile.ty1 / component.YRsiz);
+        tileComponent.width = tileComponent.tcx1 - tileComponent.tcx0;
+        tileComponent.height = tileComponent.tcy1 - tileComponent.tcy0;
+        tile.components[i] = tileComponent;
+      }
+    }
+  }
+  function getBlocksDimensions(context, component, r) {
+    var codOrCoc = component.codingStyleParameters;
+    var result = {};
+    if (!codOrCoc.entropyCoderWithCustomPrecincts) {
+      result.PPx = 15;
+      result.PPy = 15;
+    } else {
+      result.PPx = codOrCoc.precinctsSizes[r].PPx;
+      result.PPy = codOrCoc.precinctsSizes[r].PPy;
+    }
+    // calculate codeblock size as described in section B.7
+    result.xcb_ = (r > 0 ? Math.min(codOrCoc.xcb, result.PPx - 1) :
+                   Math.min(codOrCoc.xcb, result.PPx));
+    result.ycb_ = (r > 0 ? Math.min(codOrCoc.ycb, result.PPy - 1) :
+                   Math.min(codOrCoc.ycb, result.PPy));
+    return result;
+  }
+  function buildPrecincts(context, resolution, dimensions) {
+    // Section B.6 Division resolution to precincts
+    var precinctWidth = 1 << dimensions.PPx;
+    var precinctHeight = 1 << dimensions.PPy;
+    // Jasper introduces codeblock groups for mapping each subband codeblocks
+    // to precincts. Precinct partition divides a resolution according to width
+    // and height parameters. The subband that belongs to the resolution level
+    // has a different size than the level, unless it is the zero resolution.
+
+    // From Jasper documentation: jpeg2000.pdf, section K: Tier-2 coding:
+    // The precinct partitioning for a particular subband is derived from a
+    // partitioning of its parent LL band (i.e., the LL band at the next higher
+    // resolution level)... The LL band associated with each resolution level is
+    // divided into precincts... Each of the resulting precinct regions is then
+    // mapped into its child subbands (if any) at the next lower resolution
+    // level. This is accomplished by using the coordinate transformation
+    // (u, v) = (ceil(x/2), ceil(y/2)) where (x, y) and (u, v) are the
+    // coordinates of a point in the LL band and child subband, respectively.
+    var isZeroRes = resolution.resLevel === 0;
+    var precinctWidthInSubband = 1 << (dimensions.PPx + (isZeroRes ? 0 : -1));
+    var precinctHeightInSubband = 1 << (dimensions.PPy + (isZeroRes ? 0 : -1));
+    var numprecinctswide = (resolution.trx1 > resolution.trx0 ?
+      Math.ceil(resolution.trx1 / precinctWidth) -
+      Math.floor(resolution.trx0 / precinctWidth) : 0);
+    var numprecinctshigh = (resolution.try1 > resolution.try0 ?
+      Math.ceil(resolution.try1 / precinctHeight) -
+      Math.floor(resolution.try0 / precinctHeight) : 0);
+    var numprecincts = numprecinctswide * numprecinctshigh;
+
+    resolution.precinctParameters = {
+      precinctWidth: precinctWidth,
+      precinctHeight: precinctHeight,
+      numprecinctswide: numprecinctswide,
+      numprecinctshigh: numprecinctshigh,
+      numprecincts: numprecincts,
+      precinctWidthInSubband: precinctWidthInSubband,
+      precinctHeightInSubband: precinctHeightInSubband
+    };
+  }
+  function buildCodeblocks(context, subband, dimensions) {
+    // Section B.7 Division sub-band into code-blocks
+    var xcb_ = dimensions.xcb_;
+    var ycb_ = dimensions.ycb_;
+    var codeblockWidth = 1 << xcb_;
+    var codeblockHeight = 1 << ycb_;
+    var cbx0 = subband.tbx0 >> xcb_;
+    var cby0 = subband.tby0 >> ycb_;
+    var cbx1 = (subband.tbx1 + codeblockWidth - 1) >> xcb_;
+    var cby1 = (subband.tby1 + codeblockHeight - 1) >> ycb_;
+    var precinctParameters = subband.resolution.precinctParameters;
+    var codeblocks = [];
+    var precincts = [];
+    var i, j, codeblock, precinctNumber;
+    for (j = cby0; j < cby1; j++) {
+      for (i = cbx0; i < cbx1; i++) {
+        codeblock = {
+          cbx: i,
+          cby: j,
+          tbx0: codeblockWidth * i,
+          tby0: codeblockHeight * j,
+          tbx1: codeblockWidth * (i + 1),
+          tby1: codeblockHeight * (j + 1)
+        };
+
+        codeblock.tbx0_ = Math.max(subband.tbx0, codeblock.tbx0);
+        codeblock.tby0_ = Math.max(subband.tby0, codeblock.tby0);
+        codeblock.tbx1_ = Math.min(subband.tbx1, codeblock.tbx1);
+        codeblock.tby1_ = Math.min(subband.tby1, codeblock.tby1);
+
+        // Calculate precinct number for this codeblock, codeblock position
+        // should be relative to its subband, use actual dimension and position
+        // See comment about codeblock group width and height
+        var pi = Math.floor((codeblock.tbx0_ - subband.tbx0) /
+          precinctParameters.precinctWidthInSubband);
+        var pj = Math.floor((codeblock.tby0_ - subband.tby0) /
+          precinctParameters.precinctHeightInSubband);
+        precinctNumber = pi + (pj * precinctParameters.numprecinctswide);
+
+        codeblock.precinctNumber = precinctNumber;
+        codeblock.subbandType = subband.type;
+        codeblock.Lblock = 3;
+
+        if (codeblock.tbx1_ <= codeblock.tbx0_ ||
+            codeblock.tby1_ <= codeblock.tby0_) {
+          continue;
+        }
+        codeblocks.push(codeblock);
+        // building precinct for the sub-band
+        var precinct = precincts[precinctNumber];
+        if (precinct !== undefined) {
+          if (i < precinct.cbxMin) {
+            precinct.cbxMin = i;
+          } else if (i > precinct.cbxMax) {
+            precinct.cbxMax = i;
+          }
+          if (j < precinct.cbyMin) {
+            precinct.cbxMin = j;
+          } else if (j > precinct.cbyMax) {
+            precinct.cbyMax = j;
+          }
+        } else {
+          precincts[precinctNumber] = precinct = {
+            cbxMin: i,
+            cbyMin: j,
+            cbxMax: i,
+            cbyMax: j
+          };
+        }
+        codeblock.precinct = precinct;
+      }
+    }
+    subband.codeblockParameters = {
+      codeblockWidth: xcb_,
+      codeblockHeight: ycb_,
+      numcodeblockwide: cbx1 - cbx0 + 1,
+      numcodeblockhigh: cby1 - cby0 + 1
+    };
+    subband.codeblocks = codeblocks;
+    subband.precincts = precincts;
+  }
+  function createPacket(resolution, precinctNumber, layerNumber) {
+    var precinctCodeblocks = [];
+    // Section B.10.8 Order of info in packet
+    var subbands = resolution.subbands;
+    // sub-bands already ordered in 'LL', 'HL', 'LH', and 'HH' sequence
+    for (var i = 0, ii = subbands.length; i < ii; i++) {
+      var subband = subbands[i];
+      var codeblocks = subband.codeblocks;
+      for (var j = 0, jj = codeblocks.length; j < jj; j++) {
+        var codeblock = codeblocks[j];
+        if (codeblock.precinctNumber !== precinctNumber) {
+          continue;
+        }
+        precinctCodeblocks.push(codeblock);
+      }
+    }
+    return {
+      layerNumber: layerNumber,
+      codeblocks: precinctCodeblocks
+    };
+  }
+  function LayerResolutionComponentPositionIterator(context) {
+    var siz = context.SIZ;
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var layersCount = tile.codingStyleDefaultParameters.layersCount;
+    var componentsCount = siz.Csiz;
+    var maxDecompositionLevelsCount = 0;
+    for (var q = 0; q < componentsCount; q++) {
+      maxDecompositionLevelsCount = Math.max(maxDecompositionLevelsCount,
+        tile.components[q].codingStyleParameters.decompositionLevelsCount);
+    }
+
+    var l = 0, r = 0, i = 0, k = 0;
+
+    this.nextPacket = function JpxImage_nextPacket() {
+      // Section B.12.1.1 Layer-resolution-component-position
+      for (; l < layersCount; l++) {
+        for (; r <= maxDecompositionLevelsCount; r++) {
+          for (; i < componentsCount; i++) {
+            var component = tile.components[i];
+            if (r > component.codingStyleParameters.decompositionLevelsCount) {
+              continue;
+            }
+
+            var resolution = component.resolutions[r];
+            var numprecincts = resolution.precinctParameters.numprecincts;
+            for (; k < numprecincts;) {
+              var packet = createPacket(resolution, k, l);
+              k++;
+              return packet;
+            }
+            k = 0;
+          }
+          i = 0;
+        }
+        r = 0;
+      }
+      throw new Error('JPX Error: Out of packets');
+    };
+  }
+  function ResolutionLayerComponentPositionIterator(context) {
+    var siz = context.SIZ;
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var layersCount = tile.codingStyleDefaultParameters.layersCount;
+    var componentsCount = siz.Csiz;
+    var maxDecompositionLevelsCount = 0;
+    for (var q = 0; q < componentsCount; q++) {
+      maxDecompositionLevelsCount = Math.max(maxDecompositionLevelsCount,
+        tile.components[q].codingStyleParameters.decompositionLevelsCount);
+    }
+
+    var r = 0, l = 0, i = 0, k = 0;
+
+    this.nextPacket = function JpxImage_nextPacket() {
+      // Section B.12.1.2 Resolution-layer-component-position
+      for (; r <= maxDecompositionLevelsCount; r++) {
+        for (; l < layersCount; l++) {
+          for (; i < componentsCount; i++) {
+            var component = tile.components[i];
+            if (r > component.codingStyleParameters.decompositionLevelsCount) {
+              continue;
+            }
+
+            var resolution = component.resolutions[r];
+            var numprecincts = resolution.precinctParameters.numprecincts;
+            for (; k < numprecincts;) {
+              var packet = createPacket(resolution, k, l);
+              k++;
+              return packet;
+            }
+            k = 0;
+          }
+          i = 0;
+        }
+        l = 0;
+      }
+      throw new Error('JPX Error: Out of packets');
+    };
+  }
+  function ResolutionPositionComponentLayerIterator(context) {
+    var siz = context.SIZ;
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var layersCount = tile.codingStyleDefaultParameters.layersCount;
+    var componentsCount = siz.Csiz;
+    var l, r, c, p;
+    var maxDecompositionLevelsCount = 0;
+    for (c = 0; c < componentsCount; c++) {
+      var component = tile.components[c];
+      maxDecompositionLevelsCount = Math.max(maxDecompositionLevelsCount,
+        component.codingStyleParameters.decompositionLevelsCount);
+    }
+    var maxNumPrecinctsInLevel = new Int32Array(
+      maxDecompositionLevelsCount + 1);
+    for (r = 0; r <= maxDecompositionLevelsCount; ++r) {
+      var maxNumPrecincts = 0;
+      for (c = 0; c < componentsCount; ++c) {
+        var resolutions = tile.components[c].resolutions;
+        if (r < resolutions.length) {
+          maxNumPrecincts = Math.max(maxNumPrecincts,
+            resolutions[r].precinctParameters.numprecincts);
+        }
+      }
+      maxNumPrecinctsInLevel[r] = maxNumPrecincts;
+    }
+    l = 0;
+    r = 0;
+    c = 0;
+    p = 0;
+
+    this.nextPacket = function JpxImage_nextPacket() {
+      // Section B.12.1.3 Resolution-position-component-layer
+      for (; r <= maxDecompositionLevelsCount; r++) {
+        for (; p < maxNumPrecinctsInLevel[r]; p++) {
+          for (; c < componentsCount; c++) {
+            var component = tile.components[c];
+            if (r > component.codingStyleParameters.decompositionLevelsCount) {
+              continue;
+            }
+            var resolution = component.resolutions[r];
+            var numprecincts = resolution.precinctParameters.numprecincts;
+            if (p >= numprecincts) {
+              continue;
+            }
+            for (; l < layersCount;) {
+              var packet = createPacket(resolution, p, l);
+              l++;
+              return packet;
+            }
+            l = 0;
+          }
+          c = 0;
+        }
+        p = 0;
+      }
+      throw new Error('JPX Error: Out of packets');
+    };
+  }
+  function PositionComponentResolutionLayerIterator(context) {
+    var siz = context.SIZ;
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var layersCount = tile.codingStyleDefaultParameters.layersCount;
+    var componentsCount = siz.Csiz;
+    var precinctsSizes = getPrecinctSizesInImageScale(tile);
+    var precinctsIterationSizes = precinctsSizes;
+    var l = 0, r = 0, c = 0, px = 0, py = 0;
+
+    this.nextPacket = function JpxImage_nextPacket() {
+      // Section B.12.1.4 Position-component-resolution-layer
+      for (; py < precinctsIterationSizes.maxNumHigh; py++) {
+        for (; px < precinctsIterationSizes.maxNumWide; px++) {
+          for (; c < componentsCount; c++) {
+            var component = tile.components[c];
+            var decompositionLevelsCount =
+              component.codingStyleParameters.decompositionLevelsCount;
+            for (; r <= decompositionLevelsCount; r++) {
+              var resolution = component.resolutions[r];
+              var sizeInImageScale =
+                precinctsSizes.components[c].resolutions[r];
+              var k = getPrecinctIndexIfExist(
+                px,
+                py,
+                sizeInImageScale,
+                precinctsIterationSizes,
+                resolution);
+              if (k === null) {
+                continue;
+              }
+              for (; l < layersCount;) {
+                var packet = createPacket(resolution, k, l);
+                l++;
+                return packet;
+              }
+              l = 0;
+            }
+            r = 0;
+          }
+          c = 0;
+        }
+        px = 0;
+      }
+      throw new Error('JPX Error: Out of packets');
+    };
+  }
+  function ComponentPositionResolutionLayerIterator(context) {
+    var siz = context.SIZ;
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var layersCount = tile.codingStyleDefaultParameters.layersCount;
+    var componentsCount = siz.Csiz;
+    var precinctsSizes = getPrecinctSizesInImageScale(tile);
+    var l = 0, r = 0, c = 0, px = 0, py = 0;
+
+    this.nextPacket = function JpxImage_nextPacket() {
+      // Section B.12.1.5 Component-position-resolution-layer
+      for (; c < componentsCount; ++c) {
+        var component = tile.components[c];
+        var precinctsIterationSizes = precinctsSizes.components[c];
+        var decompositionLevelsCount =
+          component.codingStyleParameters.decompositionLevelsCount;
+        for (; py < precinctsIterationSizes.maxNumHigh; py++) {
+          for (; px < precinctsIterationSizes.maxNumWide; px++) {
+            for (; r <= decompositionLevelsCount; r++) {
+              var resolution = component.resolutions[r];
+              var sizeInImageScale = precinctsIterationSizes.resolutions[r];
+              var k = getPrecinctIndexIfExist(
+                px,
+                py,
+                sizeInImageScale,
+                precinctsIterationSizes,
+                resolution);
+              if (k === null) {
+                continue;
+              }
+              for (; l < layersCount;) {
+                var packet = createPacket(resolution, k, l);
+                l++;
+                return packet;
+              }
+              l = 0;
+            }
+            r = 0;
+          }
+          px = 0;
+        }
+        py = 0;
+      }
+      throw new Error('JPX Error: Out of packets');
+    };
+  }
+  function getPrecinctIndexIfExist(
+    pxIndex, pyIndex, sizeInImageScale, precinctIterationSizes, resolution) {
+    var posX = pxIndex * precinctIterationSizes.minWidth;
+    var posY = pyIndex * precinctIterationSizes.minHeight;
+    if (posX % sizeInImageScale.width !== 0 ||
+        posY % sizeInImageScale.height !== 0) {
+      return null;
+    }
+    var startPrecinctRowIndex =
+      (posY / sizeInImageScale.width) *
+      resolution.precinctParameters.numprecinctswide;
+    return (posX / sizeInImageScale.height) + startPrecinctRowIndex;
+  }
+  function getPrecinctSizesInImageScale(tile) {
+    var componentsCount = tile.components.length;
+    var minWidth = Number.MAX_VALUE;
+    var minHeight = Number.MAX_VALUE;
+    var maxNumWide = 0;
+    var maxNumHigh = 0;
+    var sizePerComponent = new Array(componentsCount);
+    for (var c = 0; c < componentsCount; c++) {
+      var component = tile.components[c];
+      var decompositionLevelsCount =
+        component.codingStyleParameters.decompositionLevelsCount;
+      var sizePerResolution = new Array(decompositionLevelsCount + 1);
+      var minWidthCurrentComponent = Number.MAX_VALUE;
+      var minHeightCurrentComponent = Number.MAX_VALUE;
+      var maxNumWideCurrentComponent = 0;
+      var maxNumHighCurrentComponent = 0;
+      var scale = 1;
+      for (var r = decompositionLevelsCount; r >= 0; --r) {
+        var resolution = component.resolutions[r];
+        var widthCurrentResolution =
+          scale * resolution.precinctParameters.precinctWidth;
+        var heightCurrentResolution =
+          scale * resolution.precinctParameters.precinctHeight;
+        minWidthCurrentComponent = Math.min(
+          minWidthCurrentComponent,
+          widthCurrentResolution);
+        minHeightCurrentComponent = Math.min(
+          minHeightCurrentComponent,
+          heightCurrentResolution);
+        maxNumWideCurrentComponent = Math.max(maxNumWideCurrentComponent,
+          resolution.precinctParameters.numprecinctswide);
+        maxNumHighCurrentComponent = Math.max(maxNumHighCurrentComponent,
+          resolution.precinctParameters.numprecinctshigh);
+        sizePerResolution[r] = {
+          width: widthCurrentResolution,
+          height: heightCurrentResolution
+        };
+        scale <<= 1;
+      }
+      minWidth = Math.min(minWidth, minWidthCurrentComponent);
+      minHeight = Math.min(minHeight, minHeightCurrentComponent);
+      maxNumWide = Math.max(maxNumWide, maxNumWideCurrentComponent);
+      maxNumHigh = Math.max(maxNumHigh, maxNumHighCurrentComponent);
+      sizePerComponent[c] = {
+        resolutions: sizePerResolution,
+        minWidth: minWidthCurrentComponent,
+        minHeight: minHeightCurrentComponent,
+        maxNumWide: maxNumWideCurrentComponent,
+        maxNumHigh: maxNumHighCurrentComponent
+      };
+    }
+    return {
+      components: sizePerComponent,
+      minWidth: minWidth,
+      minHeight: minHeight,
+      maxNumWide: maxNumWide,
+      maxNumHigh: maxNumHigh
+    };
+  }
+  function buildPackets(context) {
+    var siz = context.SIZ;
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var componentsCount = siz.Csiz;
+    // Creating resolutions and sub-bands for each component
+    for (var c = 0; c < componentsCount; c++) {
+      var component = tile.components[c];
+      var decompositionLevelsCount =
+        component.codingStyleParameters.decompositionLevelsCount;
+      // Section B.5 Resolution levels and sub-bands
+      var resolutions = [];
+      var subbands = [];
+      for (var r = 0; r <= decompositionLevelsCount; r++) {
+        var blocksDimensions = getBlocksDimensions(context, component, r);
+        var resolution = {};
+        var scale = 1 << (decompositionLevelsCount - r);
+        resolution.trx0 = Math.ceil(component.tcx0 / scale);
+        resolution.try0 = Math.ceil(component.tcy0 / scale);
+        resolution.trx1 = Math.ceil(component.tcx1 / scale);
+        resolution.try1 = Math.ceil(component.tcy1 / scale);
+        resolution.resLevel = r;
+        buildPrecincts(context, resolution, blocksDimensions);
+        resolutions.push(resolution);
+
+        var subband;
+        if (r === 0) {
+          // one sub-band (LL) with last decomposition
+          subband = {};
+          subband.type = 'LL';
+          subband.tbx0 = Math.ceil(component.tcx0 / scale);
+          subband.tby0 = Math.ceil(component.tcy0 / scale);
+          subband.tbx1 = Math.ceil(component.tcx1 / scale);
+          subband.tby1 = Math.ceil(component.tcy1 / scale);
+          subband.resolution = resolution;
+          buildCodeblocks(context, subband, blocksDimensions);
+          subbands.push(subband);
+          resolution.subbands = [subband];
+        } else {
+          var bscale = 1 << (decompositionLevelsCount - r + 1);
+          var resolutionSubbands = [];
+          // three sub-bands (HL, LH and HH) with rest of decompositions
+          subband = {};
+          subband.type = 'HL';
+          subband.tbx0 = Math.ceil(component.tcx0 / bscale - 0.5);
+          subband.tby0 = Math.ceil(component.tcy0 / bscale);
+          subband.tbx1 = Math.ceil(component.tcx1 / bscale - 0.5);
+          subband.tby1 = Math.ceil(component.tcy1 / bscale);
+          subband.resolution = resolution;
+          buildCodeblocks(context, subband, blocksDimensions);
+          subbands.push(subband);
+          resolutionSubbands.push(subband);
+
+          subband = {};
+          subband.type = 'LH';
+          subband.tbx0 = Math.ceil(component.tcx0 / bscale);
+          subband.tby0 = Math.ceil(component.tcy0 / bscale - 0.5);
+          subband.tbx1 = Math.ceil(component.tcx1 / bscale);
+          subband.tby1 = Math.ceil(component.tcy1 / bscale - 0.5);
+          subband.resolution = resolution;
+          buildCodeblocks(context, subband, blocksDimensions);
+          subbands.push(subband);
+          resolutionSubbands.push(subband);
+
+          subband = {};
+          subband.type = 'HH';
+          subband.tbx0 = Math.ceil(component.tcx0 / bscale - 0.5);
+          subband.tby0 = Math.ceil(component.tcy0 / bscale - 0.5);
+          subband.tbx1 = Math.ceil(component.tcx1 / bscale - 0.5);
+          subband.tby1 = Math.ceil(component.tcy1 / bscale - 0.5);
+          subband.resolution = resolution;
+          buildCodeblocks(context, subband, blocksDimensions);
+          subbands.push(subband);
+          resolutionSubbands.push(subband);
+
+          resolution.subbands = resolutionSubbands;
+        }
+      }
+      component.resolutions = resolutions;
+      component.subbands = subbands;
+    }
+    // Generate the packets sequence
+    var progressionOrder = tile.codingStyleDefaultParameters.progressionOrder;
+    switch (progressionOrder) {
+      case 0:
+        tile.packetsIterator =
+          new LayerResolutionComponentPositionIterator(context);
+        break;
+      case 1:
+        tile.packetsIterator =
+          new ResolutionLayerComponentPositionIterator(context);
+        break;
+      case 2:
+        tile.packetsIterator =
+          new ResolutionPositionComponentLayerIterator(context);
+        break;
+      case 3:
+        tile.packetsIterator =
+          new PositionComponentResolutionLayerIterator(context);
+        break;
+      case 4:
+        tile.packetsIterator =
+          new ComponentPositionResolutionLayerIterator(context);
+        break;
+      default:
+        throw new Error('JPX Error: Unsupported progression order ' +
+                        progressionOrder);
+    }
+  }
+  function parseTilePackets(context, data, offset, dataLength) {
+    var position = 0;
+    var buffer, bufferSize = 0, skipNextBit = false;
+    function readBits(count) {
+      while (bufferSize < count) {
+        var b = data[offset + position];
+        position++;
+        if (skipNextBit) {
+          buffer = (buffer << 7) | b;
+          bufferSize += 7;
+          skipNextBit = false;
+        } else {
+          buffer = (buffer << 8) | b;
+          bufferSize += 8;
+        }
+        if (b === 0xFF) {
+          skipNextBit = true;
+        }
+      }
+      bufferSize -= count;
+      return (buffer >>> bufferSize) & ((1 << count) - 1);
+    }
+    function skipMarkerIfEqual(value) {
+      if (data[offset + position - 1] === 0xFF &&
+          data[offset + position] === value) {
+        skipBytes(1);
+        return true;
+      } else if (data[offset + position] === 0xFF &&
+                 data[offset + position + 1] === value) {
+        skipBytes(2);
+        return true;
+      }
+      return false;
+    }
+    function skipBytes(count) {
+      position += count;
+    }
+    function alignToByte() {
+      bufferSize = 0;
+      if (skipNextBit) {
+        position++;
+        skipNextBit = false;
+      }
+    }
+    function readCodingpasses() {
+      if (readBits(1) === 0) {
+        return 1;
+      }
+      if (readBits(1) === 0) {
+        return 2;
+      }
+      var value = readBits(2);
+      if (value < 3) {
+        return value + 3;
+      }
+      value = readBits(5);
+      if (value < 31) {
+        return value + 6;
+      }
+      value = readBits(7);
+      return value + 37;
+    }
+    var tileIndex = context.currentTile.index;
+    var tile = context.tiles[tileIndex];
+    var sopMarkerUsed = context.COD.sopMarkerUsed;
+    var ephMarkerUsed = context.COD.ephMarkerUsed;
+    var packetsIterator = tile.packetsIterator;
+    while (position < dataLength) {
+      alignToByte();
+      if (sopMarkerUsed && skipMarkerIfEqual(0x91)) {
+        // Skip also marker segment length and packet sequence ID
+        skipBytes(4);
+      }
+      var packet = packetsIterator.nextPacket();
+      if (!readBits(1)) {
+        continue;
+      }
+      var layerNumber = packet.layerNumber;
+      var queue = [], codeblock;
+      for (var i = 0, ii = packet.codeblocks.length; i < ii; i++) {
+        codeblock = packet.codeblocks[i];
+        var precinct = codeblock.precinct;
+        var codeblockColumn = codeblock.cbx - precinct.cbxMin;
+        var codeblockRow = codeblock.cby - precinct.cbyMin;
+        var codeblockIncluded = false;
+        var firstTimeInclusion = false;
+        var valueReady;
+        if (codeblock['included'] !== undefined) {
+          codeblockIncluded = !!readBits(1);
+        } else {
+          // reading inclusion tree
+          precinct = codeblock.precinct;
+          var inclusionTree, zeroBitPlanesTree;
+          if (precinct['inclusionTree'] !== undefined) {
+            inclusionTree = precinct.inclusionTree;
+          } else {
+            // building inclusion and zero bit-planes trees
+            var width = precinct.cbxMax - precinct.cbxMin + 1;
+            var height = precinct.cbyMax - precinct.cbyMin + 1;
+            inclusionTree = new InclusionTree(width, height, layerNumber);
+            zeroBitPlanesTree = new TagTree(width, height);
+            precinct.inclusionTree = inclusionTree;
+            precinct.zeroBitPlanesTree = zeroBitPlanesTree;
+          }
+
+          if (inclusionTree.reset(codeblockColumn, codeblockRow, layerNumber)) {
+            while (true) {
+              if (readBits(1)) {
+                valueReady = !inclusionTree.nextLevel();
+                if (valueReady) {
+                  codeblock.included = true;
+                  codeblockIncluded = firstTimeInclusion = true;
+                  break;
+                }
+              } else {
+                inclusionTree.incrementValue(layerNumber);
+                break;
+              }
+            }
+          }
+        }
+        if (!codeblockIncluded) {
+          continue;
+        }
+        if (firstTimeInclusion) {
+          zeroBitPlanesTree = precinct.zeroBitPlanesTree;
+          zeroBitPlanesTree.reset(codeblockColumn, codeblockRow);
+          while (true) {
+            if (readBits(1)) {
+              valueReady = !zeroBitPlanesTree.nextLevel();
+              if (valueReady) {
+                break;
+              }
+            } else {
+              zeroBitPlanesTree.incrementValue();
+            }
+          }
+          codeblock.zeroBitPlanes = zeroBitPlanesTree.value;
+        }
+        var codingpasses = readCodingpasses();
+        while (readBits(1)) {
+          codeblock.Lblock++;
+        }
+        var codingpassesLog2 = log2(codingpasses);
+        // rounding down log2
+        var bits = ((codingpasses < (1 << codingpassesLog2)) ?
+          codingpassesLog2 - 1 : codingpassesLog2) + codeblock.Lblock;
+        var codedDataLength = readBits(bits);
+        queue.push({
+          codeblock: codeblock,
+          codingpasses: codingpasses,
+          dataLength: codedDataLength
+        });
+      }
+      alignToByte();
+      if (ephMarkerUsed) {
+        skipMarkerIfEqual(0x92);
+      }
+      while (queue.length > 0) {
+        var packetItem = queue.shift();
+        codeblock = packetItem.codeblock;
+        if (codeblock['data'] === undefined) {
+          codeblock.data = [];
+        }
+        codeblock.data.push({
+          data: data,
+          start: offset + position,
+          end: offset + position + packetItem.dataLength,
+          codingpasses: packetItem.codingpasses
+        });
+        position += packetItem.dataLength;
+      }
+    }
+    return position;
+  }
+  function copyCoefficients(coefficients, levelWidth, levelHeight, subband,
+                            delta, mb, reversible, segmentationSymbolUsed) {
+    var x0 = subband.tbx0;
+    var y0 = subband.tby0;
+    var width = subband.tbx1 - subband.tbx0;
+    var codeblocks = subband.codeblocks;
+    var right = subband.type.charAt(0) === 'H' ? 1 : 0;
+    var bottom = subband.type.charAt(1) === 'H' ? levelWidth : 0;
+
+    for (var i = 0, ii = codeblocks.length; i < ii; ++i) {
+      var codeblock = codeblocks[i];
+      var blockWidth = codeblock.tbx1_ - codeblock.tbx0_;
+      var blockHeight = codeblock.tby1_ - codeblock.tby0_;
+      if (blockWidth === 0 || blockHeight === 0) {
+        continue;
+      }
+      if (codeblock['data'] === undefined) {
+        continue;
+      }
+
+      var bitModel, currentCodingpassType;
+      bitModel = new BitModel(blockWidth, blockHeight, codeblock.subbandType,
+                              codeblock.zeroBitPlanes, mb);
+      currentCodingpassType = 2; // first bit plane starts from cleanup
+
+      // collect data
+      var data = codeblock.data, totalLength = 0, codingpasses = 0;
+      var j, jj, dataItem;
+      for (j = 0, jj = data.length; j < jj; j++) {
+        dataItem = data[j];
+        totalLength += dataItem.end - dataItem.start;
+        codingpasses += dataItem.codingpasses;
+      }
+      var encodedData = new Uint8Array(totalLength);
+      var position = 0;
+      for (j = 0, jj = data.length; j < jj; j++) {
+        dataItem = data[j];
+        var chunk = dataItem.data.subarray(dataItem.start, dataItem.end);
+        encodedData.set(chunk, position);
+        position += chunk.length;
+      }
+      // decoding the item
+      var decoder = new ArithmeticDecoder(encodedData, 0, totalLength);
+      bitModel.setDecoder(decoder);
+
+      for (j = 0; j < codingpasses; j++) {
+        switch (currentCodingpassType) {
+          case 0:
+            bitModel.runSignificancePropogationPass();
+            break;
+          case 1:
+            bitModel.runMagnitudeRefinementPass();
+            break;
+          case 2:
+            bitModel.runCleanupPass();
+            if (segmentationSymbolUsed) {
+              bitModel.checkSegmentationSymbol();
+            }
+            break;
+        }
+        currentCodingpassType = (currentCodingpassType + 1) % 3;
+      }
+
+      var offset = (codeblock.tbx0_ - x0) + (codeblock.tby0_ - y0) * width;
+      var sign = bitModel.coefficentsSign;
+      var magnitude = bitModel.coefficentsMagnitude;
+      var bitsDecoded = bitModel.bitsDecoded;
+      var magnitudeCorrection = reversible ? 0 : 0.5;
+      var k, n, nb;
+      position = 0;
+      // Do the interleaving of Section F.3.3 here, so we do not need
+      // to copy later. LL level is not interleaved, just copied.
+      var interleave = (subband.type !== 'LL');
+      for (j = 0; j < blockHeight; j++) {
+        var row = (offset / width) | 0; // row in the non-interleaved subband
+        var levelOffset = 2 * row * (levelWidth - width) + right + bottom;
+        for (k = 0; k < blockWidth; k++) {
+          n = magnitude[position];
+          if (n !== 0) {
+            n = (n + magnitudeCorrection) * delta;
+            if (sign[position] !== 0) {
+              n = -n;
+            }
+            nb = bitsDecoded[position];
+            var pos = interleave ? (levelOffset + (offset << 1)) : offset;
+            if (reversible && (nb >= mb)) {
+              coefficients[pos] = n;
+            } else {
+              coefficients[pos] = n * (1 << (mb - nb));
+            }
+          }
+          offset++;
+          position++;
+        }
+        offset += width - blockWidth;
+      }
+    }
+  }
+  function transformTile(context, tile, c) {
+    var component = tile.components[c];
+    var codingStyleParameters = component.codingStyleParameters;
+    var quantizationParameters = component.quantizationParameters;
+    var decompositionLevelsCount =
+      codingStyleParameters.decompositionLevelsCount;
+    var spqcds = quantizationParameters.SPqcds;
+    var scalarExpounded = quantizationParameters.scalarExpounded;
+    var guardBits = quantizationParameters.guardBits;
+    var segmentationSymbolUsed = codingStyleParameters.segmentationSymbolUsed;
+    var precision = context.components[c].precision;
+
+    var reversible = codingStyleParameters.reversibleTransformation;
+    var transform = (reversible ? new ReversibleTransform() :
+                                  new IrreversibleTransform());
+
+    var subbandCoefficients = [];
+    var b = 0;
+    for (var i = 0; i <= decompositionLevelsCount; i++) {
+      var resolution = component.resolutions[i];
+
+      var width = resolution.trx1 - resolution.trx0;
+      var height = resolution.try1 - resolution.try0;
+      // Allocate space for the whole sublevel.
+      var coefficients = new Float32Array(width * height);
+
+      for (var j = 0, jj = resolution.subbands.length; j < jj; j++) {
+        var mu, epsilon;
+        if (!scalarExpounded) {
+          // formula E-5
+          mu = spqcds[0].mu;
+          epsilon = spqcds[0].epsilon + (i > 0 ? 1 - i : 0);
+        } else {
+          mu = spqcds[b].mu;
+          epsilon = spqcds[b].epsilon;
+          b++;
+        }
+
+        var subband = resolution.subbands[j];
+        var gainLog2 = SubbandsGainLog2[subband.type];
+
+        // calulate quantization coefficient (Section E.1.1.1)
+        var delta = (reversible ? 1 :
+          Math.pow(2, precision + gainLog2 - epsilon) * (1 + mu / 2048));
+        var mb = (guardBits + epsilon - 1);
+
+        // In the first resolution level, copyCoefficients will fill the
+        // whole array with coefficients. In the succeding passes,
+        // copyCoefficients will consecutively fill in the values that belong
+        // to the interleaved positions of the HL, LH, and HH coefficients.
+        // The LL coefficients will then be interleaved in Transform.iterate().
+        copyCoefficients(coefficients, width, height, subband, delta, mb,
+                         reversible, segmentationSymbolUsed);
+      }
+      subbandCoefficients.push({
+        width: width,
+        height: height,
+        items: coefficients
+      });
+    }
+
+    var result = transform.calculate(subbandCoefficients,
+                                     component.tcx0, component.tcy0);
+    return {
+      left: component.tcx0,
+      top: component.tcy0,
+      width: result.width,
+      height: result.height,
+      items: result.items
+    };
+  }
+  function transformComponents(context) {
+    var siz = context.SIZ;
+    var components = context.components;
+    var componentsCount = siz.Csiz;
+    var resultImages = [];
+    for (var i = 0, ii = context.tiles.length; i < ii; i++) {
+      var tile = context.tiles[i];
+      var transformedTiles = [];
+      var c;
+      for (c = 0; c < componentsCount; c++) {
+        transformedTiles[c] = transformTile(context, tile, c);
+      }
+      var tile0 = transformedTiles[0];
+      var out = new Uint8Array(tile0.items.length * componentsCount);
+      var result = {
+        left: tile0.left,
+        top: tile0.top,
+        width: tile0.width,
+        height: tile0.height,
+        items: out
+      };
+
+      // Section G.2.2 Inverse multi component transform
+      var shift, offset, max, min, maxK;
+      var pos = 0, j, jj, y0, y1, y2, r, g, b, k, val;
+      if (tile.codingStyleDefaultParameters.multipleComponentTransform) {
+        var fourComponents = componentsCount === 4;
+        var y0items = transformedTiles[0].items;
+        var y1items = transformedTiles[1].items;
+        var y2items = transformedTiles[2].items;
+        var y3items = fourComponents ? transformedTiles[3].items : null;
+
+        // HACK: The multiple component transform formulas below assume that
+        // all components have the same precision. With this in mind, we
+        // compute shift and offset only once.
+        shift = components[0].precision - 8;
+        offset = (128 << shift) + 0.5;
+        max = 255 * (1 << shift);
+        maxK = max * 0.5;
+        min = -maxK;
+
+        var component0 = tile.components[0];
+        var alpha01 = componentsCount - 3;
+        jj = y0items.length;
+        if (!component0.codingStyleParameters.reversibleTransformation) {
+          // inverse irreversible multiple component transform
+          for (j = 0; j < jj; j++, pos += alpha01) {
+            y0 = y0items[j] + offset;
+            y1 = y1items[j];
+            y2 = y2items[j];
+            r = y0 + 1.402 * y2;
+            g = y0 - 0.34413 * y1 - 0.71414 * y2;
+            b = y0 + 1.772 * y1;
+            out[pos++] = r <= 0 ? 0 : r >= max ? 255 : r >> shift;
+            out[pos++] = g <= 0 ? 0 : g >= max ? 255 : g >> shift;
+            out[pos++] = b <= 0 ? 0 : b >= max ? 255 : b >> shift;
+          }
+        } else {
+          // inverse reversible multiple component transform
+          for (j = 0; j < jj; j++, pos += alpha01) {
+            y0 = y0items[j] + offset;
+            y1 = y1items[j];
+            y2 = y2items[j];
+            g = y0 - ((y2 + y1) >> 2);
+            r = g + y2;
+            b = g + y1;
+            out[pos++] = r <= 0 ? 0 : r >= max ? 255 : r >> shift;
+            out[pos++] = g <= 0 ? 0 : g >= max ? 255 : g >> shift;
+            out[pos++] = b <= 0 ? 0 : b >= max ? 255 : b >> shift;
+          }
+        }
+        if (fourComponents) {
+          for (j = 0, pos = 3; j < jj; j++, pos += 4) {
+            k = y3items[j];
+            out[pos] = k <= min ? 0 : k >= maxK ? 255 : (k + offset) >> shift;
+          }
+        }
+      } else { // no multi-component transform
+        for (c = 0; c < componentsCount; c++) {
+          var items = transformedTiles[c].items;
+          shift = components[c].precision - 8;
+          offset = (128 << shift) + 0.5;
+          max = (127.5 * (1 << shift));
+          min = -max;
+          for (pos = c, j = 0, jj = items.length; j < jj; j++) {
+            val = items[j];
+            out[pos] = val <= min ? 0 :
+                       val >= max ? 255 : (val + offset) >> shift;
+            pos += componentsCount;
+          }
+        }
+      }
+      resultImages.push(result);
+    }
+    return resultImages;
+  }
+  function initializeTile(context, tileIndex) {
+    var siz = context.SIZ;
+    var componentsCount = siz.Csiz;
+    var tile = context.tiles[tileIndex];
+    for (var c = 0; c < componentsCount; c++) {
+      var component = tile.components[c];
+      var qcdOrQcc = (context.currentTile.QCC[c] !== undefined ?
+        context.currentTile.QCC[c] : context.currentTile.QCD);
+      component.quantizationParameters = qcdOrQcc;
+      var codOrCoc = (context.currentTile.COC[c] !== undefined  ?
+        context.currentTile.COC[c] : context.currentTile.COD);
+      component.codingStyleParameters = codOrCoc;
+    }
+    tile.codingStyleDefaultParameters = context.currentTile.COD;
+  }
+
+  // Section B.10.2 Tag trees
+  var TagTree = (function TagTreeClosure() {
+    function TagTree(width, height) {
+      var levelsLength = log2(Math.max(width, height)) + 1;
+      this.levels = [];
+      for (var i = 0; i < levelsLength; i++) {
+        var level = {
+          width: width,
+          height: height,
+          items: []
+        };
+        this.levels.push(level);
+        width = Math.ceil(width / 2);
+        height = Math.ceil(height / 2);
+      }
+    }
+    TagTree.prototype = {
+      reset: function TagTree_reset(i, j) {
+        var currentLevel = 0, value = 0, level;
+        while (currentLevel < this.levels.length) {
+          level = this.levels[currentLevel];
+          var index = i + j * level.width;
+          if (level.items[index] !== undefined) {
+            value = level.items[index];
+            break;
+          }
+          level.index = index;
+          i >>= 1;
+          j >>= 1;
+          currentLevel++;
+        }
+        currentLevel--;
+        level = this.levels[currentLevel];
+        level.items[level.index] = value;
+        this.currentLevel = currentLevel;
+        delete this.value;
+      },
+      incrementValue: function TagTree_incrementValue() {
+        var level = this.levels[this.currentLevel];
+        level.items[level.index]++;
+      },
+      nextLevel: function TagTree_nextLevel() {
+        var currentLevel = this.currentLevel;
+        var level = this.levels[currentLevel];
+        var value = level.items[level.index];
+        currentLevel--;
+        if (currentLevel < 0) {
+          this.value = value;
+          return false;
+        }
+
+        this.currentLevel = currentLevel;
+        level = this.levels[currentLevel];
+        level.items[level.index] = value;
+        return true;
+      }
+    };
+    return TagTree;
+  })();
+
+  var InclusionTree = (function InclusionTreeClosure() {
+    function InclusionTree(width, height,  defaultValue) {
+      var levelsLength = log2(Math.max(width, height)) + 1;
+      this.levels = [];
+      for (var i = 0; i < levelsLength; i++) {
+        var items = new Uint8Array(width * height);
+        for (var j = 0, jj = items.length; j < jj; j++) {
+          items[j] = defaultValue;
+        }
+
+        var level = {
+          width: width,
+          height: height,
+          items: items
+        };
+        this.levels.push(level);
+
+        width = Math.ceil(width / 2);
+        height = Math.ceil(height / 2);
+      }
+    }
+    InclusionTree.prototype = {
+      reset: function InclusionTree_reset(i, j, stopValue) {
+        var currentLevel = 0;
+        while (currentLevel < this.levels.length) {
+          var level = this.levels[currentLevel];
+          var index = i + j * level.width;
+          level.index = index;
+          var value = level.items[index];
+
+          if (value === 0xFF) {
+            break;
+          }
+
+          if (value > stopValue) {
+            this.currentLevel = currentLevel;
+            // already know about this one, propagating the value to top levels
+            this.propagateValues();
+            return false;
+          }
+
+          i >>= 1;
+          j >>= 1;
+          currentLevel++;
+        }
+        this.currentLevel = currentLevel - 1;
+        return true;
+      },
+      incrementValue: function InclusionTree_incrementValue(stopValue) {
+        var level = this.levels[this.currentLevel];
+        level.items[level.index] = stopValue + 1;
+        this.propagateValues();
+      },
+      propagateValues: function InclusionTree_propagateValues() {
+        var levelIndex = this.currentLevel;
+        var level = this.levels[levelIndex];
+        var currentValue = level.items[level.index];
+        while (--levelIndex >= 0) {
+          level = this.levels[levelIndex];
+          level.items[level.index] = currentValue;
+        }
+      },
+      nextLevel: function InclusionTree_nextLevel() {
+        var currentLevel = this.currentLevel;
+        var level = this.levels[currentLevel];
+        var value = level.items[level.index];
+        level.items[level.index] = 0xFF;
+        currentLevel--;
+        if (currentLevel < 0) {
+          return false;
+        }
+
+        this.currentLevel = currentLevel;
+        level = this.levels[currentLevel];
+        level.items[level.index] = value;
+        return true;
+      }
+    };
+    return InclusionTree;
+  })();
+
+  // Section D. Coefficient bit modeling
+  var BitModel = (function BitModelClosure() {
+    var UNIFORM_CONTEXT = 17;
+    var RUNLENGTH_CONTEXT = 18;
+    // Table D-1
+    // The index is binary presentation: 0dddvvhh, ddd - sum of Di (0..4),
+    // vv - sum of Vi (0..2), and hh - sum of Hi (0..2)
+    var LLAndLHContextsLabel = new Uint8Array([
+      0, 5, 8, 0, 3, 7, 8, 0, 4, 7, 8, 0, 0, 0, 0, 0, 1, 6, 8, 0, 3, 7, 8, 0, 4,
+      7, 8, 0, 0, 0, 0, 0, 2, 6, 8, 0, 3, 7, 8, 0, 4, 7, 8, 0, 0, 0, 0, 0, 2, 6,
+      8, 0, 3, 7, 8, 0, 4, 7, 8, 0, 0, 0, 0, 0, 2, 6, 8, 0, 3, 7, 8, 0, 4, 7, 8
+    ]);
+    var HLContextLabel = new Uint8Array([
+      0, 3, 4, 0, 5, 7, 7, 0, 8, 8, 8, 0, 0, 0, 0, 0, 1, 3, 4, 0, 6, 7, 7, 0, 8,
+      8, 8, 0, 0, 0, 0, 0, 2, 3, 4, 0, 6, 7, 7, 0, 8, 8, 8, 0, 0, 0, 0, 0, 2, 3,
+      4, 0, 6, 7, 7, 0, 8, 8, 8, 0, 0, 0, 0, 0, 2, 3, 4, 0, 6, 7, 7, 0, 8, 8, 8
+    ]);
+    var HHContextLabel = new Uint8Array([
+      0, 1, 2, 0, 1, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 3, 4, 5, 0, 4, 5, 5, 0, 5,
+      5, 5, 0, 0, 0, 0, 0, 6, 7, 7, 0, 7, 7, 7, 0, 7, 7, 7, 0, 0, 0, 0, 0, 8, 8,
+      8, 0, 8, 8, 8, 0, 8, 8, 8, 0, 0, 0, 0, 0, 8, 8, 8, 0, 8, 8, 8, 0, 8, 8, 8
+    ]);
+
+    function BitModel(width, height, subband, zeroBitPlanes, mb) {
+      this.width = width;
+      this.height = height;
+
+      this.contextLabelTable = (subband === 'HH' ? HHContextLabel :
+        (subband === 'HL' ? HLContextLabel : LLAndLHContextsLabel));
+
+      var coefficientCount = width * height;
+
+      // coefficients outside the encoding region treated as insignificant
+      // add border state cells for significanceState
+      this.neighborsSignificance = new Uint8Array(coefficientCount);
+      this.coefficentsSign = new Uint8Array(coefficientCount);
+      this.coefficentsMagnitude = mb > 14 ? new Uint32Array(coefficientCount) :
+                                  mb > 6 ? new Uint16Array(coefficientCount) :
+                                  new Uint8Array(coefficientCount);
+      this.processingFlags = new Uint8Array(coefficientCount);
+
+      var bitsDecoded = new Uint8Array(coefficientCount);
+      if (zeroBitPlanes !== 0) {
+        for (var i = 0; i < coefficientCount; i++) {
+          bitsDecoded[i] = zeroBitPlanes;
+        }
+      }
+      this.bitsDecoded = bitsDecoded;
+
+      this.reset();
+    }
+
+    BitModel.prototype = {
+      setDecoder: function BitModel_setDecoder(decoder) {
+        this.decoder = decoder;
+      },
+      reset: function BitModel_reset() {
+        // We have 17 contexts that are accessed via context labels,
+        // plus the uniform and runlength context.
+        this.contexts = new Int8Array(19);
+
+        // Contexts are packed into 1 byte:
+        // highest 7 bits carry the index, lowest bit carries mps
+        this.contexts[0] = (4 << 1) | 0;
+        this.contexts[UNIFORM_CONTEXT] = (46 << 1) | 0;
+        this.contexts[RUNLENGTH_CONTEXT] = (3 << 1) | 0;
+      },
+      setNeighborsSignificance:
+        function BitModel_setNeighborsSignificance(row, column, index) {
+        var neighborsSignificance = this.neighborsSignificance;
+        var width = this.width, height = this.height;
+        var left = (column > 0);
+        var right = (column + 1 < width);
+        var i;
+
+        if (row > 0) {
+          i = index - width;
+          if (left) {
+            neighborsSignificance[i - 1] += 0x10;
+          }
+          if (right) {
+            neighborsSignificance[i + 1] += 0x10;
+          }
+          neighborsSignificance[i] += 0x04;
+        }
+
+        if (row + 1 < height) {
+          i = index + width;
+          if (left) {
+            neighborsSignificance[i - 1] += 0x10;
+          }
+          if (right) {
+            neighborsSignificance[i + 1] += 0x10;
+          }
+          neighborsSignificance[i] += 0x04;
+        }
+
+        if (left) {
+          neighborsSignificance[index - 1] += 0x01;
+        }
+        if (right) {
+          neighborsSignificance[index + 1] += 0x01;
+        }
+        neighborsSignificance[index] |= 0x80;
+      },
+      runSignificancePropogationPass:
+        function BitModel_runSignificancePropogationPass() {
+        var decoder = this.decoder;
+        var width = this.width, height = this.height;
+        var coefficentsMagnitude = this.coefficentsMagnitude;
+        var coefficentsSign = this.coefficentsSign;
+        var neighborsSignificance = this.neighborsSignificance;
+        var processingFlags = this.processingFlags;
+        var contexts = this.contexts;
+        var labels = this.contextLabelTable;
+        var bitsDecoded = this.bitsDecoded;
+        var processedInverseMask = ~1;
+        var processedMask = 1;
+        var firstMagnitudeBitMask = 2;
+
+        for (var i0 = 0; i0 < height; i0 += 4) {
+          for (var j = 0; j < width; j++) {
+            var index = i0 * width + j;
+            for (var i1 = 0; i1 < 4; i1++, index += width) {
+              var i = i0 + i1;
+              if (i >= height) {
+                break;
+              }
+              // clear processed flag first
+              processingFlags[index] &= processedInverseMask;
+
+              if (coefficentsMagnitude[index] ||
+                  !neighborsSignificance[index]) {
+                continue;
+              }
+
+              var contextLabel = labels[neighborsSignificance[index]];
+              var decision = decoder.readBit(contexts, contextLabel);
+              if (decision) {
+                var sign = this.decodeSignBit(i, j, index);
+                coefficentsSign[index] = sign;
+                coefficentsMagnitude[index] = 1;
+                this.setNeighborsSignificance(i, j, index);
+                processingFlags[index] |= firstMagnitudeBitMask;
+              }
+              bitsDecoded[index]++;
+              processingFlags[index] |= processedMask;
+            }
+          }
+        }
+      },
+      decodeSignBit: function BitModel_decodeSignBit(row, column, index) {
+        var width = this.width, height = this.height;
+        var coefficentsMagnitude = this.coefficentsMagnitude;
+        var coefficentsSign = this.coefficentsSign;
+        var contribution, sign0, sign1, significance1;
+        var contextLabel, decoded;
+
+        // calculate horizontal contribution
+        significance1 = (column > 0 && coefficentsMagnitude[index - 1] !== 0);
+        if (column + 1 < width && coefficentsMagnitude[index + 1] !== 0) {
+          sign1 = coefficentsSign[index + 1];
+          if (significance1) {
+            sign0 = coefficentsSign[index - 1];
+            contribution = 1 - sign1 - sign0;
+          } else {
+            contribution = 1 - sign1 - sign1;
+          }
+        } else if (significance1) {
+          sign0 = coefficentsSign[index - 1];
+          contribution = 1 - sign0 - sign0;
+        } else {
+          contribution = 0;
+        }
+        var horizontalContribution = 3 * contribution;
+
+        // calculate vertical contribution and combine with the horizontal
+        significance1 = (row > 0 && coefficentsMagnitude[index - width] !== 0);
+        if (row + 1 < height && coefficentsMagnitude[index + width] !== 0) {
+          sign1 = coefficentsSign[index + width];
+          if (significance1) {
+            sign0 = coefficentsSign[index - width];
+            contribution = 1 - sign1 - sign0 + horizontalContribution;
+          } else {
+            contribution = 1 - sign1 - sign1 + horizontalContribution;
+          }
+        } else if (significance1) {
+          sign0 = coefficentsSign[index - width];
+          contribution = 1 - sign0 - sign0 + horizontalContribution;
+        } else {
+          contribution = horizontalContribution;
+        }
+
+        if (contribution >= 0) {
+          contextLabel = 9 + contribution;
+          decoded = this.decoder.readBit(this.contexts, contextLabel);
+        } else {
+          contextLabel = 9 - contribution;
+          decoded = this.decoder.readBit(this.contexts, contextLabel) ^ 1;
+        }
+        return decoded;
+      },
+      runMagnitudeRefinementPass:
+        function BitModel_runMagnitudeRefinementPass() {
+        var decoder = this.decoder;
+        var width = this.width, height = this.height;
+        var coefficentsMagnitude = this.coefficentsMagnitude;
+        var neighborsSignificance = this.neighborsSignificance;
+        var contexts = this.contexts;
+        var bitsDecoded = this.bitsDecoded;
+        var processingFlags = this.processingFlags;
+        var processedMask = 1;
+        var firstMagnitudeBitMask = 2;
+        var length = width * height;
+        var width4 = width * 4;
+
+        for (var index0 = 0, indexNext; index0 < length; index0 = indexNext) {
+          indexNext = Math.min(length, index0 + width4);
+          for (var j = 0; j < width; j++) {
+            for (var index = index0 + j; index < indexNext; index += width) {
+
+              // significant but not those that have just become
+              if (!coefficentsMagnitude[index] ||
+                (processingFlags[index] & processedMask) !== 0) {
+                continue;
+              }
+
+              var contextLabel = 16;
+              if ((processingFlags[index] & firstMagnitudeBitMask) !== 0) {
+                processingFlags[index] ^= firstMagnitudeBitMask;
+                // first refinement
+               var significance = neighborsSignificance[index] & 127;
+               contextLabel = significance === 0 ? 15 : 14;
+              }
+
+              var bit = decoder.readBit(contexts, contextLabel);
+              coefficentsMagnitude[index] =
+                (coefficentsMagnitude[index] << 1) | bit;
+              bitsDecoded[index]++;
+              processingFlags[index] |= processedMask;
+            }
+          }
+        }
+      },
+      runCleanupPass: function BitModel_runCleanupPass() {
+        var decoder = this.decoder;
+        var width = this.width, height = this.height;
+        var neighborsSignificance = this.neighborsSignificance;
+        var coefficentsMagnitude = this.coefficentsMagnitude;
+        var coefficentsSign = this.coefficentsSign;
+        var contexts = this.contexts;
+        var labels = this.contextLabelTable;
+        var bitsDecoded = this.bitsDecoded;
+        var processingFlags = this.processingFlags;
+        var processedMask = 1;
+        var firstMagnitudeBitMask = 2;
+        var oneRowDown = width;
+        var twoRowsDown = width * 2;
+        var threeRowsDown = width * 3;
+        var iNext;
+        for (var i0 = 0; i0 < height; i0 = iNext) {
+          iNext = Math.min(i0 + 4, height);
+          var indexBase = i0 * width;
+          var checkAllEmpty = i0 + 3 < height;
+          for (var j = 0; j < width; j++) {
+            var index0 = indexBase + j;
+            // using the property: labels[neighborsSignificance[index]] === 0
+            // when neighborsSignificance[index] === 0
+            var allEmpty = (checkAllEmpty &&
+              processingFlags[index0] === 0 &&
+              processingFlags[index0 + oneRowDown] === 0 &&
+              processingFlags[index0 + twoRowsDown] === 0 &&
+              processingFlags[index0 + threeRowsDown] === 0 &&
+              neighborsSignificance[index0] === 0 &&
+              neighborsSignificance[index0 + oneRowDown] === 0 &&
+              neighborsSignificance[index0 + twoRowsDown] === 0 &&
+              neighborsSignificance[index0 + threeRowsDown] === 0);
+            var i1 = 0, index = index0;
+            var i = i0, sign;
+            if (allEmpty) {
+              var hasSignificantCoefficent =
+                decoder.readBit(contexts, RUNLENGTH_CONTEXT);
+              if (!hasSignificantCoefficent) {
+                bitsDecoded[index0]++;
+                bitsDecoded[index0 + oneRowDown]++;
+                bitsDecoded[index0 + twoRowsDown]++;
+                bitsDecoded[index0 + threeRowsDown]++;
+                continue; // next column
+              }
+              i1 = (decoder.readBit(contexts, UNIFORM_CONTEXT) << 1) |
+                    decoder.readBit(contexts, UNIFORM_CONTEXT);
+              if (i1 !== 0) {
+                i = i0 + i1;
+                index += i1 * width;
+              }
+
+              sign = this.decodeSignBit(i, j, index);
+              coefficentsSign[index] = sign;
+              coefficentsMagnitude[index] = 1;
+              this.setNeighborsSignificance(i, j, index);
+              processingFlags[index] |= firstMagnitudeBitMask;
+
+              index = index0;
+              for (var i2 = i0; i2 <= i; i2++, index += width) {
+                bitsDecoded[index]++;
+              }
+
+              i1++;
+            }
+            for (i = i0 + i1; i < iNext; i++, index += width) {
+              if (coefficentsMagnitude[index] ||
+                (processingFlags[index] & processedMask) !== 0) {
+                continue;
+              }
+
+              var contextLabel = labels[neighborsSignificance[index]];
+              var decision = decoder.readBit(contexts, contextLabel);
+              if (decision === 1) {
+                sign = this.decodeSignBit(i, j, index);
+                coefficentsSign[index] = sign;
+                coefficentsMagnitude[index] = 1;
+                this.setNeighborsSignificance(i, j, index);
+                processingFlags[index] |= firstMagnitudeBitMask;
+              }
+              bitsDecoded[index]++;
+            }
+          }
+        }
+      },
+      checkSegmentationSymbol: function BitModel_checkSegmentationSymbol() {
+        var decoder = this.decoder;
+        var contexts = this.contexts;
+        var symbol = (decoder.readBit(contexts, UNIFORM_CONTEXT) << 3) |
+                     (decoder.readBit(contexts, UNIFORM_CONTEXT) << 2) |
+                     (decoder.readBit(contexts, UNIFORM_CONTEXT) << 1) |
+                      decoder.readBit(contexts, UNIFORM_CONTEXT);
+        if (symbol !== 0xA) {
+          throw new Error('JPX Error: Invalid segmentation symbol');
+        }
+      }
+    };
+
+    return BitModel;
+  })();
+
+  // Section F, Discrete wavelet transformation
+  var Transform = (function TransformClosure() {
+    function Transform() {}
+
+    Transform.prototype.calculate =
+      function transformCalculate(subbands, u0, v0) {
+      var ll = subbands[0];
+      for (var i = 1, ii = subbands.length; i < ii; i++) {
+        ll = this.iterate(ll, subbands[i], u0, v0);
+      }
+      return ll;
+    };
+    Transform.prototype.extend = function extend(buffer, offset, size) {
+      // Section F.3.7 extending... using max extension of 4
+      var i1 = offset - 1, j1 = offset + 1;
+      var i2 = offset + size - 2, j2 = offset + size;
+      buffer[i1--] = buffer[j1++];
+      buffer[j2++] = buffer[i2--];
+      buffer[i1--] = buffer[j1++];
+      buffer[j2++] = buffer[i2--];
+      buffer[i1--] = buffer[j1++];
+      buffer[j2++] = buffer[i2--];
+      buffer[i1] = buffer[j1];
+      buffer[j2] = buffer[i2];
+    };
+    Transform.prototype.iterate = function Transform_iterate(ll, hl_lh_hh,
+                                                             u0, v0) {
+      var llWidth = ll.width, llHeight = ll.height, llItems = ll.items;
+      var width = hl_lh_hh.width;
+      var height = hl_lh_hh.height;
+      var items = hl_lh_hh.items;
+      var i, j, k, l, u, v;
+
+      // Interleave LL according to Section F.3.3
+      for (k = 0, i = 0; i < llHeight; i++) {
+        l = i * 2 * width;
+        for (j = 0; j < llWidth; j++, k++, l += 2) {
+          items[l] = llItems[k];
+        }
+      }
+      // The LL band is not needed anymore.
+      llItems = ll.items = null;
+
+      var bufferPadding = 4;
+      var rowBuffer = new Float32Array(width + 2 * bufferPadding);
+
+      // Section F.3.4 HOR_SR
+      if (width === 1) {
+        // if width = 1, when u0 even keep items as is, when odd divide by 2
+        if ((u0 & 1) !== 0) {
+          for (v = 0, k = 0; v < height; v++, k += width) {
+            items[k] *= 0.5;
+          }
+        }
+      } else {
+        for (v = 0, k = 0; v < height; v++, k += width) {
+          rowBuffer.set(items.subarray(k, k + width), bufferPadding);
+
+          this.extend(rowBuffer, bufferPadding, width);
+          this.filter(rowBuffer, bufferPadding, width);
+
+          items.set(
+            rowBuffer.subarray(bufferPadding, bufferPadding + width),
+            k);
+        }
+      }
+
+      // Accesses to the items array can take long, because it may not fit into
+      // CPU cache and has to be fetched from main memory. Since subsequent
+      // accesses to the items array are not local when reading columns, we
+      // have a cache miss every time. To reduce cache misses, get up to
+      // 'numBuffers' items at a time and store them into the individual
+      // buffers. The colBuffers should be small enough to fit into CPU cache.
+      var numBuffers = 16;
+      var colBuffers = [];
+      for (i = 0; i < numBuffers; i++) {
+        colBuffers.push(new Float32Array(height + 2 * bufferPadding));
+      }
+      var b, currentBuffer = 0;
+      ll = bufferPadding + height;
+
+      // Section F.3.5 VER_SR
+      if (height === 1) {
+          // if height = 1, when v0 even keep items as is, when odd divide by 2
+        if ((v0 & 1) !== 0) {
+          for (u = 0; u < width; u++) {
+            items[u] *= 0.5;
+          }
+        }
+      } else {
+        for (u = 0; u < width; u++) {
+          // if we ran out of buffers, copy several image columns at once
+          if (currentBuffer === 0) {
+            numBuffers = Math.min(width - u, numBuffers);
+            for (k = u, l = bufferPadding; l < ll; k += width, l++) {
+              for (b = 0; b < numBuffers; b++) {
+                colBuffers[b][l] = items[k + b];
+              }
+            }
+            currentBuffer = numBuffers;
+          }
+
+          currentBuffer--;
+          var buffer = colBuffers[currentBuffer];
+          this.extend(buffer, bufferPadding, height);
+          this.filter(buffer, bufferPadding, height);
+
+          // If this is last buffer in this group of buffers, flush all buffers.
+          if (currentBuffer === 0) {
+            k = u - numBuffers + 1;
+            for (l = bufferPadding; l < ll; k += width, l++) {
+              for (b = 0; b < numBuffers; b++) {
+                items[k + b] = colBuffers[b][l];
+              }
+            }
+          }
+        }
+      }
+
+      return {
+        width: width,
+        height: height,
+        items: items
+      };
+    };
+    return Transform;
+  })();
+
+  // Section 3.8.2 Irreversible 9-7 filter
+  var IrreversibleTransform = (function IrreversibleTransformClosure() {
+    function IrreversibleTransform() {
+      Transform.call(this);
+    }
+
+    IrreversibleTransform.prototype = Object.create(Transform.prototype);
+    IrreversibleTransform.prototype.filter =
+      function irreversibleTransformFilter(x, offset, length) {
+      var len = length >> 1;
+      offset = offset | 0;
+      var j, n, current, next;
+
+      var alpha = -1.586134342059924;
+      var beta = -0.052980118572961;
+      var gamma = 0.882911075530934;
+      var delta = 0.443506852043971;
+      var K = 1.230174104914001;
+      var K_ = 1 / K;
+
+      // step 1 is combined with step 3
+
+      // step 2
+      j = offset - 3;
+      for (n = len + 4; n--; j += 2) {
+        x[j] *= K_;
+      }
+
+      // step 1 & 3
+      j = offset - 2;
+      current = delta * x[j -1];
+      for (n = len + 3; n--; j += 2) {
+        next = delta * x[j + 1];
+        x[j] = K * x[j] - current - next;
+        if (n--) {
+          j += 2;
+          current = delta * x[j + 1];
+          x[j] = K * x[j] - current - next;
+        } else {
+          break;
+        }
+      }
+
+      // step 4
+      j = offset - 1;
+      current = gamma * x[j - 1];
+      for (n = len + 2; n--; j += 2) {
+        next = gamma * x[j + 1];
+        x[j] -= current + next;
+        if (n--) {
+          j += 2;
+          current = gamma * x[j + 1];
+          x[j] -= current + next;
+        } else {
+          break;
+        }
+      }
+
+      // step 5
+      j = offset;
+      current = beta * x[j - 1];
+      for (n = len + 1; n--; j += 2) {
+        next = beta * x[j + 1];
+        x[j] -= current + next;
+        if (n--) {
+          j += 2;
+          current = beta * x[j + 1];
+          x[j] -= current + next;
+        } else {
+          break;
+        }
+      }
+
+      // step 6
+      if (len !== 0) {
+        j = offset + 1;
+        current = alpha * x[j - 1];
+        for (n = len; n--; j += 2) {
+          next = alpha * x[j + 1];
+          x[j] -= current + next;
+          if (n--) {
+            j += 2;
+            current = alpha * x[j + 1];
+            x[j] -= current + next;
+          } else {
+            break;
+          }
+        }
+      }
+    };
+
+    return IrreversibleTransform;
+  })();
+
+  // Section 3.8.1 Reversible 5-3 filter
+  var ReversibleTransform = (function ReversibleTransformClosure() {
+    function ReversibleTransform() {
+      Transform.call(this);
+    }
+
+    ReversibleTransform.prototype = Object.create(Transform.prototype);
+    ReversibleTransform.prototype.filter =
+      function reversibleTransformFilter(x, offset, length) {
+      var len = length >> 1;
+      offset = offset | 0;
+      var j, n;
+
+      for (j = offset, n = len + 1; n--; j += 2) {
+        x[j] -= (x[j - 1] + x[j + 1] + 2) >> 2;
+      }
+
+      for (j = offset + 1, n = len; n--; j += 2) {
+        x[j] += (x[j - 1] + x[j + 1]) >> 1;
+      }
+    };
+
+    return ReversibleTransform;
+  })();
+
+  return JpxImage;
+})();
+
+
+var Jbig2Image = (function Jbig2ImageClosure() {
+  // Utility data structures
+  function ContextCache() {}
+
+  ContextCache.prototype = {
+    getContexts: function(id) {
+      if (id in this) {
+        return this[id];
+      }
+      return (this[id] = new Int8Array(1 << 16));
+    }
+  };
+
+  function DecodingContext(data, start, end) {
+    this.data = data;
+    this.start = start;
+    this.end = end;
+  }
+
+  DecodingContext.prototype = {
+    get decoder() {
+      var decoder = new ArithmeticDecoder(this.data, this.start, this.end);
+      return shadow(this, 'decoder', decoder);
+    },
+    get contextCache() {
+      var cache = new ContextCache();
+      return shadow(this, 'contextCache', cache);
+    }
+  };
+
+  // Annex A. Arithmetic Integer Decoding Procedure
+  // A.2 Procedure for decoding values
+  function decodeInteger(contextCache, procedure, decoder) {
+    var contexts = contextCache.getContexts(procedure);
+    var prev = 1;
+
+    function readBits(length) {
+      var v = 0;
+      for (var i = 0; i < length; i++) {
+        var bit = decoder.readBit(contexts, prev);
+        prev = (prev < 256 ? (prev << 1) | bit :
+                (((prev << 1) | bit) & 511) | 256);
+        v = (v << 1) | bit;
+      }
+      return v >>> 0;
+    }
+
+    var sign = readBits(1);
+    var value = readBits(1) ?
+                  (readBits(1) ?
+                    (readBits(1) ?
+                      (readBits(1) ?
+                        (readBits(1) ?
+                          (readBits(32) + 4436) :
+                        readBits(12) + 340) :
+                      readBits(8) + 84) :
+                    readBits(6) + 20) :
+                  readBits(4) + 4) :
+                readBits(2);
+    return (sign === 0 ? value : (value > 0 ? -value : null));
+  }
+
+  // A.3 The IAID decoding procedure
+  function decodeIAID(contextCache, decoder, codeLength) {
+    var contexts = contextCache.getContexts('IAID');
+
+    var prev = 1;
+    for (var i = 0; i < codeLength; i++) {
+      var bit = decoder.readBit(contexts, prev);
+      prev = (prev << 1) | bit;
+    }
+    if (codeLength < 31) {
+      return prev & ((1 << codeLength) - 1);
+    }
+    return prev & 0x7FFFFFFF;
+  }
+
+  // 7.3 Segment types
+  var SegmentTypes = [
+    'SymbolDictionary', null, null, null, 'IntermediateTextRegion', null,
+    'ImmediateTextRegion', 'ImmediateLosslessTextRegion', null, null, null,
+    null, null, null, null, null, 'patternDictionary', null, null, null,
+    'IntermediateHalftoneRegion', null, 'ImmediateHalftoneRegion',
+    'ImmediateLosslessHalftoneRegion', null, null, null, null, null, null, null,
+    null, null, null, null, null, 'IntermediateGenericRegion', null,
+    'ImmediateGenericRegion', 'ImmediateLosslessGenericRegion',
+    'IntermediateGenericRefinementRegion', null,
+    'ImmediateGenericRefinementRegion',
+    'ImmediateLosslessGenericRefinementRegion', null, null, null, null,
+    'PageInformation', 'EndOfPage', 'EndOfStripe', 'EndOfFile', 'Profiles',
+    'Tables', null, null, null, null, null, null, null, null,
+    'Extension'
+  ];
+
+  var CodingTemplates = [
+    [{x: -1, y: -2}, {x: 0, y: -2}, {x: 1, y: -2}, {x: -2, y: -1},
+     {x: -1, y: -1}, {x: 0, y: -1}, {x: 1, y: -1}, {x: 2, y: -1},
+     {x: -4, y: 0}, {x: -3, y: 0}, {x: -2, y: 0}, {x: -1, y: 0}],
+    [{x: -1, y: -2}, {x: 0, y: -2}, {x: 1, y: -2}, {x: 2, y: -2},
+     {x: -2, y: -1}, {x: -1, y: -1}, {x: 0, y: -1}, {x: 1, y: -1},
+     {x: 2, y: -1}, {x: -3, y: 0}, {x: -2, y: 0}, {x: -1, y: 0}],
+    [{x: -1, y: -2}, {x: 0, y: -2}, {x: 1, y: -2}, {x: -2, y: -1},
+     {x: -1, y: -1}, {x: 0, y: -1}, {x: 1, y: -1}, {x: -2, y: 0},
+     {x: -1, y: 0}],
+    [{x: -3, y: -1}, {x: -2, y: -1}, {x: -1, y: -1}, {x: 0, y: -1},
+     {x: 1, y: -1}, {x: -4, y: 0}, {x: -3, y: 0}, {x: -2, y: 0}, {x: -1, y: 0}]
+  ];
+
+  var RefinementTemplates = [
+    {
+      coding: [{x: 0, y: -1}, {x: 1, y: -1}, {x: -1, y: 0}],
+      reference: [{x: 0, y: -1}, {x: 1, y: -1}, {x: -1, y: 0}, {x: 0, y: 0},
+                  {x: 1, y: 0}, {x: -1, y: 1}, {x: 0, y: 1}, {x: 1, y: 1}]
+    },
+    {
+      coding: [{x: -1, y: -1}, {x: 0, y: -1}, {x: 1, y: -1}, {x: -1, y: 0}],
+      reference: [{x: 0, y: -1}, {x: -1, y: 0}, {x: 0, y: 0}, {x: 1, y: 0},
+                  {x: 0, y: 1}, {x: 1, y: 1}]
+    }
+  ];
+
+  // See 6.2.5.7 Decoding the bitmap.
+  var ReusedContexts = [
+    0x9B25, // 10011 0110010 0101
+    0x0795, // 0011 110010 101
+    0x00E5, // 001 11001 01
+    0x0195  // 011001 0101
+  ];
+
+  var RefinementReusedContexts = [
+    0x0020, // '000' + '0' (coding) + '00010000' + '0' (reference)
+    0x0008  // '0000' + '001000'
+  ];
+
+  function decodeBitmapTemplate0(width, height, decodingContext) {
+    var decoder = decodingContext.decoder;
+    var contexts = decodingContext.contextCache.getContexts('GB');
+    var contextLabel, i, j, pixel, row, row1, row2, bitmap = [];
+
+    // ...ooooo....
+    // ..ooooooo... Context template for current pixel (X)
+    // .ooooX...... (concatenate values of 'o'-pixels to get contextLabel)
+    var OLD_PIXEL_MASK = 0x7BF7; // 01111 0111111 0111
+
+    for (i = 0; i < height; i++) {
+      row = bitmap[i] = new Uint8Array(width);
+      row1 = (i < 1) ? row : bitmap[i - 1];
+      row2 = (i < 2) ? row : bitmap[i - 2];
+
+      // At the beginning of each row:
+      // Fill contextLabel with pixels that are above/right of (X)
+      contextLabel = (row2[0] << 13) | (row2[1] << 12) | (row2[2] << 11) |
+                     (row1[0] << 7) | (row1[1] << 6) | (row1[2] << 5) |
+                     (row1[3] << 4);
+
+      for (j = 0; j < width; j++) {
+        row[j] = pixel = decoder.readBit(contexts, contextLabel);
+
+        // At each pixel: Clear contextLabel pixels that are shifted
+        // out of the context, then add new ones.
+        contextLabel = ((contextLabel & OLD_PIXEL_MASK) << 1) |
+                       (j + 3 < width ? row2[j + 3] << 11 : 0) |
+                       (j + 4 < width ? row1[j + 4] << 4 : 0) | pixel;
+      }
+    }
+
+    return bitmap;
+  }
+
+  // 6.2 Generic Region Decoding Procedure
+  function decodeBitmap(mmr, width, height, templateIndex, prediction, skip, at,
+                        decodingContext) {
+    if (mmr) {
+      error('JBIG2 error: MMR encoding is not supported');
+    }
+
+    // Use optimized version for the most common case
+    if (templateIndex === 0 && !skip && !prediction && at.length === 4 &&
+        at[0].x === 3 && at[0].y === -1 && at[1].x === -3 && at[1].y === -1 &&
+        at[2].x === 2 && at[2].y === -2 && at[3].x === -2 && at[3].y === -2) {
+      return decodeBitmapTemplate0(width, height, decodingContext);
+    }
+
+    var useskip = !!skip;
+    var template = CodingTemplates[templateIndex].concat(at);
+
+    // Sorting is non-standard, and it is not required. But sorting increases
+    // the number of template bits that can be reused from the previous
+    // contextLabel in the main loop.
+    template.sort(function (a, b) {
+      return (a.y - b.y) || (a.x - b.x);
+    });
+
+    var templateLength = template.length;
+    var templateX = new Int8Array(templateLength);
+    var templateY = new Int8Array(templateLength);
+    var changingTemplateEntries = [];
+    var reuseMask = 0, minX = 0, maxX = 0, minY = 0;
+    var c, k;
+
+    for (k = 0; k < templateLength; k++) {
+      templateX[k] = template[k].x;
+      templateY[k] = template[k].y;
+      minX = Math.min(minX, template[k].x);
+      maxX = Math.max(maxX, template[k].x);
+      minY = Math.min(minY, template[k].y);
+      // Check if the template pixel appears in two consecutive context labels,
+      // so it can be reused. Otherwise, we add it to the list of changing
+      // template entries.
+      if (k < templateLength - 1 &&
+          template[k].y === template[k + 1].y &&
+          template[k].x === template[k + 1].x - 1) {
+        reuseMask |= 1 << (templateLength - 1 - k);
+      } else {
+        changingTemplateEntries.push(k);
+      }
+    }
+    var changingEntriesLength = changingTemplateEntries.length;
+
+    var changingTemplateX = new Int8Array(changingEntriesLength);
+    var changingTemplateY = new Int8Array(changingEntriesLength);
+    var changingTemplateBit = new Uint16Array(changingEntriesLength);
+    for (c = 0; c < changingEntriesLength; c++) {
+      k = changingTemplateEntries[c];
+      changingTemplateX[c] = template[k].x;
+      changingTemplateY[c] = template[k].y;
+      changingTemplateBit[c] = 1 << (templateLength - 1 - k);
+    }
+
+    // Get the safe bounding box edges from the width, height, minX, maxX, minY
+    var sbb_left = -minX;
+    var sbb_top = -minY;
+    var sbb_right = width - maxX;
+
+    var pseudoPixelContext = ReusedContexts[templateIndex];
+    var row = new Uint8Array(width);
+    var bitmap = [];
+
+    var decoder = decodingContext.decoder;
+    var contexts = decodingContext.contextCache.getContexts('GB');
+
+    var ltp = 0, j, i0, j0, contextLabel = 0, bit, shift;
+    for (var i = 0; i < height; i++) {
+      if (prediction) {
+        var sltp = decoder.readBit(contexts, pseudoPixelContext);
+        ltp ^= sltp;
+        if (ltp) {
+          bitmap.push(row); // duplicate previous row
+          continue;
+        }
+      }
+      row = new Uint8Array(row);
+      bitmap.push(row);
+      for (j = 0; j < width; j++) {
+        if (useskip && skip[i][j]) {
+          row[j] = 0;
+          continue;
+        }
+        // Are we in the middle of a scanline, so we can reuse contextLabel
+        // bits?
+        if (j >= sbb_left && j < sbb_right && i >= sbb_top) {
+          // If yes, we can just shift the bits that are reusable and only
+          // fetch the remaining ones.
+          contextLabel = (contextLabel << 1) & reuseMask;
+          for (k = 0; k < changingEntriesLength; k++) {
+            i0 = i + changingTemplateY[k];
+            j0 = j + changingTemplateX[k];
+            bit = bitmap[i0][j0];
+            if (bit) {
+              bit = changingTemplateBit[k];
+              contextLabel |= bit;
+            }
+          }
+        } else {
+          // compute the contextLabel from scratch
+          contextLabel = 0;
+          shift = templateLength - 1;
+          for (k = 0; k < templateLength; k++, shift--) {
+            j0 = j + templateX[k];
+            if (j0 >= 0 && j0 < width) {
+              i0 = i + templateY[k];
+              if (i0 >= 0) {
+                bit = bitmap[i0][j0];
+                if (bit) {
+                  contextLabel |= bit << shift;
+                }
+              }
+            }
+          }
+        }
+        var pixel = decoder.readBit(contexts, contextLabel);
+        row[j] = pixel;
+      }
+    }
+    return bitmap;
+  }
+
+  // 6.3.2 Generic Refinement Region Decoding Procedure
+  function decodeRefinement(width, height, templateIndex, referenceBitmap,
+                            offsetX, offsetY, prediction, at,
+                            decodingContext) {
+    var codingTemplate = RefinementTemplates[templateIndex].coding;
+    if (templateIndex === 0) {
+      codingTemplate = codingTemplate.concat([at[0]]);
+    }
+    var codingTemplateLength = codingTemplate.length;
+    var codingTemplateX = new Int32Array(codingTemplateLength);
+    var codingTemplateY = new Int32Array(codingTemplateLength);
+    var k;
+    for (k = 0; k < codingTemplateLength; k++) {
+      codingTemplateX[k] = codingTemplate[k].x;
+      codingTemplateY[k] = codingTemplate[k].y;
+    }
+
+    var referenceTemplate = RefinementTemplates[templateIndex].reference;
+    if (templateIndex === 0) {
+      referenceTemplate = referenceTemplate.concat([at[1]]);
+    }
+    var referenceTemplateLength = referenceTemplate.length;
+    var referenceTemplateX = new Int32Array(referenceTemplateLength);
+    var referenceTemplateY = new Int32Array(referenceTemplateLength);
+    for (k = 0; k < referenceTemplateLength; k++) {
+      referenceTemplateX[k] = referenceTemplate[k].x;
+      referenceTemplateY[k] = referenceTemplate[k].y;
+    }
+    var referenceWidth = referenceBitmap[0].length;
+    var referenceHeight = referenceBitmap.length;
+
+    var pseudoPixelContext = RefinementReusedContexts[templateIndex];
+    var bitmap = [];
+
+    var decoder = decodingContext.decoder;
+    var contexts = decodingContext.contextCache.getContexts('GR');
+
+    var ltp = 0;
+    for (var i = 0; i < height; i++) {
+      if (prediction) {
+        var sltp = decoder.readBit(contexts, pseudoPixelContext);
+        ltp ^= sltp;
+        if (ltp) {
+          error('JBIG2 error: prediction is not supported');
+        }
+      }
+      var row = new Uint8Array(width);
+      bitmap.push(row);
+      for (var j = 0; j < width; j++) {
+        var i0, j0;
+        var contextLabel = 0;
+        for (k = 0; k < codingTemplateLength; k++) {
+          i0 = i + codingTemplateY[k];
+          j0 = j + codingTemplateX[k];
+          if (i0 < 0 || j0 < 0 || j0 >= width) {
+            contextLabel <<= 1; // out of bound pixel
+          } else {
+            contextLabel = (contextLabel << 1) | bitmap[i0][j0];
+          }
+        }
+        for (k = 0; k < referenceTemplateLength; k++) {
+          i0 = i + referenceTemplateY[k] + offsetY;
+          j0 = j + referenceTemplateX[k] + offsetX;
+          if (i0 < 0 || i0 >= referenceHeight || j0 < 0 ||
+              j0 >= referenceWidth) {
+            contextLabel <<= 1; // out of bound pixel
+          } else {
+            contextLabel = (contextLabel << 1) | referenceBitmap[i0][j0];
+          }
+        }
+        var pixel = decoder.readBit(contexts, contextLabel);
+        row[j] = pixel;
+      }
+    }
+
+    return bitmap;
+  }
+
+  // 6.5.5 Decoding the symbol dictionary
+  function decodeSymbolDictionary(huffman, refinement, symbols,
+                                  numberOfNewSymbols, numberOfExportedSymbols,
+                                  huffmanTables, templateIndex, at,
+                                  refinementTemplateIndex, refinementAt,
+                                  decodingContext) {
+    if (huffman) {
+      error('JBIG2 error: huffman is not supported');
+    }
+
+    var newSymbols = [];
+    var currentHeight = 0;
+    var symbolCodeLength = log2(symbols.length + numberOfNewSymbols);
+
+    var decoder = decodingContext.decoder;
+    var contextCache = decodingContext.contextCache;
+
+    while (newSymbols.length < numberOfNewSymbols) {
+      var deltaHeight = decodeInteger(contextCache, 'IADH', decoder); // 6.5.6
+      currentHeight += deltaHeight;
+      var currentWidth = 0;
+      var totalWidth = 0;
+      while (true) {
+        var deltaWidth = decodeInteger(contextCache, 'IADW', decoder); // 6.5.7
+        if (deltaWidth === null) {
+          break; // OOB
+        }
+        currentWidth += deltaWidth;
+        totalWidth += currentWidth;
+        var bitmap;
+        if (refinement) {
+          // 6.5.8.2 Refinement/aggregate-coded symbol bitmap
+          var numberOfInstances = decodeInteger(contextCache, 'IAAI', decoder);
+          if (numberOfInstances > 1) {
+            bitmap = decodeTextRegion(huffman, refinement,
+                                      currentWidth, currentHeight, 0,
+                                      numberOfInstances, 1, //strip size
+                                      symbols.concat(newSymbols),
+                                      symbolCodeLength,
+                                      0, //transposed
+                                      0, //ds offset
+                                      1, //top left 7.4.3.1.1
+                                      0, //OR operator
+                                      huffmanTables,
+                                      refinementTemplateIndex, refinementAt,
+                                      decodingContext);
+          } else {
+            var symbolId = decodeIAID(contextCache, decoder, symbolCodeLength);
+            var rdx = decodeInteger(contextCache, 'IARDX', decoder); // 6.4.11.3
+            var rdy = decodeInteger(contextCache, 'IARDY', decoder); // 6.4.11.4
+            var symbol = (symbolId < symbols.length ? symbols[symbolId] :
+                          newSymbols[symbolId - symbols.length]);
+            bitmap = decodeRefinement(currentWidth, currentHeight,
+            refinementTemplateIndex, symbol, rdx, rdy, false, refinementAt,
+            decodingContext);
+          }
+        } else {
+          // 6.5.8.1 Direct-coded symbol bitmap
+          bitmap = decodeBitmap(false, currentWidth, currentHeight,
+            templateIndex, false, null, at, decodingContext);
+        }
+        newSymbols.push(bitmap);
+      }
+    }
+    // 6.5.10 Exported symbols
+    var exportedSymbols = [];
+    var flags = [], currentFlag = false;
+    var totalSymbolsLength = symbols.length + numberOfNewSymbols;
+    while (flags.length < totalSymbolsLength) {
+      var runLength = decodeInteger(contextCache, 'IAEX', decoder);
+      while (runLength--) {
+        flags.push(currentFlag);
+      }
+      currentFlag = !currentFlag;
+    }
+    for (var i = 0, ii = symbols.length; i < ii; i++) {
+      if (flags[i]) {
+        exportedSymbols.push(symbols[i]);
+      }
+    }
+    for (var j = 0; j < numberOfNewSymbols; i++, j++) {
+      if (flags[i]) {
+        exportedSymbols.push(newSymbols[j]);
+      }
+    }
+    return exportedSymbols;
+  }
+
+  function decodeTextRegion(huffman, refinement, width, height,
+                            defaultPixelValue, numberOfSymbolInstances,
+                            stripSize, inputSymbols, symbolCodeLength,
+                            transposed, dsOffset, referenceCorner,
+                            combinationOperator, huffmanTables,
+                            refinementTemplateIndex, refinementAt,
+                            decodingContext) {
+    if (huffman) {
+      error('JBIG2 error: huffman is not supported');
+    }
+
+    // Prepare bitmap
+    var bitmap = [];
+    var i, row;
+    for (i = 0; i < height; i++) {
+      row = new Uint8Array(width);
+      if (defaultPixelValue) {
+        for (var j = 0; j < width; j++) {
+          row[j] = defaultPixelValue;
+        }
+      }
+      bitmap.push(row);
+    }
+
+    var decoder = decodingContext.decoder;
+    var contextCache = decodingContext.contextCache;
+    var stripT = -decodeInteger(contextCache, 'IADT', decoder); // 6.4.6
+    var firstS = 0;
+    i = 0;
+    while (i < numberOfSymbolInstances) {
+      var deltaT = decodeInteger(contextCache, 'IADT', decoder); // 6.4.6
+      stripT += deltaT;
+
+      var deltaFirstS = decodeInteger(contextCache, 'IAFS', decoder); // 6.4.7
+      firstS += deltaFirstS;
+      var currentS = firstS;
+      do {
+        var currentT = (stripSize === 1 ? 0 :
+                        decodeInteger(contextCache, 'IAIT', decoder)); // 6.4.9
+        var t = stripSize * stripT + currentT;
+        var symbolId = decodeIAID(contextCache, decoder, symbolCodeLength);
+        var applyRefinement = (refinement &&
+                               decodeInteger(contextCache, 'IARI', decoder));
+        var symbolBitmap = inputSymbols[symbolId];
+        var symbolWidth = symbolBitmap[0].length;
+        var symbolHeight = symbolBitmap.length;
+        if (applyRefinement) {
+          var rdw = decodeInteger(contextCache, 'IARDW', decoder); // 6.4.11.1
+          var rdh = decodeInteger(contextCache, 'IARDH', decoder); // 6.4.11.2
+          var rdx = decodeInteger(contextCache, 'IARDX', decoder); // 6.4.11.3
+          var rdy = decodeInteger(contextCache, 'IARDY', decoder); // 6.4.11.4
+          symbolWidth += rdw;
+          symbolHeight += rdh;
+          symbolBitmap = decodeRefinement(symbolWidth, symbolHeight,
+            refinementTemplateIndex, symbolBitmap, (rdw >> 1) + rdx,
+            (rdh >> 1) + rdy, false, refinementAt,
+            decodingContext);
+        }
+        var offsetT = t - ((referenceCorner & 1) ? 0 : symbolHeight);
+        var offsetS = currentS - ((referenceCorner & 2) ? symbolWidth : 0);
+        var s2, t2, symbolRow;
+        if (transposed) {
+          // Place Symbol Bitmap from T1,S1
+          for (s2 = 0; s2 < symbolHeight; s2++) {
+            row = bitmap[offsetS + s2];
+            if (!row) {
+              continue;
+            }
+            symbolRow = symbolBitmap[s2];
+            // To ignore Parts of Symbol bitmap which goes
+            // outside bitmap region
+            var maxWidth = Math.min(width - offsetT, symbolWidth);
+            switch (combinationOperator) {
+              case 0: // OR
+                for (t2 = 0; t2 < maxWidth; t2++) {
+                  row[offsetT + t2] |= symbolRow[t2];
+                }
+                break;
+              case 2: // XOR
+                for (t2 = 0; t2 < maxWidth; t2++) {
+                  row[offsetT + t2] ^= symbolRow[t2];
+                }
+                break;
+              default:
+                error('JBIG2 error: operator ' + combinationOperator +
+                      ' is not supported');
+            }
+          }
+          currentS += symbolHeight - 1;
+        } else {
+          for (t2 = 0; t2 < symbolHeight; t2++) {
+            row = bitmap[offsetT + t2];
+            if (!row) {
+              continue;
+            }
+            symbolRow = symbolBitmap[t2];
+            switch (combinationOperator) {
+              case 0: // OR
+                for (s2 = 0; s2 < symbolWidth; s2++) {
+                  row[offsetS + s2] |= symbolRow[s2];
+                }
+                break;
+              case 2: // XOR
+                for (s2 = 0; s2 < symbolWidth; s2++) {
+                  row[offsetS + s2] ^= symbolRow[s2];
+                }
+                break;
+              default:
+                error('JBIG2 error: operator ' + combinationOperator +
+                      ' is not supported');
+            }
+          }
+          currentS += symbolWidth - 1;
+        }
+        i++;
+        var deltaS = decodeInteger(contextCache, 'IADS', decoder); // 6.4.8
+        if (deltaS === null) {
+          break; // OOB
+        }
+        currentS += deltaS + dsOffset;
+      } while (true);
+    }
+    return bitmap;
+  }
+
+  function readSegmentHeader(data, start) {
+    var segmentHeader = {};
+    segmentHeader.number = readUint32(data, start);
+    var flags = data[start + 4];
+    var segmentType = flags & 0x3F;
+    if (!SegmentTypes[segmentType]) {
+      error('JBIG2 error: invalid segment type: ' + segmentType);
+    }
+    segmentHeader.type = segmentType;
+    segmentHeader.typeName = SegmentTypes[segmentType];
+    segmentHeader.deferredNonRetain = !!(flags & 0x80);
+
+    var pageAssociationFieldSize = !!(flags & 0x40);
+    var referredFlags = data[start + 5];
+    var referredToCount = (referredFlags >> 5) & 7;
+    var retainBits = [referredFlags & 31];
+    var position = start + 6;
+    if (referredFlags === 7) {
+      referredToCount = readUint32(data, position - 1) & 0x1FFFFFFF;
+      position += 3;
+      var bytes = (referredToCount + 7) >> 3;
+      retainBits[0] = data[position++];
+      while (--bytes > 0) {
+        retainBits.push(data[position++]);
+      }
+    } else if (referredFlags === 5 || referredFlags === 6) {
+      error('JBIG2 error: invalid referred-to flags');
+    }
+
+    segmentHeader.retainBits = retainBits;
+    var referredToSegmentNumberSize = (segmentHeader.number <= 256 ? 1 :
+      (segmentHeader.number <= 65536 ? 2 : 4));
+    var referredTo = [];
+    var i, ii;
+    for (i = 0; i < referredToCount; i++) {
+      var number = (referredToSegmentNumberSize === 1 ? data[position] :
+        (referredToSegmentNumberSize === 2 ? readUint16(data, position) :
+        readUint32(data, position)));
+      referredTo.push(number);
+      position += referredToSegmentNumberSize;
+    }
+    segmentHeader.referredTo = referredTo;
+    if (!pageAssociationFieldSize) {
+      segmentHeader.pageAssociation = data[position++];
+    } else {
+      segmentHeader.pageAssociation = readUint32(data, position);
+      position += 4;
+    }
+    segmentHeader.length = readUint32(data, position);
+    position += 4;
+
+    if (segmentHeader.length === 0xFFFFFFFF) {
+      // 7.2.7 Segment data length, unknown segment length
+      if (segmentType === 38) { // ImmediateGenericRegion
+        var genericRegionInfo = readRegionSegmentInformation(data, position);
+        var genericRegionSegmentFlags = data[position +
+          RegionSegmentInformationFieldLength];
+        var genericRegionMmr = !!(genericRegionSegmentFlags & 1);
+        // searching for the segment end
+        var searchPatternLength = 6;
+        var searchPattern = new Uint8Array(searchPatternLength);
+        if (!genericRegionMmr) {
+          searchPattern[0] = 0xFF;
+          searchPattern[1] = 0xAC;
+        }
+        searchPattern[2] = (genericRegionInfo.height >>> 24) & 0xFF;
+        searchPattern[3] = (genericRegionInfo.height >> 16) & 0xFF;
+        searchPattern[4] = (genericRegionInfo.height >> 8) & 0xFF;
+        searchPattern[5] = genericRegionInfo.height & 0xFF;
+        for (i = position, ii = data.length; i < ii; i++) {
+          var j = 0;
+          while (j < searchPatternLength && searchPattern[j] === data[i + j]) {
+            j++;
+          }
+          if (j === searchPatternLength) {
+            segmentHeader.length = i + searchPatternLength;
+            break;
+          }
+        }
+        if (segmentHeader.length === 0xFFFFFFFF) {
+          error('JBIG2 error: segment end was not found');
+        }
+      } else {
+        error('JBIG2 error: invalid unknown segment length');
+      }
+    }
+    segmentHeader.headerEnd = position;
+    return segmentHeader;
+  }
+
+  function readSegments(header, data, start, end) {
+    var segments = [];
+    var position = start;
+    while (position < end) {
+      var segmentHeader = readSegmentHeader(data, position);
+      position = segmentHeader.headerEnd;
+      var segment = {
+        header: segmentHeader,
+        data: data
+      };
+      if (!header.randomAccess) {
+        segment.start = position;
+        position += segmentHeader.length;
+        segment.end = position;
+      }
+      segments.push(segment);
+      if (segmentHeader.type === 51) {
+        break; // end of file is found
+      }
+    }
+    if (header.randomAccess) {
+      for (var i = 0, ii = segments.length; i < ii; i++) {
+        segments[i].start = position;
+        position += segments[i].header.length;
+        segments[i].end = position;
+      }
+    }
+    return segments;
+  }
+
+  // 7.4.1 Region segment information field
+  function readRegionSegmentInformation(data, start) {
+    return {
+      width: readUint32(data, start),
+      height: readUint32(data, start + 4),
+      x: readUint32(data, start + 8),
+      y: readUint32(data, start + 12),
+      combinationOperator: data[start + 16] & 7
+    };
+  }
+  var RegionSegmentInformationFieldLength = 17;
+
+  function processSegment(segment, visitor) {
+    var header = segment.header;
+
+    var data = segment.data, position = segment.start, end = segment.end;
+    var args, at, i, atLength;
+    switch (header.type) {
+      case 0: // SymbolDictionary
+        // 7.4.2 Symbol dictionary segment syntax
+        var dictionary = {};
+        var dictionaryFlags = readUint16(data, position); // 7.4.2.1.1
+        dictionary.huffman = !!(dictionaryFlags & 1);
+        dictionary.refinement = !!(dictionaryFlags & 2);
+        dictionary.huffmanDHSelector = (dictionaryFlags >> 2) & 3;
+        dictionary.huffmanDWSelector = (dictionaryFlags >> 4) & 3;
+        dictionary.bitmapSizeSelector = (dictionaryFlags >> 6) & 1;
+        dictionary.aggregationInstancesSelector = (dictionaryFlags >> 7) & 1;
+        dictionary.bitmapCodingContextUsed = !!(dictionaryFlags & 256);
+        dictionary.bitmapCodingContextRetained = !!(dictionaryFlags & 512);
+        dictionary.template = (dictionaryFlags >> 10) & 3;
+        dictionary.refinementTemplate = (dictionaryFlags >> 12) & 1;
+        position += 2;
+        if (!dictionary.huffman) {
+          atLength = dictionary.template === 0 ? 4 : 1;
+          at = [];
+          for (i = 0; i < atLength; i++) {
+            at.push({
+              x: readInt8(data, position),
+              y: readInt8(data, position + 1)
+            });
+            position += 2;
+          }
+          dictionary.at = at;
+        }
+        if (dictionary.refinement && !dictionary.refinementTemplate) {
+          at = [];
+          for (i = 0; i < 2; i++) {
+            at.push({
+              x: readInt8(data, position),
+              y: readInt8(data, position + 1)
+            });
+            position += 2;
+          }
+          dictionary.refinementAt = at;
+        }
+        dictionary.numberOfExportedSymbols = readUint32(data, position);
+        position += 4;
+        dictionary.numberOfNewSymbols = readUint32(data, position);
+        position += 4;
+        args = [dictionary, header.number, header.referredTo,
+                data, position, end];
+        break;
+      case 6: // ImmediateTextRegion
+      case 7: // ImmediateLosslessTextRegion
+        var textRegion = {};
+        textRegion.info = readRegionSegmentInformation(data, position);
+        position += RegionSegmentInformationFieldLength;
+        var textRegionSegmentFlags = readUint16(data, position);
+        position += 2;
+        textRegion.huffman = !!(textRegionSegmentFlags & 1);
+        textRegion.refinement = !!(textRegionSegmentFlags & 2);
+        textRegion.stripSize = 1 << ((textRegionSegmentFlags >> 2) & 3);
+        textRegion.referenceCorner = (textRegionSegmentFlags >> 4) & 3;
+        textRegion.transposed = !!(textRegionSegmentFlags & 64);
+        textRegion.combinationOperator = (textRegionSegmentFlags >> 7) & 3;
+        textRegion.defaultPixelValue = (textRegionSegmentFlags >> 9) & 1;
+        textRegion.dsOffset = (textRegionSegmentFlags << 17) >> 27;
+        textRegion.refinementTemplate = (textRegionSegmentFlags >> 15) & 1;
+        if (textRegion.huffman) {
+          var textRegionHuffmanFlags = readUint16(data, position);
+          position += 2;
+          textRegion.huffmanFS = (textRegionHuffmanFlags) & 3;
+          textRegion.huffmanDS = (textRegionHuffmanFlags >> 2) & 3;
+          textRegion.huffmanDT = (textRegionHuffmanFlags >> 4) & 3;
+          textRegion.huffmanRefinementDW = (textRegionHuffmanFlags >> 6) & 3;
+          textRegion.huffmanRefinementDH = (textRegionHuffmanFlags >> 8) & 3;
+          textRegion.huffmanRefinementDX = (textRegionHuffmanFlags >> 10) & 3;
+          textRegion.huffmanRefinementDY = (textRegionHuffmanFlags >> 12) & 3;
+          textRegion.huffmanRefinementSizeSelector =
+            !!(textRegionHuffmanFlags & 14);
+        }
+        if (textRegion.refinement && !textRegion.refinementTemplate) {
+          at = [];
+          for (i = 0; i < 2; i++) {
+            at.push({
+              x: readInt8(data, position),
+              y: readInt8(data, position + 1)
+            });
+            position += 2;
+          }
+          textRegion.refinementAt = at;
+        }
+        textRegion.numberOfSymbolInstances = readUint32(data, position);
+        position += 4;
+        // TODO 7.4.3.1.7 Symbol ID Huffman table decoding
+        if (textRegion.huffman) {
+          error('JBIG2 error: huffman is not supported');
+        }
+        args = [textRegion, header.referredTo, data, position, end];
+        break;
+      case 38: // ImmediateGenericRegion
+      case 39: // ImmediateLosslessGenericRegion
+        var genericRegion = {};
+        genericRegion.info = readRegionSegmentInformation(data, position);
+        position += RegionSegmentInformationFieldLength;
+        var genericRegionSegmentFlags = data[position++];
+        genericRegion.mmr = !!(genericRegionSegmentFlags & 1);
+        genericRegion.template = (genericRegionSegmentFlags >> 1) & 3;
+        genericRegion.prediction = !!(genericRegionSegmentFlags & 8);
+        if (!genericRegion.mmr) {
+          atLength = genericRegion.template === 0 ? 4 : 1;
+          at = [];
+          for (i = 0; i < atLength; i++) {
+            at.push({
+              x: readInt8(data, position),
+              y: readInt8(data, position + 1)
+            });
+            position += 2;
+          }
+          genericRegion.at = at;
+        }
+        args = [genericRegion, data, position, end];
+        break;
+      case 48: // PageInformation
+        var pageInfo = {
+          width: readUint32(data, position),
+          height: readUint32(data, position + 4),
+          resolutionX: readUint32(data, position + 8),
+          resolutionY: readUint32(data, position + 12)
+        };
+        if (pageInfo.height === 0xFFFFFFFF) {
+          delete pageInfo.height;
+        }
+        var pageSegmentFlags = data[position + 16];
+        var pageStripingInformatiom = readUint16(data, position + 17);
+        pageInfo.lossless = !!(pageSegmentFlags & 1);
+        pageInfo.refinement = !!(pageSegmentFlags & 2);
+        pageInfo.defaultPixelValue = (pageSegmentFlags >> 2) & 1;
+        pageInfo.combinationOperator = (pageSegmentFlags >> 3) & 3;
+        pageInfo.requiresBuffer = !!(pageSegmentFlags & 32);
+        pageInfo.combinationOperatorOverride = !!(pageSegmentFlags & 64);
+        args = [pageInfo];
+        break;
+      case 49: // EndOfPage
+        break;
+      case 50: // EndOfStripe
+        break;
+      case 51: // EndOfFile
+        break;
+      case 62: // 7.4.15 defines 2 extension types which
+               // are comments and can be ignored.
+        break;
+      default:
+        error('JBIG2 error: segment type ' + header.typeName + '(' +
+              header.type + ') is not implemented');
+    }
+    var callbackName = 'on' + header.typeName;
+    if (callbackName in visitor) {
+      visitor[callbackName].apply(visitor, args);
+    }
+  }
+
+  function processSegments(segments, visitor) {
+    for (var i = 0, ii = segments.length; i < ii; i++) {
+      processSegment(segments[i], visitor);
+    }
+  }
+
+  function parseJbig2(data, start, end) {
+    var position = start;
+    if (data[position] !== 0x97 || data[position + 1] !== 0x4A ||
+        data[position + 2] !== 0x42 || data[position + 3] !== 0x32 ||
+        data[position + 4] !== 0x0D || data[position + 5] !== 0x0A ||
+        data[position + 6] !== 0x1A || data[position + 7] !== 0x0A) {
+      error('JBIG2 error: invalid header');
+    }
+    var header = {};
+    position += 8;
+    var flags = data[position++];
+    header.randomAccess = !(flags & 1);
+    if (!(flags & 2)) {
+      header.numberOfPages = readUint32(data, position);
+      position += 4;
+    }
+    var segments = readSegments(header, data, position, end);
+    error('Not implemented');
+    // processSegments(segments, new SimpleSegmentVisitor());
+  }
+
+  function parseJbig2Chunks(chunks) {
+    var visitor = new SimpleSegmentVisitor();
+    for (var i = 0, ii = chunks.length; i < ii; i++) {
+      var chunk = chunks[i];
+      var segments = readSegments({}, chunk.data, chunk.start, chunk.end);
+      processSegments(segments, visitor);
+    }
+    return visitor.buffer;
+  }
+
+  function SimpleSegmentVisitor() {}
+
+  SimpleSegmentVisitor.prototype = {
+    onPageInformation: function SimpleSegmentVisitor_onPageInformation(info) {
+      this.currentPageInfo = info;
+      var rowSize = (info.width + 7) >> 3;
+      var buffer = new Uint8Array(rowSize * info.height);
+      // The contents of ArrayBuffers are initialized to 0.
+      // Fill the buffer with 0xFF only if info.defaultPixelValue is set
+      if (info.defaultPixelValue) {
+        for (var i = 0, ii = buffer.length; i < ii; i++) {
+          buffer[i] = 0xFF;
+        }
+      }
+      this.buffer = buffer;
+    },
+    drawBitmap: function SimpleSegmentVisitor_drawBitmap(regionInfo, bitmap) {
+      var pageInfo = this.currentPageInfo;
+      var width = regionInfo.width, height = regionInfo.height;
+      var rowSize = (pageInfo.width + 7) >> 3;
+      var combinationOperator = pageInfo.combinationOperatorOverride ?
+        regionInfo.combinationOperator : pageInfo.combinationOperator;
+      var buffer = this.buffer;
+      var mask0 =  128 >> (regionInfo.x & 7);
+      var offset0 = regionInfo.y * rowSize + (regionInfo.x >> 3);
+      var i, j, mask, offset;
+      switch (combinationOperator) {
+        case 0: // OR
+          for (i = 0; i < height; i++) {
+            mask = mask0;
+            offset = offset0;
+            for (j = 0; j < width; j++) {
+              if (bitmap[i][j]) {
+                buffer[offset] |= mask;
+              }
+              mask >>= 1;
+              if (!mask) {
+                mask = 128;
+                offset++;
+              }
+            }
+            offset0 += rowSize;
+          }
+        break;
+        case 2: // XOR
+          for (i = 0; i < height; i++) {
+            mask = mask0;
+            offset = offset0;
+            for (j = 0; j < width; j++) {
+              if (bitmap[i][j]) {
+                buffer[offset] ^= mask;
+              }
+              mask >>= 1;
+              if (!mask) {
+                mask = 128;
+                offset++;
+              }
+            }
+            offset0 += rowSize;
+          }
+          break;
+        default:
+          error('JBIG2 error: operator ' + combinationOperator +
+                ' is not supported');
+      }
+    },
+    onImmediateGenericRegion:
+      function SimpleSegmentVisitor_onImmediateGenericRegion(region, data,
+                                                             start, end) {
+      var regionInfo = region.info;
+      var decodingContext = new DecodingContext(data, start, end);
+      var bitmap = decodeBitmap(region.mmr, regionInfo.width, regionInfo.height,
+                                region.template, region.prediction, null,
+                                region.at, decodingContext);
+      this.drawBitmap(regionInfo, bitmap);
+    },
+    onImmediateLosslessGenericRegion:
+      function SimpleSegmentVisitor_onImmediateLosslessGenericRegion() {
+      this.onImmediateGenericRegion.apply(this, arguments);
+    },
+    onSymbolDictionary:
+      function SimpleSegmentVisitor_onSymbolDictionary(dictionary,
+                                                       currentSegment,
+                                                       referredSegments,
+                                                       data, start, end) {
+      var huffmanTables;
+      if (dictionary.huffman) {
+        error('JBIG2 error: huffman is not supported');
+      }
+
+      // Combines exported symbols from all referred segments
+      var symbols = this.symbols;
+      if (!symbols) {
+        this.symbols = symbols = {};
+      }
+
+      var inputSymbols = [];
+      for (var i = 0, ii = referredSegments.length; i < ii; i++) {
+        inputSymbols = inputSymbols.concat(symbols[referredSegments[i]]);
+      }
+
+      var decodingContext = new DecodingContext(data, start, end);
+      symbols[currentSegment] = decodeSymbolDictionary(dictionary.huffman,
+        dictionary.refinement, inputSymbols, dictionary.numberOfNewSymbols,
+        dictionary.numberOfExportedSymbols, huffmanTables,
+        dictionary.template, dictionary.at,
+        dictionary.refinementTemplate, dictionary.refinementAt,
+        decodingContext);
+    },
+    onImmediateTextRegion:
+      function SimpleSegmentVisitor_onImmediateTextRegion(region,
+                                                          referredSegments,
+                                                          data, start, end) {
+      var regionInfo = region.info;
+      var huffmanTables;
+
+      // Combines exported symbols from all referred segments
+      var symbols = this.symbols;
+      var inputSymbols = [];
+      for (var i = 0, ii = referredSegments.length; i < ii; i++) {
+        inputSymbols = inputSymbols.concat(symbols[referredSegments[i]]);
+      }
+      var symbolCodeLength = log2(inputSymbols.length);
+
+      var decodingContext = new DecodingContext(data, start, end);
+      var bitmap = decodeTextRegion(region.huffman, region.refinement,
+        regionInfo.width, regionInfo.height, region.defaultPixelValue,
+        region.numberOfSymbolInstances, region.stripSize, inputSymbols,
+        symbolCodeLength, region.transposed, region.dsOffset,
+        region.referenceCorner, region.combinationOperator, huffmanTables,
+        region.refinementTemplate, region.refinementAt, decodingContext);
+      this.drawBitmap(regionInfo, bitmap);
+    },
+    onImmediateLosslessTextRegion:
+      function SimpleSegmentVisitor_onImmediateLosslessTextRegion() {
+      this.onImmediateTextRegion.apply(this, arguments);
+    }
+  };
+
+  function Jbig2Image() {}
+
+  Jbig2Image.prototype = {
+    parseChunks: function Jbig2Image_parseChunks(chunks) {
+      return parseJbig2Chunks(chunks);
+    }
+  };
+
+  return Jbig2Image;
+})();
+
+
+var bidi = PDFJS.bidi = (function bidiClosure() {
+  // Character types for symbols from 0000 to 00FF.
+  var baseTypes = [
+    'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'S', 'B', 'S', 'WS',
+    'B', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN',
+    'BN', 'BN', 'B', 'B', 'B', 'S', 'WS', 'ON', 'ON', 'ET', 'ET', 'ET', 'ON',
+    'ON', 'ON', 'ON', 'ON', 'ON', 'CS', 'ON', 'CS', 'ON', 'EN', 'EN', 'EN',
+    'EN', 'EN', 'EN', 'EN', 'EN', 'EN', 'EN', 'ON', 'ON', 'ON', 'ON', 'ON',
+    'ON', 'ON', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'ON', 'ON',
+    'ON', 'ON', 'ON', 'ON', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'ON', 'ON', 'ON', 'ON', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'B', 'BN',
+    'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN',
+    'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN', 'BN',
+    'BN', 'CS', 'ON', 'ET', 'ET', 'ET', 'ET', 'ON', 'ON', 'ON', 'ON', 'L', 'ON',
+    'ON', 'ON', 'ON', 'ON', 'ET', 'ET', 'EN', 'EN', 'ON', 'L', 'ON', 'ON', 'ON',
+    'EN', 'L', 'ON', 'ON', 'ON', 'ON', 'ON', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'ON', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+    'L', 'L', 'L', 'ON', 'L', 'L', 'L', 'L', 'L', 'L', 'L', 'L'
+  ];
+
+  // Character types for symbols from 0600 to 06FF
+  var arabicTypes = [
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'CS', 'AL', 'ON', 'ON', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM',
+    'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AN', 'AN', 'AN', 'AN', 'AN', 'AN', 'AN', 'AN', 'AN',
+    'AN', 'ET', 'AN', 'AN', 'AL', 'AL', 'AL', 'NSM', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM',
+    'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'NSM', 'ON', 'NSM',
+    'NSM', 'NSM', 'NSM', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL',
+    'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL', 'AL'
+  ];
+
+  function isOdd(i) {
+    return (i & 1) !== 0;
+  }
+
+  function isEven(i) {
+    return (i & 1) === 0;
+  }
+
+  function findUnequal(arr, start, value) {
+    for (var j = start, jj = arr.length; j < jj; ++j) {
+      if (arr[j] !== value) {
+        return j;
+      }
+    }
+    return j;
+  }
+
+  function setValues(arr, start, end, value) {
+    for (var j = start; j < end; ++j) {
+      arr[j] = value;
+    }
+  }
+
+  function reverseValues(arr, start, end) {
+    for (var i = start, j = end - 1; i < j; ++i, --j) {
+      var temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+  }
+
+  function createBidiText(str, isLTR, vertical) {
+    return {
+      str: str,
+      dir: (vertical ? 'ttb' : (isLTR ? 'ltr' : 'rtl'))
+    };
+  }
+
+  // These are used in bidi(), which is called frequently. We re-use them on
+  // each call to avoid unnecessary allocations.
+  var chars = [];
+  var types = [];
+
+  function bidi(str, startLevel, vertical) {
+    var isLTR = true;
+    var strLength = str.length;
+    if (strLength === 0 || vertical) {
+      return createBidiText(str, isLTR, vertical);
+    }
+
+    // Get types and fill arrays
+    chars.length = strLength;
+    types.length = strLength;
+    var numBidi = 0;
+
+    var i, ii;
+    for (i = 0; i < strLength; ++i) {
+      chars[i] = str.charAt(i);
+
+      var charCode = str.charCodeAt(i);
+      var charType = 'L';
+      if (charCode <= 0x00ff) {
+        charType = baseTypes[charCode];
+      } else if (0x0590 <= charCode && charCode <= 0x05f4) {
+        charType = 'R';
+      } else if (0x0600 <= charCode && charCode <= 0x06ff) {
+        charType = arabicTypes[charCode & 0xff];
+      } else if (0x0700 <= charCode && charCode <= 0x08AC) {
+        charType = 'AL';
+      }
+      if (charType === 'R' || charType === 'AL' || charType === 'AN') {
+        numBidi++;
+      }
+      types[i] = charType;
+    }
+
+    // Detect the bidi method
+    // - If there are no rtl characters then no bidi needed
+    // - If less than 30% chars are rtl then string is primarily ltr
+    // - If more than 30% chars are rtl then string is primarily rtl
+    if (numBidi === 0) {
+      isLTR = true;
+      return createBidiText(str, isLTR);
+    }
+
+    if (startLevel === -1) {
+      if ((strLength / numBidi) < 0.3) {
+        isLTR = true;
+        startLevel = 0;
+      } else {
+        isLTR = false;
+        startLevel = 1;
+      }
+    }
+
+    var levels = [];
+    for (i = 0; i < strLength; ++i) {
+      levels[i] = startLevel;
+    }
+
+    /*
+     X1-X10: skip most of this, since we are NOT doing the embeddings.
+     */
+    var e = (isOdd(startLevel) ? 'R' : 'L');
+    var sor = e;
+    var eor = sor;
+
+    /*
+     W1. Examine each non-spacing mark (NSM) in the level run, and change the
+     type of the NSM to the type of the previous character. If the NSM is at the
+     start of the level run, it will get the type of sor.
+     */
+    var lastType = sor;
+    for (i = 0; i < strLength; ++i) {
+      if (types[i] === 'NSM') {
+        types[i] = lastType;
+      } else {
+        lastType = types[i];
+      }
+    }
+
+    /*
+     W2. Search backwards from each instance of a European number until the
+     first strong type (R, L, AL, or sor) is found.  If an AL is found, change
+     the type of the European number to Arabic number.
+     */
+    lastType = sor;
+    var t;
+    for (i = 0; i < strLength; ++i) {
+      t = types[i];
+      if (t === 'EN') {
+        types[i] = (lastType === 'AL') ? 'AN' : 'EN';
+      } else if (t === 'R' || t === 'L' || t === 'AL') {
+        lastType = t;
+      }
+    }
+
+    /*
+     W3. Change all ALs to R.
+     */
+    for (i = 0; i < strLength; ++i) {
+      t = types[i];
+      if (t === 'AL') {
+        types[i] = 'R';
+      }
+    }
+
+    /*
+     W4. A single European separator between two European numbers changes to a
+     European number. A single common separator between two numbers of the same
+     type changes to that type:
+     */
+    for (i = 1; i < strLength - 1; ++i) {
+      if (types[i] === 'ES' && types[i - 1] === 'EN' && types[i + 1] === 'EN') {
+        types[i] = 'EN';
+      }
+      if (types[i] === 'CS' &&
+          (types[i - 1] === 'EN' || types[i - 1] === 'AN') &&
+          types[i + 1] === types[i - 1]) {
+        types[i] = types[i - 1];
+      }
+    }
+
+    /*
+     W5. A sequence of European terminators adjacent to European numbers changes
+     to all European numbers:
+     */
+    for (i = 0; i < strLength; ++i) {
+      if (types[i] === 'EN') {
+        // do before
+        var j;
+        for (j = i - 1; j >= 0; --j) {
+          if (types[j] !== 'ET') {
+            break;
+          }
+          types[j] = 'EN';
+        }
+        // do after
+        for (j = i + 1; j < strLength; --j) {
+          if (types[j] !== 'ET') {
+            break;
+          }
+          types[j] = 'EN';
+        }
+      }
+    }
+
+    /*
+     W6. Otherwise, separators and terminators change to Other Neutral:
+     */
+    for (i = 0; i < strLength; ++i) {
+      t = types[i];
+      if (t === 'WS' || t === 'ES' || t === 'ET' || t === 'CS') {
+        types[i] = 'ON';
+      }
+    }
+
+    /*
+     W7. Search backwards from each instance of a European number until the
+     first strong type (R, L, or sor) is found. If an L is found,  then change
+     the type of the European number to L.
+     */
+    lastType = sor;
+    for (i = 0; i < strLength; ++i) {
+      t = types[i];
+      if (t === 'EN') {
+        types[i] = ((lastType === 'L') ? 'L' : 'EN');
+      } else if (t === 'R' || t === 'L') {
+        lastType = t;
+      }
+    }
+
+    /*
+     N1. A sequence of neutrals takes the direction of the surrounding strong
+     text if the text on both sides has the same direction. European and Arabic
+     numbers are treated as though they were R. Start-of-level-run (sor) and
+     end-of-level-run (eor) are used at level run boundaries.
+     */
+    for (i = 0; i < strLength; ++i) {
+      if (types[i] === 'ON') {
+        var end = findUnequal(types, i + 1, 'ON');
+        var before = sor;
+        if (i > 0) {
+          before = types[i - 1];
+        }
+
+        var after = eor;
+        if (end + 1 < strLength) {
+          after = types[end + 1];
+        }
+        if (before !== 'L') {
+          before = 'R';
+        }
+        if (after !== 'L') {
+          after = 'R';
+        }
+        if (before === after) {
+          setValues(types, i, end, before);
+        }
+        i = end - 1; // reset to end (-1 so next iteration is ok)
+      }
+    }
+
+    /*
+     N2. Any remaining neutrals take the embedding direction.
+     */
+    for (i = 0; i < strLength; ++i) {
+      if (types[i] === 'ON') {
+        types[i] = e;
+      }
+    }
+
+    /*
+     I1. For all characters with an even (left-to-right) embedding direction,
+     those of type R go up one level and those of type AN or EN go up two
+     levels.
+     I2. For all characters with an odd (right-to-left) embedding direction,
+     those of type L, EN or AN go up one level.
+     */
+    for (i = 0; i < strLength; ++i) {
+      t = types[i];
+      if (isEven(levels[i])) {
+        if (t === 'R') {
+          levels[i] += 1;
+        } else if (t === 'AN' || t === 'EN') {
+          levels[i] += 2;
+        }
+      } else { // isOdd
+        if (t === 'L' || t === 'AN' || t === 'EN') {
+          levels[i] += 1;
+        }
+      }
+    }
+
+    /*
+     L1. On each line, reset the embedding level of the following characters to
+     the paragraph embedding level:
+
+     segment separators,
+     paragraph separators,
+     any sequence of whitespace characters preceding a segment separator or
+     paragraph separator, and any sequence of white space characters at the end
+     of the line.
+     */
+
+    // don't bother as text is only single line
+
+    /*
+     L2. From the highest level found in the text to the lowest odd level on
+     each line, reverse any contiguous sequence of characters that are at that
+     level or higher.
+     */
+
+    // find highest level & lowest odd level
+    var highestLevel = -1;
+    var lowestOddLevel = 99;
+    var level;
+    for (i = 0, ii = levels.length; i < ii; ++i) {
+      level = levels[i];
+      if (highestLevel < level) {
+        highestLevel = level;
+      }
+      if (lowestOddLevel > level && isOdd(level)) {
+        lowestOddLevel = level;
+      }
+    }
+
+    // now reverse between those limits
+    for (level = highestLevel; level >= lowestOddLevel; --level) {
+      // find segments to reverse
+      var start = -1;
+      for (i = 0, ii = levels.length; i < ii; ++i) {
+        if (levels[i] < level) {
+          if (start >= 0) {
+            reverseValues(chars, start, i);
+            start = -1;
+          }
+        } else if (start < 0) {
+          start = i;
+        }
+      }
+      if (start >= 0) {
+        reverseValues(chars, start, levels.length);
+      }
+    }
+
+    /*
+     L3. Combining marks applied to a right-to-left base character will at this
+     point precede their base character. If the rendering engine expects them to
+     follow the base characters in the final display process, then the ordering
+     of the marks and the base character must be reversed.
+     */
+
+    // don't bother for now
+
+    /*
+     L4. A character that possesses the mirrored property as specified by
+     Section 4.7, Mirrored, must be depicted by a mirrored glyph if the resolved
+     directionality of that character is R.
+     */
+
+    // don't mirror as characters are already mirrored in the pdf
+
+    // Finally, return string
+    var result = '';
+    for (i = 0, ii = chars.length; i < ii; ++i) {
+      var ch = chars[i];
+      if (ch !== '<' && ch !== '>') {
+        result += ch;
+      }
+    }
+    return createBidiText(result, isLTR);
+  }
+
+  return bidi;
+})();
+
+/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+/* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab: */
+
+/* Copyright 2014 Opera Software ASA
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ * Based on https://code.google.com/p/smhasher/wiki/MurmurHash3.
+ * Hashes roughly 100 KB per millisecond on i7 3.4 GHz.
+ */
+/* globals Uint32ArrayView */
+
+'use strict';
+
+var MurmurHash3_64 = (function MurmurHash3_64Closure (seed) {
+  // Workaround for missing math precison in JS.
+  var MASK_HIGH = 0xffff0000;
+  var MASK_LOW = 0xffff;
+
+  function MurmurHash3_64 (seed) {
+    var SEED = 0xc3d2e1f0;
+    this.h1 = seed ? seed & 0xffffffff : SEED;
+    this.h2 = seed ? seed & 0xffffffff : SEED;
+  }
+
+  var alwaysUseUint32ArrayView = false;
+//#if !(FIREFOX || MOZCENTRAL || B2G || CHROME)
+  // old webkits have issues with non-aligned arrays
+  try {
+    new Uint32Array(new Uint8Array(5).buffer, 0, 1);
+  } catch (e) {
+    alwaysUseUint32ArrayView = true;
+  }
+//#endif
+
+  MurmurHash3_64.prototype = {
+    update: function MurmurHash3_64_update(input) {
+      var useUint32ArrayView = alwaysUseUint32ArrayView;
+      var i;
+      if (typeof input === 'string') {
+        var data = new Uint8Array(input.length * 2);
+        var length = 0;
+        for (i = 0; i < input.length; i++) {
+          var code = input.charCodeAt(i);
+          if (code <= 0xff) {
+            data[length++] = code;
+          }
+          else {
+            data[length++] = code >>> 8;
+            data[length++] = code & 0xff;
+          }
+        }
+      } else if (input instanceof Uint8Array) {
+        data = input;
+        length = data.length;
+      } else if (typeof input === 'object' && ('length' in input)) {
+        // processing regular arrays as well, e.g. for IE9
+        data = input;
+        length = data.length;
+        useUint32ArrayView = true;
+      } else {
+        throw new Error('Wrong data format in MurmurHash3_64_update. ' +
+                        'Input must be a string or array.');
+      }
+
+      var blockCounts = length >> 2;
+      var tailLength = length - blockCounts * 4;
+      // we don't care about endianness here
+      var dataUint32 = useUint32ArrayView ?
+        new Uint32ArrayView(data, blockCounts) :
+        new Uint32Array(data.buffer, 0, blockCounts);
+      var k1 = 0;
+      var k2 = 0;
+      var h1 = this.h1;
+      var h2 = this.h2;
+      var C1 = 0xcc9e2d51;
+      var C2 = 0x1b873593;
+      var C1_LOW = C1 & MASK_LOW;
+      var C2_LOW = C2 & MASK_LOW;
+
+      for (i = 0; i < blockCounts; i++) {
+        if (i & 1) {
+          k1 = dataUint32[i];
+          k1 = (k1 * C1 & MASK_HIGH) | (k1 * C1_LOW & MASK_LOW);
+          k1 = k1 << 15 | k1 >>> 17;
+          k1 = (k1 * C2 & MASK_HIGH) | (k1 * C2_LOW & MASK_LOW);
+          h1 ^= k1;
+          h1 = h1 << 13 | h1 >>> 19;
+          h1 = h1 * 5 + 0xe6546b64;
+        } else {
+          k2 = dataUint32[i];
+          k2 = (k2 * C1 & MASK_HIGH) | (k2 * C1_LOW & MASK_LOW);
+          k2 = k2 << 15 | k2 >>> 17;
+          k2 = (k2 * C2 & MASK_HIGH) | (k2 * C2_LOW & MASK_LOW);
+          h2 ^= k2;
+          h2 = h2 << 13 | h2 >>> 19;
+          h2 = h2 * 5 + 0xe6546b64;
+        }
+      }
+
+      k1 = 0;
+
+      switch (tailLength) {
+        case 3:
+          k1 ^= data[blockCounts * 4 + 2] << 16;
+          /* falls through */
+        case 2:
+          k1 ^= data[blockCounts * 4 + 1] << 8;
+          /* falls through */
+        case 1:
+          k1 ^= data[blockCounts * 4];
+          /* falls through */
+        k1 = (k1 * C1 & MASK_HIGH) | (k1 * C1_LOW & MASK_LOW);
+        k1 = k1 << 15 | k1 >>> 17;
+        k1 = (k1 * C2 & MASK_HIGH) | (k1 * C2_LOW & MASK_LOW);
+        if (blockCounts & 1) {
+          h1 ^= k1;
+        } else {
+          h2 ^= k1;
+        }
+      }
+
+      this.h1 = h1;
+      this.h2 = h2;
+      return this;
+    },
+
+    hexdigest: function MurmurHash3_64_hexdigest () {
+      var h1 = this.h1;
+      var h2 = this.h2;
+
+      h1 ^= h2 >>> 1;
+      h1 = (h1 * 0xed558ccd & MASK_HIGH) | (h1 * 0x8ccd & MASK_LOW);
+      h2 = (h2 * 0xff51afd7 & MASK_HIGH) |
+           (((h2 << 16 | h1 >>> 16) * 0xafd7ed55 & MASK_HIGH) >>> 16);
+      h1 ^= h2 >>> 1;
+      h1 = (h1 * 0x1a85ec53 & MASK_HIGH) | (h1 * 0xec53 & MASK_LOW);
+      h2 = (h2 * 0xc4ceb9fe & MASK_HIGH) |
+           (((h2 << 16 | h1 >>> 16) * 0xb9fe1a85 & MASK_HIGH) >>> 16);
+      h1 ^= h2 >>> 1;
+
+      for (var i = 0, arr = [h1, h2], str = ''; i < arr.length; i++) {
+        var hex = (arr[i] >>> 0).toString(16);
+        while (hex.length < 8) {
+          hex = '0' + hex;
+        }
+        str += hex;
+      }
+
+      return str;
+    }
+  };
+
+  return MurmurHash3_64;
+})();
+
+
+}).call((typeof window === 'undefined') ? this : window);
+
+if (!PDFJS.workerSrc && typeof document !== 'undefined') {
+  // workerSrc is not set -- using last script url to define default location
+  PDFJS.workerSrc = (function () {
+    'use strict';
+    var scriptTagContainer = document.body ||
+                             document.getElementsByTagName('head')[0];
+    var pdfjsSrc = scriptTagContainer.lastChild.src;
+    return pdfjsSrc && pdfjsSrc.replace(/\.js$/i, '.worker.js');
+  })();
+}
+
